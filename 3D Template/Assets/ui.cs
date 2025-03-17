@@ -3,6 +3,31 @@ using UnityEngine;
 public class ui : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+    /*
+    A guard found a body!, A miner found a body!
+
+    A convinently placed shovel, why don't you pick it up?
+    Guard at the enterance... No way you can knock em out without being detected, Try going around the left
+    Alright, no guards here. Make sure that camera doesn't see you.
+    Hit that camera with your shovel, that'll probably lure a guard's attention to it
+    Just one guard is coming, Hide and knock em out with that shovel
+    Got his mask? Good. We can go in without being detected.
+    Alright, try to find a way to the mine shaft.
+    Argh, Completely forgot about the door. we'll need to get a code from someone here.
+    One of the miners has to know today's code, find them.
+
+    Or you can do that I guess...
+    Quick! Get his shotgun.
+    Guards incoming!
+    Find the enterance to the mine
+    A security door? Augh, No way we can get the code from someone here, You gonna blast it with dynamite.
+    There has to be dynamite in the guard's room...
+    You're gonna need a guard's mask to open that door. Get one from the guards you killed
+    You're gonna need a guard's mask to open that door. Wear it now!
+    Alright, light that dynamite near that security door. And make sure the guards don't blow out the fuse
+    We're in!
+    */
     void Start()
     {
         
