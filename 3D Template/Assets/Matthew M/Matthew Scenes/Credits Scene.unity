@@ -708,7 +708,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 346744973}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1908762080}
+        m_TargetAssemblyTypeName: SetInactive, Assembly-CSharp
+        m_MethodName: OnButton5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &346744973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,7 +793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0, y: 462.24}
+  m_AnchoredPosition: {x: 0, y: 462.24}
   m_SizeDelta: {x: 6.098, y: -919.402}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &397742867
@@ -929,6 +941,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1986245328}
+  - {fileID: 1331146465}
   m_Father: {fileID: 726884487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -979,7 +992,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 462608339}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1908762080}
+        m_TargetAssemblyTypeName: SetInactive, Assembly-CSharp
+        m_MethodName: OnButton1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &462608339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1101,7 +1126,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 497202577}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1908762080}
+        m_TargetAssemblyTypeName: SetInactive, Assembly-CSharp
+        m_MethodName: OnButton4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &497202577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1153,7 +1190,7 @@ GameObject:
   - component: {fileID: 617465319}
   - component: {fileID: 617465318}
   m_Layer: 5
-  m_Name: Oscar Button
+  m_Name: Oscar Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1495,7 +1532,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9d8a48ba8c32f5547b855ce3ec367fe1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1596,7 +1633,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1221310135}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1908762080}
+        m_TargetAssemblyTypeName: SetInactive, Assembly-CSharp
+        m_MethodName: OnButton2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1221310135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1718,7 +1767,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1242145370}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1908762080}
+        m_TargetAssemblyTypeName: SetInactive, Assembly-CSharp
+        m_MethodName: OnButton3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1242145370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1783,17 +1844,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331146464}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1986245328}
+  m_Father: {fileID: 462608337}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 498.48, y: -528}
-  m_SizeDelta: {x: 996.961, y: 551.045}
+  m_SizeDelta: {x: 996.961, y: 551.04504}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1331146466
 Animator:
@@ -1837,7 +1898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d1cd863f5210bf047819ff1a9751b45a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2004,7 +2065,7 @@ GameObject:
   - component: {fileID: 1523943400}
   - component: {fileID: 1523943399}
   m_Layer: 5
-  m_Name: Zelda Button
+  m_Name: Zelda Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2323,6 +2384,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663158196}
   m_CullTransparentMesh: 1
+--- !u!1 &1908762079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1908762081}
+  - component: {fileID: 1908762080}
+  m_Layer: 0
+  m_Name: SetInactive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1908762080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908762079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcdb69f9f3097f4587769426e3ab896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object1: {fileID: 1331146464}
+  Object2: {fileID: 1108308061}
+  Object3: {fileID: 1578098696}
+  Object4: {fileID: 617465316}
+  Object5: {fileID: 1523943397}
+--- !u!4 &1908762081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908762079}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.41151667, y: 15.32396, z: 10.123107}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1986245327
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,8 +2462,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1331146465}
+  m_Children: []
   m_Father: {fileID: 462608337}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2725,3 +2834,4 @@ SceneRoots:
   - {fileID: 17794595}
   - {fileID: 726884487}
   - {fileID: 909807267}
+  - {fileID: 1908762081}
