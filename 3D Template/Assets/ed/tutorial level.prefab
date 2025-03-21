@@ -6813,7 +6813,7 @@ GameObject:
   - component: {fileID: 254369605770601796}
   - component: {fileID: 2004945328748327437}
   - component: {fileID: 6645250687005414476}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14737,7 +14737,7 @@ PrefabInstance:
     - target: {fileID: 6657022576568043488, guid: 00c250feedf56ff4a8ff348d0fcb413d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6657022576568043488, guid: 00c250feedf56ff4a8ff348d0fcb413d,
         type: 3}
@@ -15635,7 +15635,7 @@ PrefabInstance:
     - target: {fileID: 6657022576568043488, guid: 00c250feedf56ff4a8ff348d0fcb413d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6657022576568043488, guid: 00c250feedf56ff4a8ff348d0fcb413d,
         type: 3}
