@@ -106,7 +106,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -119,6 +119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3563776157789037578}
+  - component: {fileID: 3985480336064703363}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -143,6 +144,20 @@ Transform:
   - {fileID: 1855362620995530628}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3985480336064703363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624174415430165272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1697c6ac3e5cb4dbaf0d4596abe2bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 3976846265408971094, guid: 28cc81340ee9fdf469a1b701aeb51141, type: 3}
+  playertransform: {fileID: 1855362620995530628}
 --- !u!1 &2274778758876689623
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,8 +308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb379369f4871f84d94ab8cb17eaf98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 2000
-  sensY: 2000
+  sensX: 600
+  sensY: 600
   orientation: {fileID: 1103243833669211420}
 --- !u!1 &5117880022107593058
 GameObject:
@@ -407,9 +422,12 @@ MonoBehaviour:
   jumpForce: 12
   jumpCooldown: 0.25
   airMultiplier: 0.4
+  crouchSpeed: 2
+  crouchYScale: 0.2
   walkSpeed: 0
   sprintSpeed: 0
   jumpKey: 32
+  crouchKey: 99
   playerHeight: 3
   whatIsGround:
     serializedVersion: 2
