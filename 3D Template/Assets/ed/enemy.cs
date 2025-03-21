@@ -3,6 +3,7 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
     Vector3 cameradirection;
+    public GameObject sprite;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +16,6 @@ public class enemy : MonoBehaviour
         cameradirection = Camera.main.transform.forward;
         cameradirection.y = 0;
         
-        transform.rotation = Quaternion.LookRotation(cameradirection);
+        sprite.transform.rotation = Quaternion.LookRotation(cameradirection);
     }
 }
