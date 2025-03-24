@@ -10,9 +10,12 @@ public class PlayerCam : MonoBehaviour
     float xRotation;
     float yRotation;
 
+    public int target = 120;
+    
+
     private void Awake()
     {
-        Application.targetFrameRate = 120;
+        Application.targetFrameRate = target;
     }
 
     private void Start()

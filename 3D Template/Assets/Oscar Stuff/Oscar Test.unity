@@ -656,6 +656,7 @@ MonoBehaviour:
   sensX: 500
   sensY: 500
   orientation: {fileID: 1237023881}
+  target: 150
 --- !u!1 &1089614872
 GameObject:
   m_ObjectHideFlags: 0
