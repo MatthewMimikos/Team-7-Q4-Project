@@ -16,9 +16,9 @@ public class bullet_create : MonoBehaviour
         {
             for (int i = 0; i < 8; i++)
             {
-                GameObject new_bullet = Instantiate(bullet, new Vector3(playertransform.position.x, playertransform.position.y - 0.3f, playertransform.position.z), cameratransform.rotation);
-                new_bullet.transform.Rotate(Random.Range(-2, 2), Random.Range(-2, 2), 0);
-        }
+                GameObject new_bullet = Instantiate(bullet, new Vector3(playertransform.position.x, playertransform.position.y - 0.15f, playertransform.position.z), cameratransform.rotation);
+                new_bullet.transform.Rotate(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
+            }
         }
     }
 }
