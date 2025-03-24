@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float airMultiplier;
     bool readyToJump;
 
-    [Header("Jumping")]
+    [Header("Crouching")]
     public float crouchSpeed;
     public float crouchYScale;
     private float startYScale;
