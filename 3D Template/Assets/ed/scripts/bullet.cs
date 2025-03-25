@@ -14,13 +14,18 @@ public class bullet : MonoBehaviour
         transform.position += transform.forward * 120 * Time.deltaTime;
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("hit " + other);
         if (other.gameObject.GetComponent<enemy>())
         {
             Debug.Log("actually hit enemy");
-            other.gameObject.GetComponent<enemy>().health -= 10;
+            other.gameObject.GetComponent<enemy>().health -= 0;
         }
+    }
+    private void Awake()
+    {
+        Destroy(gameObject, 3f);
     }
 }
