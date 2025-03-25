@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerCam : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class PlayerCam : MonoBehaviour
     float yRotation;
 
     public int target = 120;
-    
+
+    public bullet_create bullet_Create;
 
     private void Awake()
     {
