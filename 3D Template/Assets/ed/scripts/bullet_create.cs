@@ -5,6 +5,7 @@ public class bullet_create : MonoBehaviour
     public GameObject bullet;
     public Transform playertransform;
     public Transform cameratransform;
+    public Vector3 raycastpoint;
     void Start()
     {
         
@@ -14,6 +15,7 @@ public class bullet_create : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            transform.LookAt(raycastpoint);
             for (int i = 0; i < 8; i++)
             {
                 GameObject new_bullet = Instantiate(bullet, new Vector3(playertransform.position.x, playertransform.position.y - 0.15f, playertransform.position.z), cameratransform.rotation);
