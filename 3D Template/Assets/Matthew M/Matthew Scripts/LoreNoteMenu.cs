@@ -13,4 +13,9 @@ public class LoreNoteMenu : MonoBehaviour
     {
         LoreMenu.SetActive(true);
     }
+
+    public void CloseLoreNoteMenu()
+    {
+        LoreMenu.SetActive(false);
+    }
 }
