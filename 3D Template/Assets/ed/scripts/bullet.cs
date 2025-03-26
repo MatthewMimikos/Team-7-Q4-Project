@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
+    public bool from_enemy = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,11 +18,9 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("hit " + other);
-        if (other.gameObject.GetComponent<enemy>())
+        if (other.gameObject.GetComponent<enemy>() && from_enemy == false)
         {
-            Debug.Log("actually hit enemy");
-            other.gameObject.GetComponent<enemy>().health -= 0;
+            other.gameObject.GetComponent<enemy>().health -= 20;
         }
     }
     private void Awake()

@@ -86,8 +86,9 @@ public class enemy : MonoBehaviour
             for (int i = 0; i < 8; i++)
             {
                 GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
+                new_bullet.GetComponent<bullet>().from_enemy = true;
                 new_bullet.transform.LookAt(player.transform.position);
-                new_bullet.transform.Rotate(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
+                new_bullet.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
             }
             StartCoroutine(EnterCooldown());
         }
