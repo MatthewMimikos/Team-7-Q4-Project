@@ -6,7 +6,9 @@ public class enemy : MonoBehaviour
     Vector3 cameradirection;
     public GameObject player;
     public GameObject bullet;
+
     private bool can_attack = true;
+    public GameObject attack_transform;
 
     public GameObject sprite;
     public GameObject miner;
@@ -38,31 +40,31 @@ public class enemy : MonoBehaviour
         if (type == 1)
         {
             guard.SetActive(true);
-            sprite = miner;
+            sprite = guard;
             health = 125;
         }
         if (type == 2)
         {
             elite_guard.SetActive(true);
-            sprite = miner;
+            sprite = elite_guard;
             health = 325;
         }
         if (type == 3)
         {
             rifle.SetActive(true);
-            sprite = miner;
+            sprite = rifle;
             health = 100;
         }
         if (type == 4)
         {
             cultmember.SetActive(true);
-            sprite = miner;
+            sprite = cultmember;
             health = 125;
         }
         if (type == 5)
         {
             coolcultmember.SetActive(true);
-            sprite = miner;
+            sprite = coolcultmember;
             health = 200;
         }
     }
@@ -79,11 +81,11 @@ public class enemy : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (can_attack == true)
+        if (can_attack == true && type == 1 || can_attack == true && type == 2)
         {
             for (int i = 0; i < 8; i++)
             {
-                GameObject new_bullet = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y - 0.15f, transform.position.z), Quaternion.identity);
+                GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
                 new_bullet.transform.LookAt(player.transform.position);
                 new_bullet.transform.Rotate(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
             }
