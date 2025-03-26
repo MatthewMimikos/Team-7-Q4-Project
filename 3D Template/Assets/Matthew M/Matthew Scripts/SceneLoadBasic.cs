@@ -20,6 +20,7 @@ public class SceneLoadBasic : MonoBehaviour
 
     public void UniqueExit()
     {
+        Time.timeScale = 1;
         Invoke("LoadScene", WaitTime);
         Image.SetActive(true);
     }
