@@ -389,7 +389,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   can_see_player: 0
+  detection_visual: {fileID: 7432723170172768347, guid: 9100c3515b4592e44b114425b8e7eb8b,
+    type: 3}
   actual_camera: {fileID: 1142874022224675982}
+  player_camera: {fileID: 0}
+  my_detection_visual: {fileID: 0}
 --- !u!4 &4451562734039521253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 15ef14296401c0c4c938a4238238df08,
