@@ -1396,8 +1396,9 @@ MonoBehaviour:
   Mask1: {fileID: 2084493967}
   Mask2: {fileID: 1066131732}
   Mask3: {fileID: 736359175}
-  maskActive: 0
+  mask1Active: 0
   useMask: 103
+  noMask: 110
 --- !u!1 &1841597174
 GameObject:
   m_ObjectHideFlags: 0
