@@ -71,6 +71,7 @@ public class camera : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             can_see_player = false;
+            Destroy(my_detection_visual.gameObject);
         }
     }
 }
