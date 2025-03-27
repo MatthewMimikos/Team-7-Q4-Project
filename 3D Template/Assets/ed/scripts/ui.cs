@@ -3,7 +3,7 @@ using UnityEngine;
 public class ui : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
+
     /*
     A guard found a body!, A miner found a body!
 
@@ -18,7 +18,7 @@ public class ui : MonoBehaviour
     One of the miners has to know today's code, find them.
 
     Or you can do that I guess...
-    Quick! Get his shotgun.
+    Quick! Get his shotgun!
     Guards incoming!
     Find the enterance to the mine
     A security door? Augh, No way we can get the code from someone here, You gonna blast it with dynamite.
@@ -28,6 +28,7 @@ public class ui : MonoBehaviour
     Alright, light that dynamite near that security door. And make sure the guards don't blow out the fuse
     We're in!
     */
+    public GameObject crosshair;
     void Start()
     {
         
