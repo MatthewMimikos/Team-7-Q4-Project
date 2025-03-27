@@ -7,12 +7,14 @@ public class camera : MonoBehaviour
     public GameObject detection_visual;
     private ui ui;
     public GameObject actual_camera;
+    public GameObject player_camera;
 
     public GameObject my_detection_visual;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GameObject.Find("Player");
+        player_camera = GameObject.Find("PlayerCam");
         ui = FindFirstObjectByType<ui>();
     }
 
@@ -28,10 +30,22 @@ public class camera : MonoBehaviour
         }
         if (my_detection_visual != null)
         {
-            if (my_detection_visual.transform.rotation.z != Vector3.Angle(actual_camera.transform.position, player.transform.position))
-            {
-                my_detection_visual.transform.Rotate(0, 0, Vector3.Angle(actual_camera.transform.position, player.transform.position));
-            }
+            Vector3 direction = actual_camera.transform.position - player.transform.position;
+            Quaternion rotation = Quaternion.LookRotation(direction);
+            Debug.Log(rotation.eulerAngles);
+            my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.y + player_camera.transform.eulerAngles.y);
+
+            // if (my_detection_visual.transform.rotation.z != Vector3.Angle(actual_camera.transform.position, player.transform.position))
+            //{
+            //my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, Vector3.Angle(player.transform.position, actual_camera.transform.position) + player_camera.transform.eulerAngles.y);
+            //Debug.Log(Vector3.Angle(player.transform.position, actual_camera.transform.position) - player_camera.transform.eulerAngles.y);
+
+
+            //var screenPos = Camera.main.WorldToScreenPoint(transform.position);
+            //var arrowPos = player.transform.position;
+            //var direction = screenPos - arrowPos;
+            //my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, direction.z);
+            // }
         }
     }
     private void OnDrawGizmos()
