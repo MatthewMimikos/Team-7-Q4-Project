@@ -37,7 +37,7 @@ MonoBehaviour:
   active: 1
   quality:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   intensity:
     m_OverrideState: 1
     m_Value: 0.5
@@ -67,7 +67,7 @@ MonoBehaviour:
     m_Value: 1
   m_SampleCount:
     m_OverrideState: 1
-    m_Value: 8
+    m_Value: 4
 --- !u!114 &-6026464391438864705
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -772,13 +772,13 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 0.88115066, y: 0.9205672, z: 1, w: 0}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 0.9349212, y: 0.9814495, z: 1, w: 0}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 0.9928227, y: 1, z: 0.9856459, w: 0}
 --- !u!114 &-1016694868962581565
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1124,7 +1124,7 @@ MonoBehaviour:
     m_Value: 0.2
   scatter:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 1
   tint:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -1718,7 +1718,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.3
   smoothness:
     m_OverrideState: 1
     m_Value: 0.2
@@ -1958,10 +1958,10 @@ MonoBehaviour:
     m_Value: 1000
   baseHeight:
     m_OverrideState: 1
-    m_Value: 102.65
+    m_Value: 200
   maximumHeight:
     m_OverrideState: 1
-    m_Value: 102.65
+    m_Value: 200
   meanFreePath:
     m_OverrideState: 1
     m_Value: 20
@@ -2496,10 +2496,10 @@ MonoBehaviour:
     m_Value: 1
   rayTracing:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 4
   directLightingStrength:
     m_OverrideState: 1
     m_Value: 0
@@ -2645,7 +2645,7 @@ MonoBehaviour:
   interCascadeBorders: 1
   maxShadowDistance:
     m_OverrideState: 1
-    m_Value: 150
+    m_Value: 20
   directionalTransmissionMultiplier:
     m_OverrideState: 1
     m_Value: 1
