@@ -552,7 +552,7 @@ Transform:
   m_GameObject: {fileID: 352070877}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1000, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1076,7 +1076,7 @@ Transform:
   m_GameObject: {fileID: 395148734}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 55.3, y: 24.2, z: 120.5}
+  m_LocalPosition: {x: 55.3, y: 1000, z: 120.5}
   m_LocalScale: {x: 50, y: 20, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1275,7 +1275,7 @@ Transform:
   m_GameObject: {fileID: 470438616}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.3, y: 49.4, z: 108.9}
+  m_LocalPosition: {x: 56.3, y: 1000, z: 108.9}
   m_LocalScale: {x: 100, y: 20, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1293,7 +1293,7 @@ GameObject:
   - component: {fileID: 487289364}
   - component: {fileID: 487289363}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LN2 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1796,7 +1796,7 @@ GameObject:
   - component: {fileID: 706348858}
   - component: {fileID: 706348857}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LN1 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3436,7 +3436,7 @@ GameObject:
   - component: {fileID: 1104907888}
   - component: {fileID: 1104907887}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LN5 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4170,7 +4170,7 @@ GameObject:
   - component: {fileID: 1394152358}
   - component: {fileID: 1394152357}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LN6 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4306,7 +4306,7 @@ GameObject:
   - component: {fileID: 1396320545}
   - component: {fileID: 1396320544}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LN7 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4599,22 +4599,22 @@ MonoBehaviour:
   LoreNote6: 0
   LoreNote7: 0
   LoreNote8: 0
-  LoreNoteText1: {fileID: 0}
-  LoreNoteText2: {fileID: 0}
-  LoreNoteText3: {fileID: 0}
-  LoreNoteText4: {fileID: 0}
-  LoreNoteText5: {fileID: 0}
-  LoreNoteText6: {fileID: 0}
-  LoreNoteText7: {fileID: 0}
-  LoreNoteText8: {fileID: 0}
-  LoreNoteImage1: {fileID: 394660547}
-  LoreNoteImage2: {fileID: 355056951}
-  LoreNoteImage3: {fileID: 1944701198}
-  LoreNoteImage4: {fileID: 1734213361}
-  LoreNoteImage5: {fileID: 1713234608}
-  LoreNoteImage6: {fileID: 1126907343}
-  LoreNoteImage7: {fileID: 1930075491}
-  LoreNoteImage8: {fileID: 651611785}
+  LoreNoteText1: {fileID: 706348857}
+  LoreNoteText2: {fileID: 487289363}
+  LoreNoteText3: {fileID: 2053684371}
+  LoreNoteText4: {fileID: 2097308125}
+  LoreNoteText5: {fileID: 1104907887}
+  LoreNoteText6: {fileID: 1394152357}
+  LoreNoteText7: {fileID: 1396320544}
+  LoreNoteText8: {fileID: 2032870164}
+  LoreNoteImage1: {fileID: 394660549}
+  LoreNoteImage2: {fileID: 355056953}
+  LoreNoteImage3: {fileID: 1944701200}
+  LoreNoteImage4: {fileID: 1734213363}
+  LoreNoteImage5: {fileID: 1713234610}
+  LoreNoteImage6: {fileID: 1126907345}
+  LoreNoteImage7: {fileID: 1930075493}
+  LoreNoteImage8: {fileID: 651611787}
 --- !u!4 &1606585045
 Transform:
   m_ObjectHideFlags: 0
@@ -5634,7 +5634,7 @@ GameObject:
   - component: {fileID: 2032870165}
   - component: {fileID: 2032870164}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LN8 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5770,7 +5770,7 @@ GameObject:
   - component: {fileID: 2053684372}
   - component: {fileID: 2053684371}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LN3 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5906,7 +5906,7 @@ GameObject:
   - component: {fileID: 2097308126}
   - component: {fileID: 2097308125}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LN4 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,21 +13,38 @@ public class LoreNoteCheck : MonoBehaviour
     public bool LoreNote7 = false;
     public bool LoreNote8 = false;
 
-    public TextMeshPro LoreNoteText1;
-    public TextMeshPro LoreNoteText2;
-    public TextMeshPro LoreNoteText3;
-    public TextMeshPro LoreNoteText4;
-    public TextMeshPro LoreNoteText5;
-    public TextMeshPro LoreNoteText6;
-    public TextMeshPro LoreNoteText7;
-    public TextMeshPro LoreNoteText8;
+    public TMP_Text LoreNoteText1;
+    public TMP_Text LoreNoteText2;
+    public TMP_Text LoreNoteText3;
+    public TMP_Text LoreNoteText4;
+    public TMP_Text LoreNoteText5;
+    public TMP_Text LoreNoteText6;
+    public TMP_Text LoreNoteText7;
+    public TMP_Text LoreNoteText8;
 
-    public GameObject LoreNoteImage1;
-    public GameObject LoreNoteImage2;
-    public GameObject LoreNoteImage3;
-    public GameObject LoreNoteImage4;
-    public GameObject LoreNoteImage5;
-    public GameObject LoreNoteImage6;
-    public GameObject LoreNoteImage7;
-    public GameObject LoreNoteImage8;
+    public Button LoreNoteImage1;
+    public Button LoreNoteImage2;
+    public Button LoreNoteImage3;
+    public Button LoreNoteImage4;
+    public Button LoreNoteImage5;
+    public Button LoreNoteImage6;
+    public Button LoreNoteImage7;
+    public Button LoreNoteImage8;
+
+    public void CheckLN1()
+    {
+        if (LoreNote1)
+        {
+            LoreNoteText1.text = "Lore Note 1";
+        }
+        else
+        {
+            LoreNoteText1.text = "LOCKED";
+        }
+    }
+
+    public void Update()
+    {
+        CheckLN1();
+    }
 }

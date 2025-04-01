@@ -10,7 +10,7 @@ public class MaskSwitching : MonoBehaviour
     public bool mask1Active;
 
     public KeyCode useMask;
-    public KeyCode noMask;
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,16 +34,19 @@ public class MaskSwitching : MonoBehaviour
             Equip3();
         }
 
-        if (Input.GetKeyDown(useMask) && Mask1.enabled == true && mask1Active == false)
+        if (Input.GetKeyDown(useMask) && Mask1.enabled == true)
         {
-            GetComponent<PlayerMovement>().moveSpeed = 50;
+            GetComponent<PlayerMovement>().moveSpeed = 20;
             mask1Active = true;
         }
-        if (Input.GetKeyDown(noMask) && Mask1.enabled && mask1Active == true)
+        else if (Input.GetKeyDown(useMask) && mask1Active == true)
         {
-            GetComponent<PlayerMovement>().moveSpeed = 7;
+            GetComponent<PlayerMovement>().moveSpeed = 8;
             mask1Active = false;
+
         }
+
+
     }
 
     void Equip1()
