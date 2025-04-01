@@ -14,6 +14,7 @@ public class PlayerCam : MonoBehaviour
     public int target = 120;
 
     public bullet_create bullet_Create;
+    public ui ui;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class PlayerCam : MonoBehaviour
 
     private void Start()
     {
+        ui = FindFirstObjectByType<ui>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -38,5 +40,17 @@ public class PlayerCam : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+        Physics.Raycast(transform.position, transform.forward, out RaycastHit HitInfo, 10f);
+        if (HitInfo.collider.CompareTag("camera"))
+        {
+            ui.info_text.text = "Security Camera";
+            ui.info_text2.text = "Hit with Shovel to disable";
+        }
+        else
+        {
+            ui.info_text.text = "";
+            ui.info_text2.text = "";
+        }
+            Debug.Log(HitInfo.collider.name);
     }
 }
