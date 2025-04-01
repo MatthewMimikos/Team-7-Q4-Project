@@ -34,18 +34,6 @@ public class camera : MonoBehaviour
             Quaternion rotation = Quaternion.LookRotation(direction);
             Debug.Log(rotation.eulerAngles);
             my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.y + player_camera.transform.eulerAngles.y);
-
-            // if (my_detection_visual.transform.rotation.z != Vector3.Angle(actual_camera.transform.position, player.transform.position))
-            //{
-            //my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, Vector3.Angle(player.transform.position, actual_camera.transform.position) + player_camera.transform.eulerAngles.y);
-            //Debug.Log(Vector3.Angle(player.transform.position, actual_camera.transform.position) - player_camera.transform.eulerAngles.y);
-
-
-            //var screenPos = Camera.main.WorldToScreenPoint(transform.position);
-            //var arrowPos = player.transform.position;
-            //var direction = screenPos - arrowPos;
-            //my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, direction.z);
-            // }
         }
     }
     private void OnDrawGizmos()

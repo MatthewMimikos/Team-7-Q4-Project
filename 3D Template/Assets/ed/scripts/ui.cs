@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class ui : MonoBehaviour
@@ -29,6 +30,8 @@ public class ui : MonoBehaviour
     We're in!
     */
     public GameObject crosshair;
+
+    public TMP_Text fps;
     void Start()
     {
         
@@ -37,6 +40,7 @@ public class ui : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        float my_fps = Time.frameCount / Time.time;
+        fps.text = my_fps.ToString() + " FPS";
     }
 }
