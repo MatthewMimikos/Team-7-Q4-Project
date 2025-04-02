@@ -19,10 +19,11 @@ public class enemy : MonoBehaviour
     public GameObject coolcultmember;
     public int health = 100;
     public int type = 0;
-
+    private GameObject gamemanager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gamemanager = GameObject.Find("gamemanager");
         player = GameObject.Find("Player");
         type = Random.Range(0, 6);
         miner.SetActive(false);
@@ -81,16 +82,19 @@ public class enemy : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (can_attack == true && type == 1 || can_attack == true && type == 2)
+        if (gamemanager.GetComponent<gamemanager>().is_detected)
         {
-            for (int i = 0; i < 8; i++)
+            if (can_attack == true && type == 1 || can_attack == true && type == 2)
             {
-                GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
-                new_bullet.GetComponent<bullet>().from_enemy = true;
-                new_bullet.transform.LookAt(player.transform.position);
-                new_bullet.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
+                for (int i = 0; i < 8; i++)
+                {
+                    GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
+                    new_bullet.GetComponent<bullet>().from_enemy = true;
+                    new_bullet.transform.LookAt(player.transform.position);
+                    new_bullet.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
+                }
+                StartCoroutine(EnterCooldown());
             }
-            StartCoroutine(EnterCooldown());
         }
     }
     private IEnumerator EnterCooldown()

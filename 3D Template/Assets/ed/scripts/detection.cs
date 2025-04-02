@@ -16,9 +16,12 @@ public class camera : MonoBehaviour
     private float detection_amount = 0;
 
     private bool fully_detected = false;
+
+    private GameObject gamemanager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gamemanager = GameObject.Find("gamemanager");
         player = GameObject.Find("Player");
         player_camera = GameObject.Find("PlayerCam");
         ui = FindFirstObjectByType<ui>();
@@ -39,23 +42,12 @@ public class camera : MonoBehaviour
                         new_detection.transform.SetParent(ui.crosshair.transform);
                         my_detection_visual = new_detection.gameObject;
                     }
-                    Vector3 direction = actual_camera.transform.position - player.transform.position;
-                    Quaternion rotation = Quaternion.LookRotation(direction);
-                    Debug.Log(rotation.eulerAngles);
-                    my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.y + player_camera.transform.eulerAngles.y);
-                    detection_amount += 40 * Time.deltaTime;
-                    detection_amount = Mathf.Clamp(detection_amount, 0, 255);
-                    my_detection_visual.GetComponentInChildren<RawImage>().color = new Color32(255, 255, 225, (byte)detection_amount);
-                }
-                else
-                {
-                    Vector3 direction = actual_camera.transform.position - player.transform.position;
-                    Quaternion rotation = Quaternion.LookRotation(direction);
-                    Debug.Log(rotation.eulerAngles);
-                    my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.y + player_camera.transform.eulerAngles.y);
-                    if (detection_amount <= 254)
+                    if (!fully_detected)
                     {
-                        detection_amount -= 40 * Time.deltaTime;
+                        Vector3 direction = actual_camera.transform.position - player.transform.position;
+                        Quaternion rotation = Quaternion.LookRotation(direction);
+                        my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.y + player_camera.transform.eulerAngles.y);
+                        detection_amount += 80 * Time.deltaTime;
                         detection_amount = Mathf.Clamp(detection_amount, 0, 255);
                         my_detection_visual.GetComponentInChildren<RawImage>().color = new Color32(255, 255, 225, (byte)detection_amount);
                         if (detection_amount >= 254)
@@ -65,8 +57,21 @@ public class camera : MonoBehaviour
                     }
                     if (fully_detected)
                     {
+                        gamemanager.GetComponent<gamemanager>().detected();
+                        Vector3 direction = actual_camera.transform.position - player.transform.position;
+                        Quaternion rotation = Quaternion.LookRotation(direction);
+                        my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.y + player_camera.transform.eulerAngles.y);
                         my_detection_visual.GetComponentInChildren<RawImage>().color = new Color32(255, 0, 0, 255);
                     }
+                }
+                else
+                {
+                    Vector3 direction = actual_camera.transform.position - player.transform.position;
+                    Quaternion rotation = Quaternion.LookRotation(direction);
+                    my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.y + player_camera.transform.eulerAngles.y);
+                    detection_amount -= 80 * Time.deltaTime;
+                    detection_amount = Mathf.Clamp(detection_amount, 0, 255);
+                    my_detection_visual.GetComponentInChildren<RawImage>().color = new Color32(255, 255, 225, (byte)detection_amount);
                 }
             }
         }
@@ -76,7 +81,7 @@ public class camera : MonoBehaviour
             Quaternion rotation = Quaternion.LookRotation(direction);
             Debug.Log(rotation.eulerAngles);
             my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.y + player_camera.transform.eulerAngles.y);
-            detection_amount -= 40 * Time.deltaTime;
+            detection_amount -= 80 * Time.deltaTime;
             detection_amount = Mathf.Clamp(detection_amount, 0, 255);
             my_detection_visual.GetComponentInChildren<RawImage>().color = new Color32(255, 255, 225, (byte)detection_amount);
         }

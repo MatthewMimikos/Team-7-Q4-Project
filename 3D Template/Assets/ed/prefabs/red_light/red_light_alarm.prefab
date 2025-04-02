@@ -280,7 +280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8615835647904700072
 Transform:
   m_ObjectHideFlags: 0
@@ -1123,6 +1123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6597596817017344109}
+  - component: {fileID: 6743894136190812818}
   m_Layer: 0
   m_Name: red_light_alarm
   m_TagString: Untagged
@@ -1147,6 +1148,19 @@ Transform:
   - {fileID: 8615835647904700072}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6743894136190812818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7257368347067015614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d63dfb9a485e7ba40b95686da1364256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights: {fileID: 2644597562307600564}
 --- !u!1001 &2821604613897471288
 PrefabInstance:
   m_ObjectHideFlags: 0
