@@ -297,6 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_detected: 0
+  animator: {fileID: 693576949}
 --- !u!4 &387352086
 Transform:
   m_ObjectHideFlags: 0
@@ -565,6 +566,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 493529385}
   m_SourcePrefab: {fileID: 100100000, guid: 1b9cb0427a8892f4e8d772a5d318456a, type: 3}
+--- !u!95 &693576949 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1374716264068301472, guid: 1bb85d569d5edb74caa5f0faa65e23d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2101641203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1082264050
 GameObject:
   m_ObjectHideFlags: 1

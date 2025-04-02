@@ -3,7 +3,14 @@ using UnityEngine;
 public class gamemanager : MonoBehaviour
 {
     public bool is_detected = false;
+    private GameObject ui;
+    public Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private void Start()
+    {
+        ui = GameObject.Find("ui");
+    }
     public void detected()
     {
         PlayMusic();
@@ -18,6 +25,8 @@ public class gamemanager : MonoBehaviour
     {
         if (!is_detected)
         {
+            Debug.Log("detected");
+            animator.SetTrigger("event text");
             GetComponent<AudioSource>().Play();
         }
     }
