@@ -259,7 +259,7 @@ MonoBehaviour:
   volumeAnchorOverride: {fileID: 0}
   antialiasing: 0
   SMAAQuality: 2
-  dithering: 0
+  dithering: 1
   stopNaNs: 0
   taaSharpenStrength: 0.5
   TAAQuality: 1
@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 407761995341191900}
   - component: {fileID: 932087872383904474}
   - component: {fileID: 308163733497612966}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
