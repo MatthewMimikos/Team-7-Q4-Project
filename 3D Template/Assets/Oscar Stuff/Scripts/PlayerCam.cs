@@ -46,6 +46,11 @@ public class PlayerCam : MonoBehaviour
             ui.info_text.text = "Security Camera";
             ui.info_text2.text = "Hit with Shovel to disable";
         }
+        else if (HitInfo.collider.CompareTag("dropped_shovel"))
+        {
+            ui.info_text.text = "Shovel";
+            ui.info_text2.text = "Press E to pick up";
+        }
         else
         {
             ui.info_text.text = "";
