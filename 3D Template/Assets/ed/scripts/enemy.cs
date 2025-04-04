@@ -1,16 +1,16 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class enemy : MonoBehaviour
 {
-    Vector3 cameradirection;
     public GameObject player;
     public GameObject bullet;
 
     private bool can_attack = true;
+    public bool is_camera_guy = false;
     public GameObject attack_transform;
 
-    public GameObject sprite;
     public GameObject miner;
     public GameObject guard;
     public GameObject elite_guard;
@@ -20,6 +20,8 @@ public class enemy : MonoBehaviour
     public int health = 100;
     public int type = 0;
     private GameObject gamemanager;
+    public detection detection;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,37 +37,37 @@ public class enemy : MonoBehaviour
         if (type == 0)
         {
             miner.SetActive(true);
-            sprite = miner;
+            GetComponent<billboard_sprite>().sprite = miner;
             health = 50;
         }
         if (type == 1)
         {
             guard.SetActive(true);
-            sprite = guard;
+            GetComponent<billboard_sprite>().sprite = guard;
             health = 125;
         }
         if (type == 2)
         {
             elite_guard.SetActive(true);
-            sprite = elite_guard;
+            GetComponent<billboard_sprite>().sprite = elite_guard;
             health = 325;
         }
         if (type == 3)
         {
             rifle.SetActive(true);
-            sprite = rifle;
+            GetComponent<billboard_sprite>().sprite = rifle;
             health = 100;
         }
         if (type == 4)
         {
             cultmember.SetActive(true);
-            sprite = cultmember;
+            GetComponent<billboard_sprite>().sprite = cultmember;
             health = 125;
         }
         if (type == 5)
         {
             coolcultmember.SetActive(true);
-            sprite = coolcultmember;
+            GetComponent<billboard_sprite>().sprite = coolcultmember;
             health = 200;
         }
     }
@@ -73,12 +75,13 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cameradirection = Camera.main.transform.forward;
-        cameradirection.y = 0;
-        sprite.transform.rotation = Quaternion.LookRotation(cameradirection);
-
         if (health <= 0)
         {
+            if (is_camera_guy)
+            {
+                gamemanager.GetComponent<gamemanager>().DisableCameras();
+            }
+            Destroy(detection.my_detection_visual);
             Destroy(gameObject);
         }
 
@@ -97,6 +100,7 @@ public class enemy : MonoBehaviour
             }
         }
     }
+
     private IEnumerator EnterCooldown()
     {
         can_attack = false;
