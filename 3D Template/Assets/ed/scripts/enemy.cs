@@ -81,8 +81,11 @@ public class enemy : MonoBehaviour
             {
                 gamemanager.GetComponent<gamemanager>().DisableCameras();
             }
-            Destroy(detection.my_detection_visual);
-            Destroy(gameObject);
+            if (detection.my_detection_visual != null)
+            {
+                Destroy(detection.my_detection_visual);
+                Destroy(gameObject);
+            }
         }
 
         if (gamemanager.GetComponent<gamemanager>().is_detected)

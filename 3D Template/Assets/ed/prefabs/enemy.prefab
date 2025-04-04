@@ -691,6 +691,7 @@ MonoBehaviour:
   coolcultmember: {fileID: 6560633266848970219}
   health: 100
   type: 0
+  detection: {fileID: 6494183383225902511}
 --- !u!136 &18958240358405623
 CapsuleCollider:
   m_ObjectHideFlags: 0

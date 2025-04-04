@@ -20,7 +20,7 @@ public class bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemy") && from_enemy == false)
         {
-            other.gameObject.GetComponent<enemy>().health -= 20;
+            other.gameObject.GetComponent<enemy>().health -= 25;
         }
     }
     private void Awake()
