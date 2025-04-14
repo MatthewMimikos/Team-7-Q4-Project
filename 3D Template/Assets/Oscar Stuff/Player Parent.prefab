@@ -745,6 +745,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1025
   orientation: {fileID: 1103243833669211420}
+  ani: {fileID: 2204946354902019321}
 --- !u!136 &4140616707424625421
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -38,13 +38,14 @@ public class PlayerMovement : MonoBehaviour
     float verticalInput;
 
     Vector3 moveDirection;
-
+    public Animator ani;
     Rigidbody rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        
 
         readyToJump = true;
 
@@ -53,6 +54,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (horizontalInput != 0 || verticalInput != 0)
+        {
+            ani.SetBool("Moving", true);
+        }
+        else
+        {
+            ani.SetBool("Moving", false);
+        }
+            
+
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
 

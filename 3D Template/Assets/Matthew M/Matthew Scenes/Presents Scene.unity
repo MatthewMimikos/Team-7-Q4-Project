@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff616145e9502e14bab2396d81244feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thescene: Title Screen
+  thescene: game
   wait: 2
 --- !u!4 &588051421
 Transform:
