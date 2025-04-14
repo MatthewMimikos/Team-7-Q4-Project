@@ -28,7 +28,6 @@ public class detection : MonoBehaviour
         gamemanager = GameObject.Find("gamemanager");
         player = GameObject.Find("Player");
         player_camera = GameObject.Find("PlayerCam");
-        ui = FindFirstObjectByType<ui>();
     }
 
     // Update is called once per frame
@@ -42,6 +41,7 @@ public class detection : MonoBehaviour
                 {
                     if (my_detection_visual == null && !disabled)
                     {
+                        ui = FindFirstObjectByType<ui>();
                         GameObject new_detection = Instantiate(detection_visual, ui.transform.position, Quaternion.identity);
                         new_detection.transform.SetParent(ui.crosshair.transform);
                         my_detection_visual = new_detection.gameObject;
