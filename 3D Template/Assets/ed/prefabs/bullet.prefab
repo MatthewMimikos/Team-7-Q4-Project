@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   from_enemy: 0
+  player: {fileID: 0}
 --- !u!33 &3161949925959128339
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -115,7 +116,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0

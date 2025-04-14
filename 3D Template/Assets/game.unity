@@ -296,8 +296,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346c95b64778fc649a36be679e02c119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  event_text: {fileID: 693576950}
   is_detected: 0
   animator: {fileID: 693576949}
+  cameraguy1alive: 1
 --- !u!4 &387352086
 Transform:
   m_ObjectHideFlags: 0
@@ -484,7 +486,7 @@ PrefabInstance:
     - target: {fileID: 3563776157789037578, guid: 1b9cb0427a8892f4e8d772a5d318456a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.77
+      value: -17.07
       objectReference: {fileID: 0}
     - target: {fileID: 3563776157789037578, guid: 1b9cb0427a8892f4e8d772a5d318456a,
         type: 3}
@@ -494,7 +496,7 @@ PrefabInstance:
     - target: {fileID: 3563776157789037578, guid: 1b9cb0427a8892f4e8d772a5d318456a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.97
+      value: -31.069998
       objectReference: {fileID: 0}
     - target: {fileID: 3563776157789037578, guid: 1b9cb0427a8892f4e8d772a5d318456a,
         type: 3}
@@ -556,6 +558,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7424449263912632622, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 728782731559228178, guid: 1b9cb0427a8892f4e8d772a5d318456a, type: 3}
     m_RemovedGameObjects: []
@@ -572,6 +579,18 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 2101641203}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &693576950 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 885825032526408951, guid: 1bb85d569d5edb74caa5f0faa65e23d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2101641203}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1082264050
 GameObject:
   m_ObjectHideFlags: 1

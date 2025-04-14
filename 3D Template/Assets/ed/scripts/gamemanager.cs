@@ -1,15 +1,18 @@
+using TMPro;
 using UnityEngine;
 
 public class gamemanager : MonoBehaviour
 {
+    public TMP_Text event_text;
     public bool is_detected = false;
     private GameObject ui;
     public Animator animator;
+    public bool cameraguy1alive = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private void Start()
     {
-        ui = GameObject.Find("ui");
+    
     }
     public void detected()
     {
@@ -25,9 +28,20 @@ public class gamemanager : MonoBehaviour
     {
         if (!is_detected)
         {
-            Debug.Log("detected");
-            animator.SetTrigger("event text");
+            event_text.text = "A guard detected you!";
+            animator.SetTrigger("red_text");
             GetComponent<AudioSource>().Play();
         }
+    }
+    public void DisableCameras()
+    {
+        detection[] cameras = FindObjectsByType<detection>(FindObjectsSortMode.None);
+        for (int i = 0; i < cameras.Length; i++)
+        {
+            cameras[i].Disable();
+        }
+        event_text.text = "Camera operator downed, all cameras have been disabled";
+        animator.SetTrigger("normal_text");
+        cameraguy1alive = false;
     }
 }

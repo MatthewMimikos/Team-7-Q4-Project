@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
     [Header("Movement")]
     public float moveSpeed;
 
@@ -103,8 +104,9 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         // on ground
-        if (grounded)
+        if (grounded) 
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            
 
         // in air
         else if (!grounded)
