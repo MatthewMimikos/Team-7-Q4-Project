@@ -1798,7 +1798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WaitTime: 1.5
-  scene: Title Screen
+  scene: game
   Image: {fileID: 1599638343}
 --- !u!4 &744835688
 Transform:
