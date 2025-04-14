@@ -51,7 +51,7 @@ public class detection : MonoBehaviour
                         Vector3 direction = actual_camera.transform.position - player.transform.position;
                         Quaternion rotation = Quaternion.LookRotation(direction);
                         my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.y + player_camera.transform.eulerAngles.y);
-                        detection_amount += 80 * Time.deltaTime;
+                        detection_amount += 240 * Time.deltaTime;
                         detection_amount = Mathf.Clamp(detection_amount, 0, 255);
                         my_detection_visual.GetComponentInChildren<RawImage>().color = new Color32(255, 255, 225, (byte)detection_amount);
                         if (detection_amount >= 254)
