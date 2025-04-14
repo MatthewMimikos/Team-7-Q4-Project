@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class ui : MonoBehaviour
@@ -28,6 +29,11 @@ public class ui : MonoBehaviour
     Alright, light that dynamite near that security door. Make sure the guards don't blow out the fuse
     We're in!
     */
+
+    //Song: Floatinurboat x Chris Linton - Holding On [NCS Release]
+    //Music provided by NoCopyrightSounds
+//Free Download/Stream: http://ncs.io/HoldingOn
+//Watch: http://youtu.be/X5n9OwR6taQ
     public GameObject crosshair;
 
     public TMP_Text fps;

@@ -298,6 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   event_text: {fileID: 0}
   is_detected: 0
+  ui: {fileID: 0}
   animator: {fileID: 0}
   cameraguy1alive: 1
 --- !u!4 &387352086
@@ -323,6 +324,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1025813787341150188, guid: 3478fc7ac4e07204cbb2fc08e5052379,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 387352085}
     - target: {fileID: 1025813787341150188, guid: 3478fc7ac4e07204cbb2fc08e5052379,
         type: 3}
       propertyPath: playercamera
