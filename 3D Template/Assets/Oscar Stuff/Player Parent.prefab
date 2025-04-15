@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 308163733497612966}
   - component: {fileID: 2204946354902019321}
   m_Layer: 6
-  m_Name: Plane
+  m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -656,13 +656,14 @@ GameObject:
   m_Component:
   - component: {fileID: 602998045910679048}
   - component: {fileID: 7061290794789386734}
+  - component: {fileID: 2918202869362205005}
   m_Layer: 0
   m_Name: Bigger Shovel sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &602998045910679048
 Transform:
   m_ObjectHideFlags: 0
@@ -733,6 +734,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2918202869362205005
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999506361739455418}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a7482a26eb95604d869ecafd4fabfed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6024366469592098274
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +897,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1025
   orientation: {fileID: 1103243833669211420}
-  ani: {fileID: 2204946354902019321}
+  gun: {fileID: 0}
+  shovel: {fileID: 0}
 --- !u!136 &4140616707424625421
 CapsuleCollider:
   m_ObjectHideFlags: 0
