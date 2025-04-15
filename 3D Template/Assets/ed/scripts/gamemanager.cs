@@ -5,14 +5,15 @@ public class gamemanager : MonoBehaviour
 {
     public TMP_Text event_text;
     public bool is_detected = false;
-    private GameObject ui;
+    public GameObject ui;
     public Animator animator;
     public bool cameraguy1alive = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    private void Start()
+    public void begingame()
     {
-    
+        animator = GameObject.Find("event_text").GetComponent<Animator>();
+        event_text = GameObject.Find("event_text").GetComponent<TMP_Text>();
     }
     public void detected()
     {

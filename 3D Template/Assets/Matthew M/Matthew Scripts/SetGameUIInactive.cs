@@ -7,6 +7,7 @@ public class SetGameUIInactive : MonoBehaviour
     public bool CheckStart = false;
     public PlayerCam playercamera;
     public PlayerMovement PlayerMovement;
+    public gamemanager manager;
 
     public void Start()
     {
@@ -25,5 +26,7 @@ public class SetGameUIInactive : MonoBehaviour
         GameObject newUI = Instantiate(UI);
         playercamera.enabled = true;
         PlayerMovement.enabled = true;
+        manager.ui = newUI;
+        manager.begingame();
     }
 }
