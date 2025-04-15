@@ -6,6 +6,9 @@ public class LoreNoteReading : MonoBehaviour
 {
     public GameObject LoreMenu;
     public GameObject LoreReading;
+    public TMP_Text LoreNoteName;
+    public TMP_Text LoreNoteContent;
+
     public bool LoreNote1;
     public bool LoreNote2;
     public bool LoreNote3;
@@ -24,6 +27,24 @@ public class LoreNoteReading : MonoBehaviour
     public TMP_Text LoreNoteText7;
     public TMP_Text LoreNoteText8;
 
+    public string LoreNoteTitle1;
+    public string LoreNoteTitle2;
+    public string LoreNoteTitle3;
+    public string LoreNoteTitle4;
+    public string LoreNoteTitle5;
+    public string LoreNoteTitle6;
+    public string LoreNoteTitle7;
+    public string LoreNoteTitle8;
+
+    public string LoreNoteContent1;
+    public string LoreNoteContent2;
+    public string LoreNoteContent3;
+    public string LoreNoteContent4;
+    public string LoreNoteContent5;
+    public string LoreNoteContent6;
+    public string LoreNoteContent7;
+    public string LoreNoteContent8;
+
     public void Start()
     {
         LoreReading.SetActive(false);
@@ -40,6 +61,13 @@ public class LoreNoteReading : MonoBehaviour
     public void Update()
     {
         LoreText1();
+        LoreText2();
+        LoreText3();
+        LoreText4();
+        LoreText5();
+        LoreText6();
+        LoreText7();
+        LoreText8();
     }
 
     public void OpenLore1()
@@ -48,10 +76,8 @@ public class LoreNoteReading : MonoBehaviour
         {
             LoreMenu.SetActive(false);
             LoreReading.SetActive(true);
-        }
-        else
-        {
-            Console.WriteLine("You don't have that lore note.");
+            LoreNoteName.text = LoreNoteTitle1;
+            LoreNoteContent.text = LoreNoteContent1;
         }
     }
 
@@ -61,6 +87,8 @@ public class LoreNoteReading : MonoBehaviour
         {
             LoreMenu.SetActive(false);
             LoreReading.SetActive(true);
+            LoreNoteName.text = LoreNoteTitle2;
+            LoreNoteContent.text = LoreNoteContent2;
         }
     }
 
@@ -70,6 +98,8 @@ public class LoreNoteReading : MonoBehaviour
         {
             LoreMenu.SetActive(false);
             LoreReading.SetActive(true);
+            LoreNoteName.text = LoreNoteTitle3;
+            LoreNoteContent.text = LoreNoteContent3;
         }
     }
 
@@ -79,6 +109,8 @@ public class LoreNoteReading : MonoBehaviour
         {
             LoreMenu.SetActive(false);
             LoreReading.SetActive(true);
+            LoreNoteName.text = LoreNoteTitle4;
+            LoreNoteContent.text = LoreNoteContent4;
         }
     }
 
@@ -88,6 +120,8 @@ public class LoreNoteReading : MonoBehaviour
         {
             LoreMenu.SetActive(false);
             LoreReading.SetActive(true);
+            LoreNoteName.text = LoreNoteTitle5;
+            LoreNoteContent.text = LoreNoteContent5;
         }
     }
 
@@ -97,6 +131,8 @@ public class LoreNoteReading : MonoBehaviour
         {
             LoreMenu.SetActive(false);
             LoreReading.SetActive(true);
+            LoreNoteName.text = LoreNoteTitle6;
+            LoreNoteContent.text = LoreNoteContent6;
         }
     }
 
@@ -106,6 +142,8 @@ public class LoreNoteReading : MonoBehaviour
         {
             LoreMenu.SetActive(false);
             LoreReading.SetActive(true);
+            LoreNoteName.text = LoreNoteTitle7;
+            LoreNoteContent.text = LoreNoteContent7;
         }
     }
 
@@ -115,6 +153,8 @@ public class LoreNoteReading : MonoBehaviour
         {
             LoreMenu.SetActive(false);
             LoreReading.SetActive(true);
+            LoreNoteName.text = LoreNoteTitle8;
+            LoreNoteContent.text = LoreNoteContent8;
         }
     }
 
