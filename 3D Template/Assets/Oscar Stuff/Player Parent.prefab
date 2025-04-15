@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 6385819527400756442}
   - component: {fileID: 6168784608161456314}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: dont delete this
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,7 +221,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 731aa8580f5e6b64db7d0ce9aa14a674, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -897,8 +897,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1025
   orientation: {fileID: 1103243833669211420}
-  gun: {fileID: 0}
-  shovel: {fileID: 0}
+  gun: {fileID: 2204946354902019321}
+  shovel: {fileID: 2918202869362205005}
 --- !u!136 &4140616707424625421
 CapsuleCollider:
   m_ObjectHideFlags: 0

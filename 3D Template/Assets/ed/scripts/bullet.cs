@@ -1,3 +1,4 @@
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
 public class bullet : MonoBehaviour
@@ -22,6 +23,10 @@ public class bullet : MonoBehaviour
         if (other.gameObject.CompareTag("enemy") && from_enemy == false)
         {
             other.gameObject.GetComponent<enemy>().health -= 25;
+        }
+        if (other.gameObject.CompareTag("window"))
+        {
+            other.gameObject.GetComponent<breakablewindow>().wow();
         }
     }
     private void Awake()
