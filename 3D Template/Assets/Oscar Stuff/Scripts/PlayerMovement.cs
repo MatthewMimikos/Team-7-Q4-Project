@@ -38,7 +38,8 @@ public class PlayerMovement : MonoBehaviour
     float verticalInput;
 
     Vector3 moveDirection;
-    public Animator ani;
+    public Animator gun;
+    public Animator shovel;
     Rigidbody rb;
 
     private void Start()
@@ -56,11 +57,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (horizontalInput != 0 || verticalInput != 0)
         {
-            ani.SetBool("Moving", true);
+            gun.SetBool("Moving", true);
+            shovel.SetBool("Moving", true);
         }
         else
         {
-            ani.SetBool("Moving", false);
+            gun.SetBool("Moving", false);
+            shovel.SetBool("Moving", false);
         }
             
 

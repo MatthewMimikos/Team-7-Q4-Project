@@ -391,12 +391,12 @@ GameObject:
   - component: {fileID: 308163733497612966}
   - component: {fileID: 2204946354902019321}
   m_Layer: 6
-  m_Name: Plane
+  m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &407761995341191900
 Transform:
   m_ObjectHideFlags: 0
@@ -768,7 +768,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1025
   orientation: {fileID: 1103243833669211420}
-  ani: {fileID: 2204946354902019321}
+  gun: {fileID: 0}
+  shovel: {fileID: 0}
 --- !u!136 &4140616707424625421
 CapsuleCollider:
   m_ObjectHideFlags: 0
