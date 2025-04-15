@@ -5,7 +5,7 @@ public class billboard_sprite : MonoBehaviour
 {
     public GameObject sprite;
     Vector3 cameradirection;
- 
+    
     void Update()
     {
         cameradirection = Camera.main.transform.forward;

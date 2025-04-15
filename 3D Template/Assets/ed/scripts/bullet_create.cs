@@ -6,19 +6,20 @@ public class bullet_create : MonoBehaviour
     public Transform playertransform;
     public Transform cameratransform;
     public Vector3 raycastpoint;
+    public PlayerCam playercamera;
     void Start()
     {
-        
+        playercamera = FindFirstObjectByType<PlayerCam>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            transform.LookAt(raycastpoint);
+            transform.LookAt(playercamera.raycast_point);
             for (int i = 0; i < 8; i++)
             {
-                GameObject new_bullet = Instantiate(bullet, new Vector3(playertransform.position.x, playertransform.position.y - 0.15f, playertransform.position.z), cameratransform.rotation);
+                GameObject new_bullet = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
                 new_bullet.transform.Rotate(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
             }
         }

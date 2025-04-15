@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Rendering;
 
 public class enemy : MonoBehaviour
@@ -21,6 +22,8 @@ public class enemy : MonoBehaviour
     public int type = 0;
     private GameObject gamemanager;
     public detection detection;
+
+    public NavMeshAgent navigation;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -70,6 +73,7 @@ public class enemy : MonoBehaviour
             GetComponent<billboard_sprite>().sprite = coolcultmember;
             health = 200;
         }
+        navigation.destination = player.transform.position;
     }
 
     // Update is called once per frame
@@ -84,8 +88,8 @@ public class enemy : MonoBehaviour
             if (detection.my_detection_visual != null)
             {
                 Destroy(detection.my_detection_visual);
-                Destroy(gameObject);
             }
+            Destroy(gameObject);
         }
 
         if (gamemanager.GetComponent<gamemanager>().is_detected)

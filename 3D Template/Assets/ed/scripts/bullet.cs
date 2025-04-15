@@ -14,6 +14,7 @@ public class bullet : MonoBehaviour
     void Update()
     {
         transform.position += transform.forward * 150 * Time.deltaTime;
+        transform.Rotate(new Vector3(20 * Time.deltaTime, 0, 0));
     }
 
     private void OnTriggerEnter(Collider other)
