@@ -31,7 +31,7 @@ public class gamemanager : MonoBehaviour
         {
             event_text.text = "A guard detected you!";
             animator.SetTrigger("red_text");
-            GetComponent<AudioSource>().time = 34;
+            GetComponent<AudioSource>().time = 31.75f;
             GetComponent<AudioSource>().Play();
         }
     }
