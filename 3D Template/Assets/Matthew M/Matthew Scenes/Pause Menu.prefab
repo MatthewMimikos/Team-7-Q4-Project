@@ -4630,16 +4630,16 @@ MonoBehaviour:
   LoreNoteText6: {fileID: 119918850367628804}
   LoreNoteText7: {fileID: 8488474612625277250}
   LoreNoteText8: {fileID: 3769922802549096472}
-  LoreNoteTitle1: THE NETHER
-  LoreNoteTitle2: I... AM STEVE
-  LoreNoteTitle3: 
-  LoreNoteTitle4: 
-  LoreNoteTitle5: 
-  LoreNoteTitle6: 
-  LoreNoteTitle7: 
-  LoreNoteTitle8: 
-  LoreNoteContent1: ENDER PEARL
-  LoreNoteContent2: CHICKEN JOCKEY
+  LoreNoteTitle1: Lore Note 1
+  LoreNoteTitle2: Lore Note 2
+  LoreNoteTitle3: Lore Note 3
+  LoreNoteTitle4: Lore Note 4
+  LoreNoteTitle5: Lore Note 5
+  LoreNoteTitle6: Lore Note 6
+  LoreNoteTitle7: Lore Note 7
+  LoreNoteTitle8: Lore Note 8
+  LoreNoteContent1: 
+  LoreNoteContent2: 
   LoreNoteContent3: 
   LoreNoteContent4: 
   LoreNoteContent5: 
