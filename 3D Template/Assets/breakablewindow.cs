@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class breakablewindow : MonoBehaviour
@@ -15,9 +16,12 @@ public class breakablewindow : MonoBehaviour
     }
     public void wow()
     {
+        Debug.Log("broke_window");
+        GetComponent<BoxCollider>().enabled = false;
         foreach (Transform child in this.transform)
         {
-            child.gameObject.GetComponent<Rigidbody>().useGravity = true;
+            child.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            child.gameObject.GetComponent<Rigidbody>().AddTorque(new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f)));
         }
     }
 }
