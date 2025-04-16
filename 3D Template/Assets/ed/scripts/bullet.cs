@@ -14,7 +14,7 @@ public class bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * 150 * Time.deltaTime;
+        transform.position += transform.forward * 10 * Time.deltaTime;
         transform.Rotate(new Vector3(20 * Time.deltaTime, 0, 0));
     }
 
