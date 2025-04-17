@@ -8,6 +8,7 @@ public class LoreNoteReading : MonoBehaviour
     public GameObject LoreReading;
     public TMP_Text LoreNoteName;
     public TMP_Text LoreNoteContent;
+    public TMP_Text LoreNoteSigning;
 
     public bool LoreNote1;
     public bool LoreNote2;
@@ -45,6 +46,15 @@ public class LoreNoteReading : MonoBehaviour
     public string LoreNoteContent7;
     public string LoreNoteContent8;
 
+    public string WrittenBy1;
+    public string WrittenBy2;
+    public string WrittenBy3;
+    public string WrittenBy4;
+    public string WrittenBy5;
+    public string WrittenBy6;
+    public string WrittenBy7;
+    public string WrittenBy8;
+
     public void Start()
     {
         LoreReading.SetActive(false);
@@ -78,6 +88,7 @@ public class LoreNoteReading : MonoBehaviour
             LoreReading.SetActive(true);
             LoreNoteName.text = LoreNoteTitle1;
             LoreNoteContent.text = LoreNoteContent1;
+            LoreNoteSigning.text = WrittenBy1;
         }
     }
 
@@ -89,6 +100,7 @@ public class LoreNoteReading : MonoBehaviour
             LoreReading.SetActive(true);
             LoreNoteName.text = LoreNoteTitle2;
             LoreNoteContent.text = LoreNoteContent2;
+            LoreNoteSigning.text = WrittenBy2;
         }
     }
 
@@ -100,6 +112,7 @@ public class LoreNoteReading : MonoBehaviour
             LoreReading.SetActive(true);
             LoreNoteName.text = LoreNoteTitle3;
             LoreNoteContent.text = LoreNoteContent3;
+            LoreNoteSigning.text = WrittenBy3;
         }
     }
 
@@ -111,6 +124,7 @@ public class LoreNoteReading : MonoBehaviour
             LoreReading.SetActive(true);
             LoreNoteName.text = LoreNoteTitle4;
             LoreNoteContent.text = LoreNoteContent4;
+            LoreNoteSigning.text = WrittenBy4;
         }
     }
 
@@ -122,6 +136,7 @@ public class LoreNoteReading : MonoBehaviour
             LoreReading.SetActive(true);
             LoreNoteName.text = LoreNoteTitle5;
             LoreNoteContent.text = LoreNoteContent5;
+            LoreNoteSigning.text = WrittenBy5;
         }
     }
 
@@ -133,6 +148,7 @@ public class LoreNoteReading : MonoBehaviour
             LoreReading.SetActive(true);
             LoreNoteName.text = LoreNoteTitle6;
             LoreNoteContent.text = LoreNoteContent6;
+            LoreNoteSigning.text = WrittenBy6;
         }
     }
 
@@ -144,6 +160,7 @@ public class LoreNoteReading : MonoBehaviour
             LoreReading.SetActive(true);
             LoreNoteName.text = LoreNoteTitle7;
             LoreNoteContent.text = LoreNoteContent7;
+            LoreNoteSigning.text = WrittenBy7;
         }
     }
 
@@ -155,6 +172,7 @@ public class LoreNoteReading : MonoBehaviour
             LoreReading.SetActive(true);
             LoreNoteName.text = LoreNoteTitle8;
             LoreNoteContent.text = LoreNoteContent8;
+            LoreNoteSigning.text = WrittenBy8;
         }
     }
 

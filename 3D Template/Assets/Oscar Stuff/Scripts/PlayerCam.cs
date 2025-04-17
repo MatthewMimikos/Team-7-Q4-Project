@@ -17,6 +17,8 @@ public class PlayerCam : MonoBehaviour
     public ui ui;
     public Vector3 raycast_point;
 
+    public LayerMask layerMask;
+
     private void Awake()
     {
         Application.targetFrameRate = target;
@@ -42,12 +44,13 @@ public class PlayerCam : MonoBehaviour
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
-        Physics.Raycast(transform.position, transform.forward, out RaycastHit HitInfo, 100000f);
+        Physics.Raycast(transform.position, transform.forward, out RaycastHit HitInfo, 100000f, layerMask);
         raycast_point = HitInfo.point;
+
         if (HitInfo.collider.CompareTag("camera"))
         {
             ui.info_text.text = "Security Camera";
-            ui.info_text2.text = "Hit with Shovel to disable";
+            ui.info_text2.text = "Damage with weapon to disable";
         }
         else if (HitInfo.collider.CompareTag("dropped_shovel"))
         {
