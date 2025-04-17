@@ -1588,7 +1588,7 @@ GameObject:
   - component: {fileID: 2395773016867278458}
   - component: {fileID: 3762346103580470860}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Title Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1610,8 +1610,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000076293945}
-  m_SizeDelta: {x: 1329, y: 834.5358}
+  m_AnchoredPosition: {x: 0, y: 55.114334}
+  m_SizeDelta: {x: 1329, y: 779.4215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2395773016867278458
 CanvasRenderer:
@@ -1866,15 +1866,15 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1498134617568840018}
   - {fileID: 1419114855011376971}
+  - {fileID: 1498134617568840018}
   - {fileID: 8279598327058371803}
   - {fileID: 5525094675553995718}
   - {fileID: 3169902347629048583}
   - {fileID: 3326193892847124203}
+  - {fileID: 3765590831335429933}
   - {fileID: 2566451590656404381}
   - {fileID: 7719464805780841788}
-  - {fileID: 3765590831335429933}
   m_Father: {fileID: 3087180491956319717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

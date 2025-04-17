@@ -304,7 +304,11 @@ MonoBehaviour:
   raycast_point: {x: 0, y: 0, z: 0}
   layerMask:
     serializedVersion: 2
+<<<<<<< HEAD
+    m_Bits: 0
+=======
     m_Bits: 1353
+>>>>>>> 30bf654d4ebec8ab965109d8f9b8139866477b42
 --- !u!114 &3471659783714565118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,16 +889,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7694c45e0aac2454292398bbfdf0fb99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  walkSpeed: 7
+  sprintSpeed: 12
   groundDrag: 5
   jumpForce: 12
   jumpCooldown: 0.25
   airMultiplier: 0.4
   crouchSpeed: 2
   crouchYScale: 0.2
-  walkSpeed: 0
-  sprintSpeed: 0
   jumpKey: 32
+  sprintKey: 304
   crouchKey: 99
   playerHeight: 3
   whatIsGround:
@@ -903,6 +907,7 @@ MonoBehaviour:
   orientation: {fileID: 1103243833669211420}
   gun: {fileID: 2204946354902019321}
   shovel: {fileID: 2918202869362205005}
+  state: 0
 --- !u!136 &141435927267241272
 CapsuleCollider:
   m_ObjectHideFlags: 0
