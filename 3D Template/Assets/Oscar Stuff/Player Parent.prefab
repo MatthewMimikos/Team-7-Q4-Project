@@ -302,6 +302,9 @@ MonoBehaviour:
   bullet_Create: {fileID: 0}
   ui: {fileID: 0}
   raycast_point: {x: 0, y: 0, z: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1353
 --- !u!114 &3471659783714565118
 MonoBehaviour:
   m_ObjectHideFlags: 0
