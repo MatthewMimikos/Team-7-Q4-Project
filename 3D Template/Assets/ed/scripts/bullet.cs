@@ -28,6 +28,10 @@ public class bullet : MonoBehaviour
         {
             other.gameObject.GetComponent<breakablewindow>().wow();
         }
+        if (other.gameObject.CompareTag("Player"))
+        {
+            
+        }
         else
         {
             Destroy(gameObject);
