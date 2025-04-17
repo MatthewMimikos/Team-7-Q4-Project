@@ -2299,8 +2299,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00018310547, y: -180}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0.00060701, y: -180}
+  m_SizeDelta: {x: 228.72, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4903725871566635071
 CanvasRenderer:
@@ -2396,7 +2396,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0.27124023, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4710,7 +4710,7 @@ MonoBehaviour:
   LoreReading: {fileID: 168644062273195620}
   LoreNoteName: {fileID: 3812752203074251701}
   LoreNoteContent: {fileID: 8654650759643515480}
-  LoreNoteSigning: {fileID: 0}
+  LoreNoteSigning: {fileID: 3969087869349676336}
   LoreNote1: 0
   LoreNote2: 0
   LoreNote3: 0
@@ -4743,14 +4743,14 @@ MonoBehaviour:
   LoreNoteContent6: 
   LoreNoteContent7: 
   LoreNoteContent8: 
-  WrittenBy1: 
-  WrittenBy2: 
-  WrittenBy3: 
-  WrittenBy4: 
-  WrittenBy5: 
-  WrittenBy6: 
-  WrittenBy7: 
-  WrittenBy8: 
+  WrittenBy1: Sincerely, John Writing
+  WrittenBy2: Thanks, Obama
+  WrittenBy3: Your Pal, Homeless Guy Behind the Walmart
+  WrittenBy4: Sincerely, Sincerely
+  WrittenBy5: Good Riddance, Paul
+  WrittenBy6: Hope this reaches you before you die of Polio, John Polio
+  WrittenBy7: Sincerely, Julio Jones
+  WrittenBy8: Hope you like my cool hat, Spike Rosered from Mega Man X5
 --- !u!1 &8360556267856262011
 GameObject:
   m_ObjectHideFlags: 0
