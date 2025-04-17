@@ -663,7 +663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &602998045910679048
 Transform:
   m_ObjectHideFlags: 0
@@ -814,6 +814,7 @@ GameObject:
   - component: {fileID: 1855362620995530628}
   - component: {fileID: 6774422506898858150}
   - component: {fileID: 5753141569924104311}
+  - component: {fileID: 141435927267241272}
   - component: {fileID: 4140616707424625421}
   - component: {fileID: 25001110947590717}
   - component: {fileID: 5226927608904884246}
@@ -899,7 +900,7 @@ MonoBehaviour:
   orientation: {fileID: 1103243833669211420}
   gun: {fileID: 2204946354902019321}
   shovel: {fileID: 2918202869362205005}
---- !u!136 &4140616707424625421
+--- !u!136 &141435927267241272
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -918,8 +919,31 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.2
   m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &4140616707424625421
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6944541057997856593}
+  m_Material: {fileID: 13400000, guid: 06dd350f7e0ae964c81e1d674d32081a, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 1.9
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &25001110947590717
