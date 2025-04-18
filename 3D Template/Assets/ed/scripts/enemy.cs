@@ -73,7 +73,6 @@ public class enemy : MonoBehaviour
             GetComponent<billboard_sprite>().sprite = coolcultmember;
             health = 200;
         }
-        navigation.destination = player.transform.position;
     }
 
     // Update is called once per frame
@@ -105,6 +104,10 @@ public class enemy : MonoBehaviour
                 }
                 StartCoroutine(EnterCooldown());
             }
+        }
+        if (gamemanager.GetComponent<gamemanager>().is_detected == true)
+        {
+            navigation.destination = player.transform.position;
         }
     }
 

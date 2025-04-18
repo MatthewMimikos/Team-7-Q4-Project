@@ -22,6 +22,7 @@ public class breakablewindow : MonoBehaviour
         {
             child.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             child.gameObject.GetComponent<Rigidbody>().AddTorque(new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f)));
+            child.gameObject.transform.Rotate(new Vector3(Random.Range(-360f, 360f), Random.Range(-360f, 360f), Random.Range(-360f, 360f)));
         }
     }
 }

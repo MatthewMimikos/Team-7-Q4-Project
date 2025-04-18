@@ -23,16 +23,25 @@ public class bullet : MonoBehaviour
         {
             other.gameObject.GetComponent<enemy>().health -= 25;
         }
-        if (other.gameObject.CompareTag("window"))
+        else if (other.gameObject.CompareTag("window"))
         {
             other.gameObject.GetComponent<breakablewindow>().wow();
         }
-        if (other.gameObject.CompareTag("Player"))
+        else if (other.gameObject.CompareTag("detection"))
         {
             
         }
+        else if (other.gameObject.CompareTag("Player"))
+        {
+
+        }
+        else if (other.gameObject.CompareTag("enemy"))
+        {
+
+        }
         else
         {
+            Debug.Log(other);
             Destroy(gameObject);
         }
     }
