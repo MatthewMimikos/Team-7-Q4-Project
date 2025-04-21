@@ -6,6 +6,7 @@ public class IntroSceneChange : MonoBehaviour
 {
     public string thescene;
     public float wait;
+
     void Start()
     {
         StartCoroutine(IntroSwitch());
