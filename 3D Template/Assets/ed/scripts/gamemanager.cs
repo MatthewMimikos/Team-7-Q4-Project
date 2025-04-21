@@ -4,6 +4,7 @@ using UnityEngine;
 public class gamemanager : MonoBehaviour
 {
     public TMP_Text event_text;
+    public TMP_Text status_text;
     public bool is_detected = false;
     public GameObject ui;
     public Animator animator;
@@ -14,6 +15,7 @@ public class gamemanager : MonoBehaviour
     {
         animator = GameObject.Find("event_text").GetComponent<Animator>();
         event_text = GameObject.Find("event_text").GetComponent<TMP_Text>();
+        status_text = GameObject.Find("status_text").GetComponent<TMP_Text>();
     }
     public void detected()
     {
@@ -45,5 +47,23 @@ public class gamemanager : MonoBehaviour
         event_text.text = "Camera operator downed, all cameras have been disabled";
         animator.SetTrigger("normal_text");
         cameraguy1alive = false;
+    }
+    public void switch_mask(int mask_id)
+    {
+        if (mask_id == 1)
+        {
+            status_text.text = "Disguised as Miner";
+            status_text.color = Color.white;
+        }
+        if (mask_id == 2)
+        {
+            status_text.text = "Disguised as Guard";
+            status_text.color = Color.white;
+        }
+        if (mask_id == 3)
+        {
+            status_text.text = "Wrong Mask, Not Disguised";
+            status_text.color = Color.red;
+        }
     }
 }

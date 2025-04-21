@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ui : MonoBehaviour
 {
@@ -58,6 +59,9 @@ public class ui : MonoBehaviour
     public TMP_Text fps;
     public TMP_Text info_text;
     public TMP_Text info_text2;
+    public TMP_Text status_text;
+
+    public RawImage mask_texture;
     void Start()
     {
         
@@ -68,5 +72,10 @@ public class ui : MonoBehaviour
     {
         float my_fps = Time.frameCount / Time.time;
         fps.text = my_fps.ToString() + " FPS";
+    }
+
+    public void switch_mask(Texture2D mask)
+    {
+        mask_texture.texture = mask;
     }
 }

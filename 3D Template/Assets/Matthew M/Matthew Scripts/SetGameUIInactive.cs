@@ -7,6 +7,7 @@ public class SetGameUIInactive : MonoBehaviour
     public bool CheckStart = false;
     public PlayerCam playercamera;
     public PlayerMovement PlayerMovement;
+    public MaskSwitching MaskSwitching;
     public gamemanager manager;
 
     public void Start()
@@ -24,9 +25,10 @@ public class SetGameUIInactive : MonoBehaviour
         TitleScreen.SetActive(false);
         CheckStart = true;
         GameObject newUI = Instantiate(UI);
+        manager.ui = newUI;
         playercamera.enabled = true;
         PlayerMovement.enabled = true;
-        manager.ui = newUI;
+        MaskSwitching.enabled = true;
         manager.begingame();
     }
 }

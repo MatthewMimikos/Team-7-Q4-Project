@@ -613,6 +613,8 @@ MonoBehaviour:
   fps: {fileID: 7556927681937178485}
   info_text: {fileID: 4913884586858846508}
   info_text2: {fileID: 8538633104804212173}
+  status_text: {fileID: 1337508054314822613}
+  mask_texture: {fileID: 7706256142268433939}
 --- !u!1 &3898489248096450475
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +786,7 @@ GameObject:
   - component: {fileID: 5510846061295043841}
   - component: {fileID: 1337508054314822613}
   m_Layer: 0
-  m_Name: objective_info
+  m_Name: status_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -870,7 +872,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535

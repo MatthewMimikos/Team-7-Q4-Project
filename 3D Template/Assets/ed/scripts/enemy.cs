@@ -24,6 +24,7 @@ public class enemy : MonoBehaviour
     public detection detection;
 
     public NavMeshAgent navigation;
+    public LayerMask layerMask;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -95,14 +96,19 @@ public class enemy : MonoBehaviour
         {
             if (can_attack == true && type == 1 || can_attack == true && type == 2)
             {
-                for (int i = 0; i < 8; i++)
+                Physics.Raycast(transform.position, transform.position - player.transform.position, out RaycastHit hitInfo, 100f, layerMask);
+                Debug.Log(hitInfo);
+                if (hitInfo.transform.gameObject.CompareTag("Player"))
                 {
-                    GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
-                    new_bullet.GetComponent<bullet>().from_enemy = true;
-                    new_bullet.transform.LookAt(player.transform.position);
-                    new_bullet.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
+                    for (int i = 0; i < 8; i++)
+                    {
+                        GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
+                        new_bullet.GetComponent<bullet>().from_enemy = true;
+                        new_bullet.transform.LookAt(player.transform.position);
+                        new_bullet.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
+                    }
+                    StartCoroutine(EnterCooldown());
                 }
-                StartCoroutine(EnterCooldown());
             }
         }
         if (gamemanager.GetComponent<gamemanager>().is_detected == true)
