@@ -129,17 +129,20 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
+            gun.SetBool("Running", true);
         }
 
         else if(grounded)
         {
             state = MovementState.walking;
             moveSpeed = walkSpeed;
+            gun.SetBool("Running", false);
         }
 
         else
         {
             state = MovementState.air;
+            gun.SetBool("Running", false);
         }
     }
     private void MovePlayer()

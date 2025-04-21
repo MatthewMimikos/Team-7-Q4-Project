@@ -25,6 +25,7 @@ public class GameOverTrigger : MonoBehaviour
     public void Start()
     {
         DeathCanvas.SetActive(false);
+        Death = false;
     }
 
     void Update()

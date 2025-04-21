@@ -867,7 +867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000050813, y: -376.9}
+  m_AnchoredPosition: {x: 0.0000050813, y: -396}
   m_SizeDelta: {x: 502.054, y: 445.068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8458161918955779096
@@ -1068,8 +1068,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13
-  m_fontSizeBase: 13
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4735,7 +4735,28 @@ MonoBehaviour:
   LoreNoteTitle6: Lore Note 6
   LoreNoteTitle7: Lore Note 7
   LoreNoteTitle8: Lore Note 8
-  LoreNoteContent1: I TRIED SO HAARD AND GOT SO FAAAAAAR BUT IN THE END
+  LoreNoteContent1: Hi mom! How are you doing? My vacation to Mongolia is going really
+    well. I rented a pretty nice van, then I took off exploring. I gambled my remaining
+    funds with some fellas in this bar, and I somehow won! Unfortunately, they weren't
+    too happy about that. They whacked me with a chair and knocked me out, and took
+    me to some mine. They gave me a pickaxe and told me to start working. It sucked.
+    After a bit, they said something about how I was "not worthy of the pickaxe",
+    and gave me a shovel instead. I know it may sound bad, but don't worry! Some
+    dude was escaping, so I decided to follow him! After heroically beating up one
+    of the guards with my trusty shovel, that dude practically BEGGED me to join
+    him! So of course, I couldn't decline, and I left with him. We eventually got
+    to my van, and discussed what we should do next. Apparently that was a cult,
+    and that dude, Jonathan, wanted to infiltrate them! Now, I don't know what they
+    did to him, but I was a bit annoyed that they kidnapped me. Seriously, who do
+    they think they are? Anyways, mom, we took my van and now we're driving back
+    to the cult. We're going to destroy them! Or rather, Jonathan is. He told me
+    it was "too dangerous" for me and I'd "slow him down". So I'm staying in the
+    van, helping him along! I might be here for a few days longer than expected,
+    but don't worry about it, mom! I've never gotten myself into a situation that
+    had any real consequences. Except for the time I went to jail in Slovenia after
+    eating those mushrooms. Or the time when I accidentally ended up in the White
+    House. Or the time when I accidentally joined the South African Mafia. Anyways,
+    everything's great, and I'lll see you soon, mom!
   LoreNoteContent2: 
   LoreNoteContent3: 
   LoreNoteContent4: 
@@ -4743,7 +4764,7 @@ MonoBehaviour:
   LoreNoteContent6: 
   LoreNoteContent7: 
   LoreNoteContent8: 
-  WrittenBy1: Sincerely, John Writing
+  WrittenBy1: Sincerely, Maurice
   WrittenBy2: Thanks, Obama
   WrittenBy3: Your Pal, Homeless Guy Behind the Walmart
   WrittenBy4: Sincerely, Sincerely

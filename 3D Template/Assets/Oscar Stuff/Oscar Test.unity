@@ -158,6 +158,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 28434898280992333, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: Amount
+      value: 0.00857
+      objectReference: {fileID: 0}
+    - target: {fileID: 28434898280992333, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: Smooth
+      value: 12.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 28434898280992333, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: Frequency
+      value: 17.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 28434898280992333, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 624174415430165272, guid: 1b9cb0427a8892f4e8d772a5d318456a,
         type: 3}
       propertyPath: m_Name
@@ -213,7 +233,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8641960904554911863, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: Amount
+      value: 0.00182
+      objectReference: {fileID: 0}
+    - target: {fileID: 8641960904554911863, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: Smooth
+      value: 40.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8641960904554911863, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: Frequency
+      value: 18.7
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 28434898280992333, guid: 1b9cb0427a8892f4e8d772a5d318456a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1352,16 +1388,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7694c45e0aac2454292398bbfdf0fb99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  walkSpeed: 0
+  sprintSpeed: 0
   groundDrag: 5
   jumpForce: 12
   jumpCooldown: 0.25
   airMultiplier: 0.4
   crouchSpeed: 3.5
   crouchYScale: 0.5
-  walkSpeed: 0
-  sprintSpeed: 0
   jumpKey: 32
+  sprintKey: 304
   crouchKey: 99
   playerHeight: 3
   whatIsGround:
@@ -1370,6 +1406,7 @@ MonoBehaviour:
   orientation: {fileID: 1237023881}
   gun: {fileID: 0}
   shovel: {fileID: 0}
+  state: 0
 --- !u!114 &1439677101
 MonoBehaviour:
   m_ObjectHideFlags: 0

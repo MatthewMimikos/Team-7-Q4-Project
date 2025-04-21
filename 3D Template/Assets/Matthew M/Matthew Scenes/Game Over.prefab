@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58007983f7ab0b144919a2d073717faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Death: 0
+  Death: 1
   DeathCanvas: {fileID: 7394038305000307259}
   playercamera: {fileID: 0}
   PlayerMovement: {fileID: 0}

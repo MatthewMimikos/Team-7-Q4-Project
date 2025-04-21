@@ -627,6 +627,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5920040068276063888}
+  - component: {fileID: 8641960904554911863}
   m_Layer: 0
   m_Name: CameraPos
   m_TagString: Untagged
@@ -649,6 +650,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1855362620995530628}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8641960904554911863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5117880022107593058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c9b991c9c395a4a8c6d33f9b7df9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Amount: 0.00319
+  Frequency: 10
+  Smooth: 11.5
 --- !u!1 &5999506361739455418
 GameObject:
   m_ObjectHideFlags: 0
