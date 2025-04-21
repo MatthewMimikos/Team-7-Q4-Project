@@ -44,6 +44,9 @@ public class PlayerMovement : MonoBehaviour
     public Animator shovel;
     Rigidbody rb;
 
+    public int health = 100;
+    public gamemanager Gamemanager;
+
     public MovementState state;
     public enum MovementState
     {
@@ -75,7 +78,11 @@ public class PlayerMovement : MonoBehaviour
             gun.SetBool("Moving", false);
             shovel.SetBool("Moving", false);
         }
-            
+        if (health <= 0)
+        {
+            moveSpeed = 0;
+            Gamemanager.GetComponent<gamemanager>().dead();
+        }
 
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);

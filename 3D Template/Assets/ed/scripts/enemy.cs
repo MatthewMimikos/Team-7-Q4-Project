@@ -98,6 +98,7 @@ public class enemy : MonoBehaviour
             {
                 Physics.Raycast(transform.position, transform.position - player.transform.position, out RaycastHit hitInfo, 100f, layerMask);
                 Debug.Log(hitInfo);
+
                 if (hitInfo.transform.gameObject.CompareTag("Player"))
                 {
                     for (int i = 0; i < 8; i++)

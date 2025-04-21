@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class gamemanager : MonoBehaviour
     public TMP_Text event_text;
     public TMP_Text status_text;
     public bool is_detected = false;
+    public bool is_dead = false;
     public GameObject ui;
     public Animator animator;
     public bool cameraguy1alive = true;
@@ -64,6 +66,24 @@ public class gamemanager : MonoBehaviour
         {
             status_text.text = "Wrong Mask, Not Disguised";
             status_text.color = Color.red;
+        }
+    }
+    public void dead()
+    {
+        if (is_dead == false)
+        {
+            is_dead = true;
+            StartCoroutine(Tween(GetComponent<AudioSource>().pitch, 1f, 0.4f));
+        }
+    }
+
+    private IEnumerator Tween(float pitch, float posA, float posB)
+    {
+        for (int i = 0; i <= 100; ++i)
+        {
+            float sound_pitch = Mathf.Lerp(posA, posB, i / 100f);
+            GetComponent<AudioSource>().pitch = sound_pitch;
+            yield return new WaitForSeconds(0.02f);
         }
     }
 }

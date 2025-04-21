@@ -367,6 +367,7 @@ MonoBehaviour:
   event_text: {fileID: 0}
   status_text: {fileID: 0}
   is_detected: 0
+  is_dead: 0
   ui: {fileID: 0}
   animator: {fileID: 0}
   cameraguy1alive: 1
@@ -748,6 +749,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5753141569924104311, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: Gamemanager
+      value: 
+      objectReference: {fileID: 387352085}
     - target: {fileID: 7424449263912632622, guid: 1b9cb0427a8892f4e8d772a5d318456a,
         type: 3}
       propertyPath: m_LocalPosition.y
