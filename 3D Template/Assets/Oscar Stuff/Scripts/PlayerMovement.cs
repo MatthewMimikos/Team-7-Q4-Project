@@ -207,6 +207,8 @@ public class PlayerMovement : MonoBehaviour
             playercamera.GetComponent<PlayerCam>().enabled = false;
             playercamera.GetComponent<Animator>().enabled = true;
             playercamera.GetComponent<Animator>().SetTrigger("die");
+
+
             this.GetComponent<PlayerMovement>().enabled = false;
         }
     }
