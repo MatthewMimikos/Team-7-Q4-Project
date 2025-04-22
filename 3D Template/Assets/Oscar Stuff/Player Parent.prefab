@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 5724717817495280661}
   - component: {fileID: 3471659783714565118}
   - component: {fileID: 728782731559228178}
+  - component: {fileID: 3947853635204685455}
   m_Layer: 0
   m_Name: PlayerCam
   m_TagString: MainCamera
@@ -460,6 +461,28 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!95 &3947853635204685455
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2274778758876689623}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 985d534cc2551354b98edbc9964d17f9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3088061421520623781
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,6 +942,9 @@ MonoBehaviour:
   orientation: {fileID: 1103243833669211420}
   gun: {fileID: 2204946354902019321}
   shovel: {fileID: 2918202869362205005}
+  health: 100
+  dead: 0
+  Gamemanager: {fileID: 0}
   state: 0
 --- !u!136 &141435927267241272
 CapsuleCollider:

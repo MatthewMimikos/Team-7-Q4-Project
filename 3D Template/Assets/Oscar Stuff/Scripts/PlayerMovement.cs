@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
 
     public int health = 100;
+    public bool dead = false;
     public gamemanager Gamemanager;
 
     public MovementState state;
@@ -80,8 +81,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (health <= 0)
         {
-            moveSpeed = 0;
-            Gamemanager.GetComponent<gamemanager>().dead();
+            die();
         }
 
         // ground check
@@ -130,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            health = -10000;
+            die();
         }
     }
 
@@ -193,5 +193,21 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+    }
+
+    public void die()
+    {
+        if (!dead)
+        {
+            dead = true;
+            health = -10000;
+            moveSpeed = 0;
+            Gamemanager.GetComponent<gamemanager>().dead();
+            GameObject playercamera = GameObject.Find("PlayerCam");
+            playercamera.GetComponent<PlayerCam>().enabled = false;
+            playercamera.GetComponent<Animator>().enabled = true;
+            playercamera.GetComponent<Animator>().SetTrigger("die");
+            this.GetComponent<PlayerMovement>().enabled = false;
+        }
     }
 }
