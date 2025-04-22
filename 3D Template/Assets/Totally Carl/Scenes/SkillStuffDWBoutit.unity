@@ -1513,11 +1513,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f185560acaf96c4ba56832f8409a1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentMask: 0
   Mask1: {fileID: 0}
   Mask2: {fileID: 0}
   Mask3: {fileID: 0}
-  mask1Active: 0
-  useMask: 0
 --- !u!1 &1004718484
 GameObject:
   m_ObjectHideFlags: 0
