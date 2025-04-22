@@ -13,8 +13,6 @@ public class GameOverTrigger : MonoBehaviour
         if (Death)
         {
             DeathCanvas.SetActive(true);
-            playercamera.enabled = false;
-            PlayerMovement.enabled = false;
         }
         else
         {

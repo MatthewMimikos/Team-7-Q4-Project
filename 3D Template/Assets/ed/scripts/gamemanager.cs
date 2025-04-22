@@ -74,7 +74,7 @@ public class gamemanager : MonoBehaviour
         if (is_dead == false)
         {
             is_dead = true;
-            GameObject dead_screen = Instantiate(game_over);
+            game_over.GetComponent<GameOverTrigger>().Death = true;
             StartCoroutine(Tween(GetComponent<AudioSource>().pitch, 1f, 0.6f));
         }
     }
