@@ -183,6 +183,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8862334715342726179, guid: 2d9acb18c97d8794695ffd2c2e224b13,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -369,6 +374,7 @@ MonoBehaviour:
   is_detected: 0
   is_dead: 0
   ui: {fileID: 0}
+  game_over: {fileID: 462821910}
   animator: {fileID: 0}
   cameraguy1alive: 1
 --- !u!4 &387352086
@@ -494,6 +500,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3478fc7ac4e07204cbb2fc08e5052379, type: 3}
+--- !u!1 &462821910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3148052233835447306, guid: 213b1758bcd45374a9b48429b69732a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 534100485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &493529377 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2274778758876689623, guid: 1b9cb0427a8892f4e8d772a5d318456a,
