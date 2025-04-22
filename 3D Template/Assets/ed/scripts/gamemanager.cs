@@ -73,7 +73,7 @@ public class gamemanager : MonoBehaviour
         if (is_dead == false)
         {
             is_dead = true;
-            StartCoroutine(Tween(GetComponent<AudioSource>().pitch, 1f, 0.4f));
+            StartCoroutine(Tween(GetComponent<AudioSource>().pitch, 1f, 0.6f));
         }
     }
 
@@ -83,7 +83,7 @@ public class gamemanager : MonoBehaviour
         {
             float sound_pitch = Mathf.Lerp(posA, posB, i / 100f);
             GetComponent<AudioSource>().pitch = sound_pitch;
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(0.03f);
         }
     }
 }
