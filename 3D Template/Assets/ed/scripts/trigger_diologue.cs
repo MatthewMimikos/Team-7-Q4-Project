@@ -18,6 +18,7 @@ public class trigger_diologue : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             gamemanager.GetComponent<gamemanager>().diologue(diologue);
+            Destroy(gameObject);
         }
     }
 }
