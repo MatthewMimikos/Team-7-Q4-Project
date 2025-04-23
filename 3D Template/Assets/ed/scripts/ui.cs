@@ -10,8 +10,8 @@ public class ui : MonoBehaviour
     //TUTORIAL LEVEl / LEVEL 1
     /*
     //SHEALTH
-    Guard at the enterance... No way you can knock em out without being detected, Try going up those rocks
-    Alright, no guards here. Make sure that camera doesn't see you.
+    Guard at the entrance. No way you can knock 'em out without getting detected, Go back around and try going up those rocks.
+    Make sure that camera doesn't see you.
     Maybe crawl under the building? (Hold C to crouch)
     You need a guard mask to open that door, hit that camera with your shovel, that'll probably lure a guard's attention to it
     Just one guard is coming, knock em out with that shovel when you see em
