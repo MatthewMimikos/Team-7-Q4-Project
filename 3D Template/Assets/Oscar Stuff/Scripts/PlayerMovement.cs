@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 moveDirection;
     public Animator gun;
     public Animator shovel;
+    public Animator playerCam;
     Rigidbody rb;
 
     public int health = 100;
@@ -73,11 +74,13 @@ public class PlayerMovement : MonoBehaviour
         {
             gun.SetBool("Moving", true);
             shovel.SetBool("Moving", true);
+            playerCam.SetBool("Moving", true);
         }
         else
         {
             gun.SetBool("Moving", false);
             shovel.SetBool("Moving", false);
+            playerCam.SetBool("Moving", false);
         }
         if (health <= 0)
         {
@@ -207,6 +210,8 @@ public class PlayerMovement : MonoBehaviour
             playercamera.GetComponent<PlayerCam>().enabled = false;
             playercamera.GetComponent<Animator>().enabled = true;
             playercamera.GetComponent<Animator>().SetTrigger("die");
+
+
             this.GetComponent<PlayerMovement>().enabled = false;
         }
     }

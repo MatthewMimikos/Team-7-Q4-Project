@@ -9,6 +9,7 @@ public class gamemanager : MonoBehaviour
     public bool is_detected = false;
     public bool is_dead = false;
     public GameObject ui;
+    public GameObject game_over;
     public Animator animator;
     public bool cameraguy1alive = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -73,6 +74,7 @@ public class gamemanager : MonoBehaviour
         if (is_dead == false)
         {
             is_dead = true;
+            game_over.GetComponent<GameOverTrigger>().Death = true;
             StartCoroutine(Tween(GetComponent<AudioSource>().pitch, 1f, 0.6f));
         }
     }
