@@ -942,6 +942,7 @@ MonoBehaviour:
   orientation: {fileID: 1103243833669211420}
   gun: {fileID: 2204946354902019321}
   shovel: {fileID: 2918202869362205005}
+  playerCam: {fileID: 3947853635204685455}
   health: 100
   dead: 0
   Gamemanager: {fileID: 0}
