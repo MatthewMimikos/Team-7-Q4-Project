@@ -233,6 +233,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5226927608904884246, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753141569924104311, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 624829120}
     - target: {fileID: 8641960904554911863, guid: 1b9cb0427a8892f4e8d772a5d318456a,
         type: 3}
       propertyPath: Amount
@@ -486,6 +496,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &624829120 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3947853635204685455, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+    type: 3}
+  m_PrefabInstance: {fileID: 222528175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &736359173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1422,10 @@ MonoBehaviour:
   orientation: {fileID: 1237023881}
   gun: {fileID: 0}
   shovel: {fileID: 0}
+  playerCam: {fileID: 0}
+  health: 100
+  dead: 0
+  Gamemanager: {fileID: 0}
   state: 0
 --- !u!114 &1439677101
 MonoBehaviour:
@@ -1420,9 +1440,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMask: 0
-  Mask1: {fileID: 2084493967}
-  Mask2: {fileID: 1066131732}
-  Mask3: {fileID: 736359175}
+  No_mask: {fileID: 0}
+  Miner_mask: {fileID: 0}
+  Guard_mask: {fileID: 0}
+  Camera_mask: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!1 &1610753382
 GameObject:
   m_ObjectHideFlags: 0
