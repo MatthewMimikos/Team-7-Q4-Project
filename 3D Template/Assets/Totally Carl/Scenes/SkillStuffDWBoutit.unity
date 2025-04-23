@@ -1514,9 +1514,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMask: 0
-  Mask1: {fileID: 0}
-  Mask2: {fileID: 0}
-  Mask3: {fileID: 0}
+  No_mask: {fileID: 0}
+  Miner_mask: {fileID: 0}
+  Guard_mask: {fileID: 0}
+  Camera_mask: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!1 &1004718484
 GameObject:
   m_ObjectHideFlags: 0
