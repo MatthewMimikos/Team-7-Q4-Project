@@ -36,5 +36,10 @@ public class MaskSwitching : MonoBehaviour
             ui.switch_mask(Camera_mask);
             gamemanager.switch_mask(3);
         }
+        if (Input.GetKeyDown("4"))
+        {
+            ui.switch_mask(No_mask);
+            gamemanager.switch_mask(4);
+        }
     }
 }

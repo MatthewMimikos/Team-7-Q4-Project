@@ -68,6 +68,11 @@ public class gamemanager : MonoBehaviour
             status_text.text = "Wrong Mask, Not Disguised";
             status_text.color = Color.red;
         }
+        if (mask_id == 4)
+        {
+            status_text.text = "No Mask, Not Disguised";
+            status_text.color = Color.red;
+        }
     }
     public void dead()
     {
