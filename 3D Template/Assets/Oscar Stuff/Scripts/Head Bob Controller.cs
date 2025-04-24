@@ -12,6 +12,10 @@ public class HeadBobController : MonoBehaviour
         {
             camAnim.SetBool("walk", true);
         }
+        else if (Input.GetKey(KeyCode.LeftShift))
+        {
+            camAnim.SetBool("running", true);
+        }
         else
         {
             camAnim.SetBool("walk", false);
