@@ -943,6 +943,8 @@ MonoBehaviour:
   health: 100
   dead: 0
   Gamemanager: {fileID: 0}
+  dynamite: {fileID: 6025753014329545179, guid: c695549369c66954899e887e9a5d5be3,
+    type: 3}
   state: 0
 --- !u!136 &141435927267241272
 CapsuleCollider:
