@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -138,8 +138,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d74d2b5403e76ab4ebee20696f935043
-      internalID: 1641792409
+      spriteID: dbe80616af908be41b9d7b2ee0826e73
+      internalID: -65406672
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b68a0f2c444dc7c4abbccf229fdab1bd
-      internalID: 851682792
+      spriteID: afc9d9bc97e7c7947960fafa06e0452c
+      internalID: -654218472
       vertices: []
       indices: 
       edges: []
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86f9139bd64c4da4aacf77a904868e4c
-      internalID: 646390671
+      spriteID: 8cfc9a8f7bbd75c47a5cb696912098bb
+      internalID: 1429472189
       vertices: []
       indices: 
       edges: []
@@ -204,8 +204,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3565b7651644ca64ba1ae073b9c1fd0e
-      internalID: -339911190
+      spriteID: 67765a9604b776d488f2c2c8c60cdb3b
+      internalID: -2138676678
       vertices: []
       indices: 
       edges: []
@@ -214,7 +214,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 937b30aa2b9976e479dd059a61e5addf
+    spriteID: b5b25a56949af974db4956258f3b0b76
     internalID: 0
     vertices: []
     indices: 
@@ -224,10 +224,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EarlyEliteCultistWalk_0: 1641792409
-      EarlyEliteCultistWalk_1: 851682792
-      EarlyEliteCultistWalk_2: 646390671
-      EarlyEliteCultistWalk_3: -339911190
+      EarlyEliteCultistWalk_0: -65406672
+      EarlyEliteCultistWalk_1: -654218472
+      EarlyEliteCultistWalk_2: 1429472189
+      EarlyEliteCultistWalk_3: -2138676678
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
