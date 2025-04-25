@@ -19,6 +19,7 @@ public class dynamite : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         ParticleSystem.Emit(20);
+        //GameObject.Find("PlayerCam").GetComponent<Shake>().start = true;
         yield return new WaitForSeconds(1.0f);
         Destroy(gameObject);
     }
