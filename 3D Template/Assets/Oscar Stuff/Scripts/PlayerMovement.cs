@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     public int health = 100;
     public bool dead = false;
     public gamemanager Gamemanager;
+    public GameObject dynamite;
 
     public MovementState state;
     public enum MovementState
@@ -134,6 +135,10 @@ public class PlayerMovement : MonoBehaviour
         {
             die();
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            drop_item();
+        }
     }
 
     private void StateHandler()
@@ -213,5 +218,10 @@ public class PlayerMovement : MonoBehaviour
 
             this.GetComponent<PlayerMovement>().enabled = false;
         }
+    }
+
+    public void drop_item()
+    {
+        GameObject new_dynamite = Instantiate(dynamite, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
     }
 }

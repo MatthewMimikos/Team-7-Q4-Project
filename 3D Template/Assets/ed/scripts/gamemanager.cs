@@ -68,6 +68,11 @@ public class gamemanager : MonoBehaviour
             status_text.text = "Wrong Mask, Not Disguised";
             status_text.color = Color.red;
         }
+        if (mask_id == 4)
+        {
+            status_text.text = "No Mask, Not Disguised";
+            status_text.color = Color.red;
+        }
     }
     public void dead()
     {
@@ -79,6 +84,11 @@ public class gamemanager : MonoBehaviour
         }
     }
 
+    public void diologue(string diologue)
+    {
+        event_text.text = "Maurice: " + diologue;
+        animator.SetTrigger("normal_text");
+    }
     private IEnumerator Tween(float pitch, float posA, float posB)
     {
         for (int i = 0; i <= 100; ++i)

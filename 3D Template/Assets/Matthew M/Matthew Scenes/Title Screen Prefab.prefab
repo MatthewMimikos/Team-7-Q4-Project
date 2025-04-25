@@ -405,6 +405,7 @@ MonoBehaviour:
   CheckStart: 0
   playercamera: {fileID: 0}
   PlayerMovement: {fileID: 0}
+  MaskSwitching: {fileID: 0}
   manager: {fileID: 0}
 --- !u!1 &2687323326947617961
 GameObject:

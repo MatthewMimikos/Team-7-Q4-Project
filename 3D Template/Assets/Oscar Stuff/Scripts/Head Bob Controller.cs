@@ -1,5 +1,4 @@
 using Unity.VisualScripting;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class HeadBobController : MonoBehaviour
@@ -11,6 +10,10 @@ public class HeadBobController : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             camAnim.SetBool("walk", true);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift))
+        {
+            camAnim.SetBool("running", true);
         }
         else
         {

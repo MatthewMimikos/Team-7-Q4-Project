@@ -56,7 +56,7 @@ public class detection : MonoBehaviour
                         detection_amount += 0.3f * Time.deltaTime;
                         detection_amount = Mathf.Clamp(detection_amount, 0, 1);
                         animator.ForceStateNormalizedTime(detection_amount);
-                        my_detection_visual.GetComponentInChildren<Image>().color = new Color32(255, 255, 225, (byte)(detection_amount * 255));
+                        my_detection_visual.GetComponentInChildren<Image>().color = new Color32(255, 255, 225, 255);
                         if (detection_amount >= 0.999f)
                         {
                             fully_detected = true;
@@ -73,13 +73,16 @@ public class detection : MonoBehaviour
                 }
                 else
                 {
-                    Vector3 direction = actual_camera.transform.position - player.transform.position;
-                    Quaternion rotation = Quaternion.LookRotation(direction);
-                    my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.y + player_camera.transform.eulerAngles.y);
-                    detection_amount -= 0.1f * Time.deltaTime;
-                    detection_amount = Mathf.Clamp(detection_amount, 0, 1);
-                    animator.ForceStateNormalizedTime(detection_amount);
-                    my_detection_visual.GetComponentInChildren<Image>().color = new Color32(255, 255, 225, (byte)(detection_amount * 255));
+                    if (my_detection_visual != null)
+                    {
+                        Vector3 direction = actual_camera.transform.position - player.transform.position;
+                        Quaternion rotation = Quaternion.LookRotation(direction);
+                        my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.y + player_camera.transform.eulerAngles.y);
+                        detection_amount -= 0.1f * Time.deltaTime;
+                        detection_amount = Mathf.Clamp(detection_amount, 0, 1);
+                        animator.ForceStateNormalizedTime(detection_amount);
+                        my_detection_visual.GetComponentInChildren<Image>().color = new Color32(255, 255, 225, 255);
+                    }
                 }
             }
         }
@@ -92,7 +95,7 @@ public class detection : MonoBehaviour
             detection_amount -= 0.1f * Time.deltaTime;
             detection_amount = Mathf.Clamp(detection_amount, 0, 1);
             animator.ForceStateNormalizedTime(detection_amount);
-            my_detection_visual.GetComponentInChildren<Image>().color = new Color32(255, 255, 225, (byte)(detection_amount * 255));
+            my_detection_visual.GetComponentInChildren<Image>().color = new Color32(255, 255, 225, 255);
         }
         if (detection_amount == 0 && my_detection_visual != null)
         {
