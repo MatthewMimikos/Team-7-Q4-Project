@@ -9,6 +9,7 @@ TagManager:
   - dropped_shovel
   - detection
   - window
+  - dropped_shotgun
   layers:
   - Default
   - TransparentFX
