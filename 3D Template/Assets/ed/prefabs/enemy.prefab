@@ -694,7 +694,7 @@ MonoBehaviour:
   health: 100
   type: 0
   detection: {fileID: 6494183383225902511}
-  navigation: {fileID: 0}
+  navigation: {fileID: 7094818280113359741}
   layerMask:
     serializedVersion: 2
     m_Bits: 129
@@ -741,7 +741,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7011194103705707654}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1e+9
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
