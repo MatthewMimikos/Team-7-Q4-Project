@@ -54,7 +54,14 @@ public class PlayerCam : MonoBehaviour
         }
         else if (HitInfo.collider.CompareTag("dropped_shovel"))
         {
+            HitInfo.collider.gameObject.GetComponent<pickup>().pickable = true;
             ui.info_text.text = "Shovel";
+            ui.info_text2.text = "Press E to pick up";
+        }
+        else if (HitInfo.collider.CompareTag("dropped_shotgun"))
+        {
+            HitInfo.collider.gameObject.GetComponent<pickup>().pickable = true;
+            ui.info_text.text = "convinently placed shotgun";
             ui.info_text2.text = "Press E to pick up";
         }
         else

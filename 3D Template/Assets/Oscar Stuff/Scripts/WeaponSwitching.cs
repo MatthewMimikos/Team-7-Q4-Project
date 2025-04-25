@@ -3,6 +3,8 @@ using UnityEngine;
 public class WeaponSwitching : MonoBehaviour
 {
     public int selectedWeapon = 0;
+    public bool has_shovel = false;
+    public bool has_shotgun = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

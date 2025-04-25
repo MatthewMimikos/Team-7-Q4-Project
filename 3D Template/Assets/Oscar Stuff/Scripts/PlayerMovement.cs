@@ -135,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
         {
             die();
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             drop_item();
         }
