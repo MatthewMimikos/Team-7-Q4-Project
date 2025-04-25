@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 728782731559228178}
   - component: {fileID: 3947853635204685455}
   - component: {fileID: 6600746906725002378}
+  - component: {fileID: 4090564589001495570}
   m_Layer: 0
   m_Name: PlayerCam
   m_TagString: MainCamera
@@ -497,6 +498,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camAnim: {fileID: 3947853635204685455}
+--- !u!114 &4090564589001495570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2274778758876689623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17030a79f34e3c64183c5a1f3733ac2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: 0
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 1
 --- !u!1 &3059385930899740643
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +975,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedWeapon: 0
+  has_shovel: 0
+  has_shotgun: 0
 --- !u!1 &6944541057997856593
 GameObject:
   m_ObjectHideFlags: 0
