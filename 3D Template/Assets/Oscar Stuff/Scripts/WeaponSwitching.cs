@@ -19,22 +19,68 @@ public class WeaponSwitching : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
-            if(selectedWeapon >= transform.childCount - 1)
+            if (selectedWeapon == 0)
+            {
+                if (has_shotgun)
+                {
+                    selectedWeapon = 2;
+                }
+                else if (has_shotgun)
+                {
+                    selectedWeapon = 1;
+                }
+            }
+            else if (selectedWeapon == 1)
+            {
                 selectedWeapon = 0;
-            else 
-                selectedWeapon++;
+            }
+            else if (selectedWeapon == 2)
+            {
+                if (has_shovel)
+                {
+                    selectedWeapon = 1;
+                }
+                else if (has_shotgun)
+                {
+                    selectedWeapon = 0;
+                }
+            }
         }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f || Input.GetMouseButtonDown(1)) 
         {
-            if (selectedWeapon <= 0)
-                selectedWeapon = transform.childCount - 1;
-            else
-                selectedWeapon--;
+            if (selectedWeapon == 0)
+            {
+                if (has_shovel)
+                {
+                    selectedWeapon = 1;
+                }
+                else if (has_shotgun)
+                {
+                    selectedWeapon = 2;
+                }
+            }
+            else if (selectedWeapon == 1)
+            {
+                if (has_shotgun)
+                {
+                    selectedWeapon = 2;
+                }
+                else if (has_shovel)
+                {
+                    selectedWeapon = 0;
+                }
+            }
+            else if (selectedWeapon == 2)
+            {
+                selectedWeapon = 0;
+            }
         }
         if (previousSelectedWeapon != selectedWeapon)
         {
             SelectWeapon();
         }
+        Debug.Log(selectedWeapon);
     }
 
     void SelectWeapon()

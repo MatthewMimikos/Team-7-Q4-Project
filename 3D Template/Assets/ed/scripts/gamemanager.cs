@@ -84,9 +84,16 @@ public class gamemanager : MonoBehaviour
         }
     }
 
-    public void diologue(string diologue)
+    public void diologue(string diologue, bool is_maurice = false)
     {
-        event_text.text = "Maurice: " + diologue;
+        if (is_maurice)
+        {
+            event_text.text = "Maurice: " + diologue;
+        }
+        else
+        {
+            event_text.text = diologue;
+        }
         animator.SetTrigger("normal_text");
     }
     private IEnumerator Tween(float pitch, float posA, float posB)
