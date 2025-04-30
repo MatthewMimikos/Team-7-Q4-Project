@@ -4821,7 +4821,31 @@ MonoBehaviour:
     I have to stop this. I can''t sit by anymore, watching as our cult takes more
     and more innocent people as slaves. I guess I''ll end for today, but I''ll have
     a lot more to write about tomorrow, depending on what the boss says.'
-  LoreNoteContent6: 
+  LoreNoteContent6: I have only been the leader of this cult for a mere 20 years,
+    and yet my success greatly surpasses all that came before me. When I took over
+    in 1983, I had one goal, and that was to free my great nation from the clutches
+    of communism, and the clutches of the Soviet Union. After biding our time for
+    a few years, we saw a chance to strike. We won over the hearts of the people
+    by using non-violence, and it worked flawlessly. We cleansed our nation of the
+    red disease, and saved Mongolia from the constant grasp of the Soviet Union.
+    Unfortunately, Mongolia did not come back to power. We did not rise back to the
+    top of the world, despite our efforts. While disappointing, it wasn't going to
+    stop us. We just had to keep working. I ran for a few elections, but I never
+    won. I even tried invoking an insurrection. Nothing worked. Luckily, I had a
+    last resort. There was a long-running legend within the family of the Khans.
+    The legend of the Great Mask. The Great Mask is buried deep underground, and
+    it gives the wearer unlimited power. If we could find the mask, then Mongolia
+    can return. Once again, Mongolia will be at the top of the world. So I got to
+    work. We began to set up a mine around Erdenet, blending in with the Erdenet
+    Mining Corporation. Progress was slow, but we eventually became rich. Because
+    of this, we were able to pay the police if any problems arose. Because of this,
+    we started to get a bit more bold. Progress was slow, since none of us were experienced
+    miners. So I had the idea to start finding volunteers. We didn't find any willing
+    volunteers, so some of our men started taking men as slaves. While I have some
+    reservations about using slaves, I know that it's for the good of Mongolia. We've
+    been much more successful mining since then. So if I die, I want my successor
+    to hold my name in high regard. And please, finish what I started. Don't stop
+    until Mongolia can conquer China once again. Then you shall conquer the world.
   LoreNoteContent7: 
   LoreNoteContent8: 
   WrittenBy1: Love, Maurice
@@ -4829,9 +4853,9 @@ MonoBehaviour:
   WrittenBy3: Sincerely, Carl
   WrittenBy4: Ganbaatar
   WrittenBy5: Excerpt From Jonathan's Journal
-  WrittenBy6: Hope this reaches you before you die of Polio, John Polio
-  WrittenBy7: Sincerely, Julio Jones
-  WrittenBy8: Hope you like my cool hat, Spike Rosered from Mega Man X5
+  WrittenBy6: Ganbaatar
+  WrittenBy7: Ganbaatar
+  WrittenBy8: Excerpt From Jonathan's Journal
 --- !u!1 &8360556267856262011
 GameObject:
   m_ObjectHideFlags: 0
