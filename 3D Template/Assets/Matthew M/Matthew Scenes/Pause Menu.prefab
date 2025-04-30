@@ -1004,7 +1004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.12799072, y: -71}
+  m_AnchoredPosition: {x: 0.0000050813, y: -47}
   m_SizeDelta: {x: 502.054, y: 445.068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8618626815513343641
@@ -1068,8 +1068,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 11.5
+  m_fontSizeBase: 11.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4814,13 +4814,17 @@ MonoBehaviour:
     is important, but kidnapping and enslaving people isn''t right. And the attitude
     of the rest of the cult isn''t helping. They beat these people and treat them
     horribly. At least the boss has given me permission to stop anyone who''s treating
-    them too badly. Today, though, I was too late. Seeing an innocent man die like
-    that has reinforced my belief. What we''re doing is wrong. I don''t know what
-    to do about it. I don''t know what I can do about it. But I have to do something.
-    Maybe I should talk to the boss; Surely he would understand. No matter what,
-    I have to stop this. I can''t sit by anymore, watching as our cult takes more
-    and more innocent people as slaves. I guess I''ll end for today, but I''ll have
-    a lot more to write about tomorrow, depending on what the boss says.'
+    them too badly. And I have to do that a lot. Even with things as basic as food.
+    If I don''t feed the miners, than no one will. They''ll starve and die, and I
+    won''t allow that. I can''t believe I have to be the one in this cult who acknowledges
+    that starving people is wrong, but I guess that''s where we are at this point.
+    Today, though, I was too late. Seeing an innocent man die like that has reinforced
+    my belief. What we''re doing is wrong. I don''t know what to do about it. I don''t
+    know what I can do about it. But I have to do something. Maybe I should talk
+    to the boss; Surely he would understand. No matter what, I have to stop this.
+    I can''t sit by anymore, watching as our cult takes more and more innocent people
+    as slaves. I guess I''ll end for today, but I''ll have a lot more to write about
+    tomorrow, depending on what the boss says.'
   LoreNoteContent6: I have only been the leader of this cult for a mere 20 years,
     and yet my success greatly surpasses all that came before me. When I took over
     in 1983, I had one goal, and that was to free my great nation from the clutches
