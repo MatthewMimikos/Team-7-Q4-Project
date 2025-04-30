@@ -940,6 +940,7 @@ MonoBehaviour:
   selectedWeapon: 0
   has_shovel: 0
   has_shotgun: 0
+  animator: {fileID: 2204946354902019321}
 --- !u!1 &6944541057997856593
 GameObject:
   m_ObjectHideFlags: 0
