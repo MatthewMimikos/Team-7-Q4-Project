@@ -6,6 +6,8 @@ public class WeaponSwitching : MonoBehaviour
     public bool has_shovel = false;
     public bool has_shotgun = false;
 
+    public Animator animator;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -80,7 +82,10 @@ public class WeaponSwitching : MonoBehaviour
         {
             SelectWeapon();
         }
-        Debug.Log(selectedWeapon);
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetTrigger("shoot");
+        }
     }
 
     void SelectWeapon()
