@@ -1004,7 +1004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.12799072, y: -71}
+  m_AnchoredPosition: {x: 0.0000050813, y: -47}
   m_SizeDelta: {x: 502.054, y: 445.068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8618626815513343641
@@ -1068,8 +1068,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 11.5
+  m_fontSizeBase: 11.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2797,6 +2797,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 933868141823128377}
   Pause: 27
+  playercamera: {fileID: 0}
+  PlayerMovement: {fileID: 0}
+  MaskSwitching: {fileID: 0}
 --- !u!1 &3710574586422294527
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,13 +4817,17 @@ MonoBehaviour:
     is important, but kidnapping and enslaving people isn''t right. And the attitude
     of the rest of the cult isn''t helping. They beat these people and treat them
     horribly. At least the boss has given me permission to stop anyone who''s treating
-    them too badly. Today, though, I was too late. Seeing an innocent man die like
-    that has reinforced my belief. What we''re doing is wrong. I don''t know what
-    to do about it. I don''t know what I can do about it. But I have to do something.
-    Maybe I should talk to the boss; Surely he would understand. No matter what,
-    I have to stop this. I can''t sit by anymore, watching as our cult takes more
-    and more innocent people as slaves. I guess I''ll end for today, but I''ll have
-    a lot more to write about tomorrow, depending on what the boss says.'
+    them too badly. And I have to do that a lot. Even with things as basic as food.
+    If I don''t feed the miners, than no one will. They''ll starve and die, and I
+    won''t allow that. I can''t believe I have to be the one in this cult who acknowledges
+    that starving people is wrong, but I guess that''s where we are at this point.
+    Today, though, I was too late. Seeing an innocent man die like that has reinforced
+    my belief. What we''re doing is wrong. I don''t know what to do about it. I don''t
+    know what I can do about it. But I have to do something. Maybe I should talk
+    to the boss; Surely he would understand. No matter what, I have to stop this.
+    I can''t sit by anymore, watching as our cult takes more and more innocent people
+    as slaves. I guess I''ll end for today, but I''ll have a lot more to write about
+    tomorrow, depending on what the boss says.'
   LoreNoteContent6: I have only been the leader of this cult for a mere 20 years,
     and yet my success greatly surpasses all that came before me. When I took over
     in 1983, I had one goal, and that was to free my great nation from the clutches
@@ -4846,7 +4853,22 @@ MonoBehaviour:
     been much more successful mining since then. So if I die, I want my successor
     to hold my name in high regard. And please, finish what I started. Don't stop
     until Mongolia can conquer China once again. Then you shall conquer the world.
-  LoreNoteContent7: 
+  LoreNoteContent7: In case I die before my goal is realized, I'm writing this so
+    whoever succeeds me can find the Mask of Mongolia. This is the legend of the
+    Mask of Mongolia, passed down by my family. Once, in the late 1100s, there was
+    a young man named Temujin. His father died, and he was reduced to poverty. But
+    he didn't give up. Temujin worked hard to gain followers and friends. One of
+    these followers was a powerful Shaman. In 1206, after years of gaining power,
+    the Shaman gave Temujin a Mask. This was known as the Mask of Mongolia. The mask
+    had incredible power, and made Genghis Khan unstoppable. He continued his great
+    campaigns, and only died in 1227 when his mask was taken from him by his enemy.
+    Our Empire continued to expand with the power of the mask. That is, until the
+    reign of Temur Khan. Temur feared the power of the mask, and buried the mask
+    deep underground in the Khentii Mountains, where Genghis Khan was born. It has
+    been resting underground since then. If we ever want to bring the power of Mongolia
+    back, we need the mask. Its power may be long forgotten, but once it comes back,
+    the rest of the world is not prepared for the destruction that will overtake
+    the world, under the heel of our great nation, Mongolia.
   LoreNoteContent8: 
   WrittenBy1: Love, Maurice
   WrittenBy2: Love, Khulan

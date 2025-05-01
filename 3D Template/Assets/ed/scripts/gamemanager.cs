@@ -10,6 +10,7 @@ public class gamemanager : MonoBehaviour
     public bool is_dead = false;
     public GameObject ui;
     public GameObject game_over;
+    public GameObject pause;
     public Animator animator;
     public bool cameraguy1alive = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -103,6 +104,13 @@ public class gamemanager : MonoBehaviour
             float sound_pitch = Mathf.Lerp(posA, posB, i / 100f);
             GetComponent<AudioSource>().pitch = sound_pitch;
             yield return new WaitForSeconds(0.03f);
+        }
+    }
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            StartCoroutine(Tween(GetComponent<AudioSource>().pitch, 1f, 0.6f));
         }
     }
 }

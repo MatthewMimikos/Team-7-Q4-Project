@@ -7,12 +7,16 @@ public class GameOverTrigger : MonoBehaviour
     public GameObject DeathCanvas;
     public PlayerCam playercamera;
     public PlayerMovement PlayerMovement;
+    public MaskSwitching MaskSwitching;
 
     public void CheckForDeath()
     {
         if (Death)
         {
             DeathCanvas.SetActive(true);
+            playercamera.enabled = false;
+            PlayerMovement.enabled = false;
+            MaskSwitching.enabled = false;
         }
         else
         {

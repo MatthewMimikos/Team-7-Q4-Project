@@ -116,6 +116,12 @@ public class enemy : MonoBehaviour
         {
             navigation.destination = player.transform.position;
         }
+
+        if (type == 5)
+        {
+            float angle = Vector3.Angle(player.transform.position, transform.position);
+            Debug.Log(angle);
+        }
     }
 
     private IEnumerator EnterCooldown()
