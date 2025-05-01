@@ -1,9 +1,13 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class PauseUnpause : MonoBehaviour
 {
     public GameObject PauseMenu;
     public KeyCode Pause;
+    public PlayerCam playercamera;
+    public PlayerMovement PlayerMovement;
+    public MaskSwitching MaskSwitching;
 
     public void Start()
     {
@@ -14,6 +18,9 @@ public class PauseUnpause : MonoBehaviour
     {
         Time.timeScale = 1f;
         PauseMenu.SetActive(false);
+        playercamera.enabled = true;
+        PlayerMovement.enabled = true;
+        MaskSwitching.enabled = true;
     }
 
     public void Update()
@@ -22,6 +29,9 @@ public class PauseUnpause : MonoBehaviour
         {
             PauseMenu.SetActive(true);
             Time.timeScale = 0f;
+            playercamera.enabled = false;
+            PlayerMovement.enabled = false;
+            MaskSwitching.enabled = false;
         }
     }
 }
