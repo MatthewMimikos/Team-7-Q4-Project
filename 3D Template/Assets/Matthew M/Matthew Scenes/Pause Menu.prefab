@@ -2797,6 +2797,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 933868141823128377}
   Pause: 27
+  playercamera: {fileID: 0}
+  PlayerMovement: {fileID: 0}
+  MaskSwitching: {fileID: 0}
 --- !u!1 &3710574586422294527
 GameObject:
   m_ObjectHideFlags: 0
