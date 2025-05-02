@@ -2728,7 +2728,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Menu
+  m_text: Paused
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3583fb53e00d3d04f9c0b8a9709e5149, type: 2}
   m_sharedMaterial: {fileID: 3857413598099053261, guid: 3583fb53e00d3d04f9c0b8a9709e5149,
@@ -4731,7 +4731,26 @@ MonoBehaviour:
     back, we need the mask. Its power may be long forgotten, but once it comes back,
     the rest of the world is not prepared for the destruction that will overtake
     the world, under the heel of our great nation, Mongolia.
-  LoreNoteContent8: 
+  LoreNoteContent8: 'NOVEMBER 7, 2003: I''m finally done. I can''t be in this cult
+    any longer. Yesterday, Carl brought in a young man named Maurice. But unlike
+    the rest of the slaves we bring in, Maurice isn''t a Mongolian who made bad decisions.
+    He''s some tourist who was in the wrong place at the wrong time. The boss initially
+    made a point of only taking Mongolians, and not foreigners, but now he''s going
+    back on that word. This got me thinking. I knew that I wasn''t Mongolian, so
+    how did I get here? How have I been in this cult for as long as I can remember?
+    I decided to search boss... No, Ganbaatar''s room while he was away. I found
+    his journal, and looked back. It turns out, my parents were tourists, back in
+    the early 1980s. Ganbaatar saw them, and tried to recruit them into the cult,
+    trying to get them to fight against communism in Mongolia. They joined for a
+    bit, and became high-ranking members in a short amount of time. But then they
+    wanted to leave. They had a baby with them, and didn''t want the baby falling
+    into that life. So Ganbaatar killed them, and took me in as a member of the cult.
+    I can''t believe that I''ve been deceived all this time. But because of this,
+    I can''t do this anymore. I can''t work with the man who killed my parents, and
+    the man who''s using slaves to do his dirty work. I''m getting out of here, and
+    once I escape, I might have to come back to get my revenge. To kill the horrible
+    people in this cult. I''ll get the mask for myself. I don''t know what I''ll
+    do with it, but I can''t sit back and watch this any longer.'
   WrittenBy1: Love, Maurice
   WrittenBy2: Love, Khulan
   WrittenBy3: Sincerely, Carl
