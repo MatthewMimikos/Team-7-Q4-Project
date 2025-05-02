@@ -14903,6 +14903,11 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 944bcce2662cf0947a0bf54762209242, type: 2}
+    - target: {fileID: 887681423013244416, guid: f5ddd87aab4f02b418585941e4052f07,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000000059604645
+      objectReference: {fileID: 0}
     - target: {fileID: 1041812343791427620, guid: f5ddd87aab4f02b418585941e4052f07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14969,7 +14974,8 @@ PrefabInstance:
       value: computer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7925816480977063465, guid: f5ddd87aab4f02b418585941e4052f07, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5ddd87aab4f02b418585941e4052f07, type: 3}

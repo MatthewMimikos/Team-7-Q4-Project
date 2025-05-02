@@ -21,25 +21,26 @@ public class gamemanager : MonoBehaviour
         event_text = GameObject.Find("event_text").GetComponent<TMP_Text>();
         status_text = GameObject.Find("status_text").GetComponent<TMP_Text>();
     }
-    public void detected()
+    public void detected(string reason)
     {
-        PlayMusic();
-        is_detected = true;
-        red_light_alarm[] lights = FindObjectsByType<red_light_alarm>(FindObjectsSortMode.None);
-        for (int i = 0; i < lights.Length; i++)
+        if (!is_detected)
         {
-            lights[i].turnon();
+            is_detected = true;
+            PlayMusic();
+            event_text.text = reason;
+            animator.SetTrigger("red_text");
+            red_light_alarm[] lights = FindObjectsByType<red_light_alarm>(FindObjectsSortMode.None);
+            for (int i = 0; i < lights.Length; i++)
+            {
+                lights[i].turnon();
+            }
+            StartCoroutine(diologue_queue("Or you can do that, I guess..."));
         }
     }
     public void PlayMusic()
     {
-        if (!is_detected)
-        {
-            event_text.text = "A guard detected you!";
-            animator.SetTrigger("red_text");
-            GetComponent<AudioSource>().time = 31.75f;
-            GetComponent<AudioSource>().Play();
-        }
+        GetComponent<AudioSource>().time = 31.75f;
+        GetComponent<AudioSource>().Play();
     }
     public void DisableCameras()
     {
@@ -112,5 +113,10 @@ public class gamemanager : MonoBehaviour
         {
             StartCoroutine(Tween(GetComponent<AudioSource>().pitch, 1f, 0.6f));
         }
+    }
+    private IEnumerator diologue_queue(string text)
+    {
+        yield return new WaitForSeconds(9.0f);
+        diologue(text, true);
     }
 }

@@ -26,7 +26,7 @@ public class bullet_create : MonoBehaviour
                     new_bullet.transform.Rotate(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
                 }
                 GameObject game_manager = GameObject.Find("gamemanager");
-                game_manager.GetComponent<gamemanager>().is_detected = true;
+                game_manager.GetComponent<gamemanager>().detected("Everyone heard the shotgun fire...");
             }
         }
     }

@@ -64,7 +64,7 @@ public class detection : MonoBehaviour
                     }
                     if (fully_detected)
                     {
-                        gamemanager.GetComponent<gamemanager>().detected();
+                        gamemanager.GetComponent<gamemanager>().detected("Someone has detected you");
                         Vector3 direction = actual_camera.transform.position - player.transform.position;
                         Quaternion rotation = Quaternion.LookRotation(direction);
                         my_detection_visual.transform.rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.y + player_camera.transform.eulerAngles.y);
