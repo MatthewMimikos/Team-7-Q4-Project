@@ -26,12 +26,19 @@ public class enemy : MonoBehaviour
     public NavMeshAgent navigation;
     public LayerMask layerMask;
 
+    public GameObject player_position;
+
+    Vector3 prev_position;
+    Vector3 moving_direction;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        prev_position = transform.position;
+        moving_direction = Vector3.zero;
         gamemanager = GameObject.Find("gamemanager");
         player = GameObject.Find("Player");
-        type = Random.Range(0, 6);
+        type = Random.Range(5, 6);
         miner.SetActive(false);
         guard.SetActive(false);
         elite_guard.SetActive(false);
@@ -79,6 +86,12 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        player_position.transform.LookAt(player.transform.position);
+        if (transform.position != prev_position)
+        {
+            moving_direction = (transform.position - prev_position).normalized;
+            prev_position = transform.position;
+        }
         if (health <= 0)
         {
             if (is_camera_guy)
@@ -119,8 +132,17 @@ public class enemy : MonoBehaviour
 
         if (type == 5)
         {
-            float angle = Vector3.Angle(player.transform.position, transform.position);
+            float angle = (player_position.transform.rotation.y * Mathf.Rad2Deg) - (Vector3.Angle(prev_position, moving_direction));
+            angle = Mathf.Abs(angle);
             Debug.Log(angle);
+            if (angle >= 0 && angle <= 90)
+            {
+                GetComponent<billboard_sprite>().sprite.GetComponent<Animator>().SetTrigger("front_walk");
+            }
+            else if (angle >= 90 && angle <= 180)
+            {
+                GetComponent<billboard_sprite>().sprite.GetComponent<Animator>().SetTrigger("back_walk");
+            }
         }
     }
 
