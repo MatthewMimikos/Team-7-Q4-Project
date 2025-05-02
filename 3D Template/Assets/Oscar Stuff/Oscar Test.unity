@@ -419,6 +419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4090564589001495570, guid: 1b9cb0427a8892f4e8d772a5d318456a,
         type: 3}
+      propertyPath: start
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090564589001495570, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
       propertyPath: curve.m_Curve.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -527,6 +532,16 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 624829120}
+    - target: {fileID: 5753141569924104311, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: sprintSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753141569924104311, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      propertyPath: maxSprintTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6944541057997856593, guid: 1b9cb0427a8892f4e8d772a5d318456a,
         type: 3}
       propertyPath: m_Layer
@@ -2045,6 +2060,7 @@ MonoBehaviour:
   walkSpeed: 0
   sprintSpeed: 0
   groundDrag: 5
+  maxSprintTime: 0
   jumpForce: 12
   jumpCooldown: 0.25
   airMultiplier: 0.4

@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
 
     public float groundDrag;
 
+    public float maxSprintTime;
+    private float sprintTimer;
+
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
@@ -21,8 +24,6 @@ public class PlayerMovement : MonoBehaviour
     public float crouchSpeed;
     public float crouchYScale;
     private float startYScale;
-
-     
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
@@ -148,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
             gun.SetBool("Running", true);
+            
         }
 
         else if(grounded)
