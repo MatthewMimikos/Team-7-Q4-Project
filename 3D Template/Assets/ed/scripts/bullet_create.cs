@@ -25,6 +25,8 @@ public class bullet_create : MonoBehaviour
                     GameObject new_bullet = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
                     new_bullet.transform.Rotate(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
                 }
+                GameObject game_manager = GameObject.Find("gamemanager");
+                game_manager.GetComponent<gamemanager>().detected("Everyone heard the shotgun fire...");
             }
         }
     }

@@ -25,21 +25,25 @@ public class MaskSwitching : MonoBehaviour
         {
             ui.switch_mask(Miner_mask);
             gamemanager.switch_mask(1);
+            currentMask = 1;
         }
         if (Input.GetKeyDown("2"))
         {
             ui.switch_mask(Guard_mask);
             gamemanager.switch_mask(2);
+            currentMask = 2;
         }
         if (Input.GetKeyDown("3"))
         {
             ui.switch_mask(Camera_mask);
             gamemanager.switch_mask(3);
+            currentMask = 3;
         }
         if (Input.GetKeyDown("4"))
         {
             ui.switch_mask(No_mask);
             gamemanager.switch_mask(4);
+            currentMask = 0;
         }
     }
 }
