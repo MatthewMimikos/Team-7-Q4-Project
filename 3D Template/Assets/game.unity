@@ -710,6 +710,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb379369f4871f84d94ab8cb17eaf98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &493529390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4090564589001495570, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+    type: 3}
+  m_PrefabInstance: {fileID: 536486801}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493529377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17030a79f34e3c64183c5a1f3733ac2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &493529391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6600746906725002378, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+    type: 3}
+  m_PrefabInstance: {fileID: 536486801}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493529377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c9b991c9c395a4a8c6d33f9b7df9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &534100485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -768,6 +792,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4306317669941081742, guid: 213b1758bcd45374a9b48429b69732a4,
+        type: 3}
+      propertyPath: playercamera
+      value: 
+      objectReference: {fileID: 493529388}
+    - target: {fileID: 4306317669941081742, guid: 213b1758bcd45374a9b48429b69732a4,
+        type: 3}
+      propertyPath: MaskSwitching
+      value: 
+      objectReference: {fileID: 536486803}
+    - target: {fileID: 4306317669941081742, guid: 213b1758bcd45374a9b48429b69732a4,
+        type: 3}
+      propertyPath: PlayerMovement
+      value: 
+      objectReference: {fileID: 1735815489}
     - target: {fileID: 7253800500716343146, guid: 213b1758bcd45374a9b48429b69732a4,
         type: 3}
       propertyPath: m_Name
@@ -953,6 +992,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b1697c6ac3e5cb4dbaf0d4596abe2bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1030098413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2627435431816587097, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+    type: 3}
+  m_PrefabInstance: {fileID: 536486801}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d6c64dbf1301a4ca91377202a956e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1082264050
@@ -1434,6 +1485,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 6747424496298840662, guid: 24ab4277bad2d4848bd80f3650faf025,
+        type: 3}
+      propertyPath: Shake
+      value: 
+      objectReference: {fileID: 493529390}
+    - target: {fileID: 6747424496298840662, guid: 24ab4277bad2d4848bd80f3650faf025,
+        type: 3}
+      propertyPath: MoveCam
+      value: 
+      objectReference: {fileID: 1030098413}
+    - target: {fileID: 6747424496298840662, guid: 24ab4277bad2d4848bd80f3650faf025,
+        type: 3}
+      propertyPath: playercamera
+      value: 
+      objectReference: {fileID: 493529388}
+    - target: {fileID: 6747424496298840662, guid: 24ab4277bad2d4848bd80f3650faf025,
+        type: 3}
+      propertyPath: MaskSwitching
+      value: 
+      objectReference: {fileID: 536486803}
+    - target: {fileID: 6747424496298840662, guid: 24ab4277bad2d4848bd80f3650faf025,
+        type: 3}
+      propertyPath: PlayerMovement
+      value: 
+      objectReference: {fileID: 1735815489}
+    - target: {fileID: 6747424496298840662, guid: 24ab4277bad2d4848bd80f3650faf025,
+        type: 3}
+      propertyPath: HeadBobController
+      value: 
+      objectReference: {fileID: 493529391}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1632,7 +1713,7 @@ SceneRoots:
   - {fileID: 387352086}
   - {fileID: 1945514576}
   - {fileID: 1521816854}
-  - {fileID: 534100485}
   - {fileID: 1617531029}
+  - {fileID: 534100485}
   - {fileID: 110404415}
   - {fileID: 1782874902}

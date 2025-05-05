@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Diagnostics.Contracts;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -9,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     private float moveSpeed;
     public float walkSpeed;
     public float sprintSpeed;
+
+    public float dashSpeed;
+    public float dashSpeedChangeFactor;
 
     public float groundDrag;
 
@@ -51,12 +55,17 @@ public class PlayerMovement : MonoBehaviour
     public GameObject dynamite;
 
     public MovementState state;
+
+    
     public enum MovementState
     {
         walking,
         sprinting,
+        crouching,
+        dashing,
         air
     }
+    public bool dashing;
 
     private void Start()
     {
@@ -96,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         StateHandler();
 
         // handle drag
-        if (grounded)
+        if (state == MovementState.walking || state == MovementState.sprinting || state == MovementState.crouching)
             rb.linearDamping = groundDrag;
         else
             rb.linearDamping = 0;
@@ -141,13 +150,22 @@ public class PlayerMovement : MonoBehaviour
             drop_item();
         }
     }
-
+    private float desiredMoveSpeed;
+    private float lastDesiredMoveSpeed;
+    private MovementState lastState;
+    private bool keepMomentum;
     private void StateHandler()
     {
-        if(grounded && Input.GetKey(sprintKey))
+        if (dashing)
+        {
+            state = MovementState.dashing;
+            desiredMoveSpeed = dashSpeed;
+            speedChangeFactor = dashSpeedChangeFactor;
+        }
+        else if (grounded && Input.GetKey(sprintKey))
         {
             state = MovementState.sprinting;
-            moveSpeed = sprintSpeed;
+            desiredMoveSpeed = sprintSpeed;
             gun.SetBool("Running", true);
             
         }
@@ -155,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
         else if(grounded)
         {
             state = MovementState.walking;
-            moveSpeed = walkSpeed;
+            desiredMoveSpeed = walkSpeed;
             gun.SetBool("Running", false);
         }
 
@@ -163,7 +181,55 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.air;
             gun.SetBool("Running", false);
+
+            if (desiredMoveSpeed < sprintSpeed)
+                desiredMoveSpeed = walkSpeed;
+            else
+                desiredMoveSpeed = sprintSpeed;
         }
+
+        bool desiredMoveSpeedHasChanged = desiredMoveSpeed != lastDesiredMoveSpeed;
+        if (lastState == MovementState.dashing) keepMomentum = true;
+        
+        if (desiredMoveSpeedHasChanged)
+        {
+            if (keepMomentum)
+            {
+                StopAllCoroutines();
+                StartCoroutine(SmoothlyLerpMoveSpeed());
+            }
+            else
+            {
+                StopAllCoroutines();
+                moveSpeed = desiredMoveSpeed;
+            }
+        }
+
+        lastDesiredMoveSpeed = desiredMoveSpeed;
+        lastState = state;
+    }
+
+    private float speedChangeFactor;
+    private IEnumerator SmoothlyLerpMoveSpeed()
+    {
+        float time = 0;
+        float difference = Mathf.Abs(desiredMoveSpeed - moveSpeed);
+        float startValue = moveSpeed;
+
+        float boostFactor = speedChangeFactor;
+
+        while (time < difference)
+        {
+            moveSpeed = Mathf.Lerp(startValue, desiredMoveSpeed, time / difference);
+
+            time += Time.deltaTime * boostFactor;
+
+            yield return null;
+        }
+
+        moveSpeed = desiredMoveSpeed;
+        speedChangeFactor = 1f;
+        keepMomentum = false;
     }
     private void MovePlayer()
     {
