@@ -16,6 +16,9 @@ public class MaskSwitching : MonoBehaviour
     {
         ui = FindFirstObjectByType<ui>();
         gamemanager = FindFirstObjectByType<gamemanager>();
+        ui.switch_mask(No_mask);
+        gamemanager.switch_mask(4);
+        currentMask = 0;
     }
 
     // Update is called once per frame
