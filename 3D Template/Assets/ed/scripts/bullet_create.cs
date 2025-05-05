@@ -27,10 +27,9 @@ public class bullet_create : MonoBehaviour
         {
             if (weapons.selectedWeapon == 2)
             {
-                if (loaded_ammo > 0 && ammo > 0)
+                if (loaded_ammo >= 0 && ammo >= 0)
                 {
                     loaded_ammo--;
-                    ammo--;
                     ammo_text.text = loaded_ammo.ToString() + "/" + ammo.ToString();
                     transform.LookAt(playercamera.raycast_point);
                     for (int i = 0; i < 8; i++)

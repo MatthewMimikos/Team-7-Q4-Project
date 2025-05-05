@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 841367294867956206}
   m_Layer: 0
   m_Name: ui
-  m_TagString: Untagged
+  m_TagString: playerui
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -751,6 +751,7 @@ MonoBehaviour:
   info_text: {fileID: 4913884586858846508}
   info_text2: {fileID: 8538633104804212173}
   status_text: {fileID: 1337508054314822613}
+  ammo: {fileID: 0}
   mask_texture: {fileID: 7706256142268433939}
 --- !u!1 &3898489248096450475
 GameObject:
