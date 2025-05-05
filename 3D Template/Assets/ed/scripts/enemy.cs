@@ -5,6 +5,8 @@ using UnityEngine.Rendering;
 
 public class enemy : MonoBehaviour
 {
+    public Animator sprite_thing;
+
     public GameObject player;
     public GameObject bullet;
 
@@ -28,6 +30,7 @@ public class enemy : MonoBehaviour
 
     public GameObject player_position;
 
+    public bool dead;
     Vector3 prev_position;
     Vector3 moving_direction;
 
@@ -38,7 +41,7 @@ public class enemy : MonoBehaviour
         moving_direction = Vector3.zero;
         gamemanager = GameObject.Find("gamemanager");
         player = GameObject.Find("Player");
-        type = Random.Range(5, 6);
+        type = Random.Range(0, 6);
         miner.SetActive(false);
         guard.SetActive(false);
         elite_guard.SetActive(false);
@@ -48,36 +51,42 @@ public class enemy : MonoBehaviour
         if (type == 0)
         {
             miner.SetActive(true);
+            sprite_thing = miner.GetComponent<Animator>();
             GetComponent<billboard_sprite>().sprite = miner;
             health = 50;
         }
         if (type == 1)
         {
             guard.SetActive(true);
+            sprite_thing = guard.GetComponent<Animator>();
             GetComponent<billboard_sprite>().sprite = guard;
             health = 125;
         }
         if (type == 2)
         {
             elite_guard.SetActive(true);
+            sprite_thing = elite_guard.GetComponent<Animator>();
             GetComponent<billboard_sprite>().sprite = elite_guard;
             health = 325;
         }
         if (type == 3)
         {
             rifle.SetActive(true);
+            sprite_thing = rifle.GetComponent<Animator>();
             GetComponent<billboard_sprite>().sprite = rifle;
             health = 100;
         }
         if (type == 4)
         {
             cultmember.SetActive(true);
+            sprite_thing = cultmember.GetComponent<Animator>();
             GetComponent<billboard_sprite>().sprite = cultmember;
             health = 125;
         }
         if (type == 5)
         {
             coolcultmember.SetActive(true);
+            sprite_thing = coolcultmember.GetComponent<Animator>();
             GetComponent<billboard_sprite>().sprite = coolcultmember;
             health = 200;
         }
@@ -92,8 +101,9 @@ public class enemy : MonoBehaviour
             moving_direction = (transform.position - prev_position).normalized;
             prev_position = transform.position;
         }
-        if (health <= 0)
+        if (health <= 0 && !dead)
         {
+            dead = true;
             if (is_camera_guy)
             {
                 gamemanager.GetComponent<gamemanager>().DisableCameras();
@@ -102,7 +112,7 @@ public class enemy : MonoBehaviour
             {
                 Destroy(detection.my_detection_visual);
             }
-            Destroy(gameObject);
+            sprite_thing.SetTrigger("die");
         }
 
         if (gamemanager.GetComponent<gamemanager>().is_detected)
@@ -125,7 +135,7 @@ public class enemy : MonoBehaviour
                 }
             }
         }
-        if (gamemanager.GetComponent<gamemanager>().is_detected == true)
+        if (gamemanager.GetComponent<gamemanager>().is_detected == true && type != 0)
         {
             navigation.destination = player.transform.position;
         }

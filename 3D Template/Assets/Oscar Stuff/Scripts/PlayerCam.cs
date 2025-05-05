@@ -87,7 +87,7 @@ public class PlayerCam : MonoBehaviour
             can_pickup_shovel = false;
             can_pickup_shotgun = false;
         }
-        else if (HitInfo.collider.CompareTag("shell"))
+        else if (HitInfo.collider.CompareTag("shells"))
         {
             ui.info_text.text = "Shotgun Shells";
             ui.info_text2.text = "Press E to pick up";
