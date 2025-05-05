@@ -17,6 +17,8 @@ public class GameOverTrigger : MonoBehaviour
             playercamera.enabled = false;
             PlayerMovement.enabled = false;
             MaskSwitching.enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         else
         {

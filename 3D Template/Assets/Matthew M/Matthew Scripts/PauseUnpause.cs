@@ -31,6 +31,8 @@ public class PauseUnpause : MonoBehaviour
             Shake.enabled = true;
             HeadBobController.enabled = true;
             target.SetActive(true);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
     }
 
     public void Update()
@@ -46,6 +48,8 @@ public class PauseUnpause : MonoBehaviour
             Shake.enabled = false;
             HeadBobController.enabled = false;
             target.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }
