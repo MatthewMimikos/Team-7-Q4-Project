@@ -729,7 +729,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6045171617242724716}
-  - component: {fileID: 2012206985414456025}
+  - component: {fileID: 7797852790376747508}
   m_Layer: 0
   m_Name: SceneChange Settings
   m_TagString: Untagged
@@ -752,7 +752,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3087180491956319717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2012206985414456025
+--- !u!114 &7797852790376747508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -761,12 +761,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4958308469789653402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb92938ed1a1e841b183735f2a01686, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c46b26956597f04c906a7393c973eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaitTime: 1
-  scene: Settings Scene
-  Image: {fileID: 9208459747125362677}
+  settingsScene: {fileID: 0}
 --- !u!1 &5482872529750521953
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,9 +886,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2012206985414456025}
-        m_TargetAssemblyTypeName: SceneLoadBasic, Assembly-CSharp
-        m_MethodName: UniqueExit
+      - m_Target: {fileID: 7797852790376747508}
+        m_TargetAssemblyTypeName: SetSettingsActive, Assembly-CSharp
+        m_MethodName: SettingsActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
