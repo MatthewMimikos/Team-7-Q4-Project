@@ -81,7 +81,16 @@ public class PlayerCam : MonoBehaviour
         else if (HitInfo.collider.CompareTag("dynamite"))
         {
             ui.info_text.text = "Dynamite";
-            ui.info_text2.text = "Press E to pick up, Press F to light fuse";
+            ui.info_text2.text = "Press E to pick up";
+            item = HitInfo.collider.gameObject;
+            can_pickup_dynamite = true;
+            can_pickup_shovel = false;
+            can_pickup_shotgun = false;
+        }
+        else if (HitInfo.collider.CompareTag("shell"))
+        {
+            ui.info_text.text = "Shotgun Shells";
+            ui.info_text2.text = "Press E to pick up";
             item = HitInfo.collider.gameObject;
             can_pickup_dynamite = true;
             can_pickup_shovel = false;
@@ -109,9 +118,17 @@ public class PlayerCam : MonoBehaviour
                 GameObject.Find("WeaponHolder").GetComponent<WeaponSwitching>().has_shotgun = true;
                 gamemanager.GetComponent<gamemanager>().diologue("Picked up a Shotgun. To switch weapons, use the scrollwheel or right click", false);
             }
+            if (can_pickup_dynamite == true)
+            {
+                gamemanager.GetComponent<gamemanager>().diologue("Picked up Dynamite, Press F to drop it and ingite it's fuse", false);
+            }
+            if (item.GetComponent<pickup>().shell == true)
+            {
+
+            }
             if (item)
             {
-                Destroy(item.gameObject);
+                item.GetComponent<pickup>().picked_up();
             }
         }
     }

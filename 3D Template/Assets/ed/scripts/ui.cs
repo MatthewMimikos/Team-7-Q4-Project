@@ -60,6 +60,7 @@ public class ui : MonoBehaviour
     public TMP_Text info_text;
     public TMP_Text info_text2;
     public TMP_Text status_text;
+    public TMP_Text ammo;
 
     public RawImage mask_texture;
     void Start()
