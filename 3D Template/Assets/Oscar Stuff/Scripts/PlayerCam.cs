@@ -51,6 +51,7 @@ public class PlayerCam : MonoBehaviour
 
         bool can_pickup_shovel = false;
         bool can_pickup_shotgun = false;
+        bool can_pickup_dynamite = false;
 
         GameObject item = null;
 
@@ -65,6 +66,8 @@ public class PlayerCam : MonoBehaviour
             ui.info_text2.text = "Press E to pick up";
             item = HitInfo.collider.gameObject;
             can_pickup_shovel = true;
+            can_pickup_shovel = false;
+            can_pickup_dynamite = false;
         }
         else if (HitInfo.collider.CompareTag("dropped_shotgun"))
         {
@@ -72,6 +75,17 @@ public class PlayerCam : MonoBehaviour
             ui.info_text2.text = "Press E to pick up";
             item = HitInfo.collider.gameObject;
             can_pickup_shotgun = true;
+            can_pickup_shovel = false;
+            can_pickup_dynamite = false;
+        }
+        else if (HitInfo.collider.CompareTag("dynamite"))
+        {
+            ui.info_text.text = "Dynamite";
+            ui.info_text2.text = "Press E to pick up, Press F to light fuse";
+            item = HitInfo.collider.gameObject;
+            can_pickup_dynamite = true;
+            can_pickup_shovel = false;
+            can_pickup_shotgun = false;
         }
         else
         {
@@ -80,6 +94,7 @@ public class PlayerCam : MonoBehaviour
             item = null;
             can_pickup_shovel = false;
             can_pickup_shotgun = false;
+            can_pickup_dynamite = false;
         }
 
         if (Input.GetKeyDown(KeyCode.E))
