@@ -956,6 +956,7 @@ GameObject:
   - component: {fileID: 4140616707424625421}
   - component: {fileID: 25001110947590717}
   - component: {fileID: 5226927608904884246}
+  - component: {fileID: 2696109598567043691}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1022,6 +1023,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 7
   sprintSpeed: 12
+  dashSpeed: 20
+  dashSpeedChangeFactor: 50
   groundDrag: 5
   maxSprintTime: 0
   jumpForce: 12
@@ -1045,6 +1048,7 @@ MonoBehaviour:
   dynamite: {fileID: 6025753014329545179, guid: c695549369c66954899e887e9a5d5be3,
     type: 3}
   state: 0
+  dashing: 0
 --- !u!136 &141435927267241272
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1144,6 +1148,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2696109598567043691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6944541057997856593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe75da4ada25934469e5e50faff58beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orientation: {fileID: 1103243833669211420}
+  playerCam: {fileID: 657792957399254119}
+  dashForce: 25
+  dashDuration: 0.3
+  dashCd: 0.75
+  dashKey: 114
 --- !u!1 &8663020925678824526
 GameObject:
   m_ObjectHideFlags: 0

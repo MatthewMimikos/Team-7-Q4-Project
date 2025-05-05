@@ -539,6 +539,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5753141569924104311, guid: 1b9cb0427a8892f4e8d772a5d318456a,
         type: 3}
+      propertyPath: playerHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753141569924104311, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
       propertyPath: maxSprintTime
       value: 2
       objectReference: {fileID: 0}
@@ -567,7 +572,11 @@ PrefabInstance:
     - {fileID: 8641960904554911863, guid: 1b9cb0427a8892f4e8d772a5d318456a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6944541057997856593, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+        type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1657993029}
   m_SourcePrefab: {fileID: 100100000, guid: 1b9cb0427a8892f4e8d772a5d318456a, type: 3}
 --- !u!1 &231011912
 GameObject:
@@ -981,6 +990,12 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 222528175}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &624829121 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 657792957399254119, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+    type: 3}
+  m_PrefabInstance: {fileID: 222528175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &650364976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,6 +1155,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736359173}
   m_CullTransparentMesh: 1
+--- !u!4 &743441584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1103243833669211420, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+    type: 3}
+  m_PrefabInstance: {fileID: 222528175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &941692125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,6 +2080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 0
   sprintSpeed: 0
+  dashSpeed: 0
   groundDrag: 5
   maxSprintTime: 0
   jumpForce: 12
@@ -2081,6 +2103,7 @@ MonoBehaviour:
   Gamemanager: {fileID: 0}
   dynamite: {fileID: 0}
   state: 0
+  dashing: 0
 --- !u!114 &1439677101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2207,6 +2230,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1657993021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6944541057997856593, guid: 1b9cb0427a8892f4e8d772a5d318456a,
+    type: 3}
+  m_PrefabInstance: {fileID: 222528175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1657993029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657993021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe75da4ada25934469e5e50faff58beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orientation: {fileID: 743441584}
+  playerCam: {fileID: 624829121}
+  dashForce: 20
+  dashDuration: 0.25
+  dashCd: 1.5
+  dashKey: 114
 --- !u!1 &2046194232
 GameObject:
   m_ObjectHideFlags: 0
