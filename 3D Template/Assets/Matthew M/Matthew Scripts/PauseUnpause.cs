@@ -12,12 +12,10 @@ public class PauseUnpause : MonoBehaviour
     public HeadBobController HeadBobController;
     public Shake Shake;
     public GameObject ui;
-    private GameObject target;
 
     public void Start()
     {
         PauseMenu.SetActive(false);
-        target = GameObject.FindGameObjectWithTag("ui");
     }
 
     public void Unpause()
@@ -30,7 +28,6 @@ public class PauseUnpause : MonoBehaviour
             MoveCam.enabled = true;
             Shake.enabled = true;
             HeadBobController.enabled = true;
-            target.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
     }
@@ -47,7 +44,6 @@ public class PauseUnpause : MonoBehaviour
             MoveCam.enabled = false;
             Shake.enabled = false;
             HeadBobController.enabled = false;
-            target.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
