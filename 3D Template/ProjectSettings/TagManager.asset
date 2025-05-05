@@ -11,6 +11,8 @@ TagManager:
   - window
   - dropped_shotgun
   - dynamite
+  - shells
+  - playerui
   layers:
   - Default
   - TransparentFX
