@@ -11,6 +11,12 @@ public class MaskSwitching : MonoBehaviour
     public ui ui;
     private gamemanager gamemanager;
 
+    public bool has_miner_mask = false;
+    public bool has_guard_mask = false;
+    public bool has_camera_mask = false;
+    public bool has_shovel_mask = false;
+    public bool has_speed_mask = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,19 +30,19 @@ public class MaskSwitching : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("1"))
+        if (Input.GetKeyDown("1") && has_miner_mask)
         {
             ui.switch_mask(Miner_mask);
             gamemanager.switch_mask(1);
             currentMask = 1;
         }
-        if (Input.GetKeyDown("2"))
+        if (Input.GetKeyDown("2") && has_guard_mask)
         {
             ui.switch_mask(Guard_mask);
             gamemanager.switch_mask(2);
             currentMask = 2;
         }
-        if (Input.GetKeyDown("3"))
+        if (Input.GetKeyDown("3") && has_camera_mask)
         {
             ui.switch_mask(Camera_mask);
             gamemanager.switch_mask(3);

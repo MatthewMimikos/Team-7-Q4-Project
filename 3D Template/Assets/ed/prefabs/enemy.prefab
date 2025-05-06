@@ -851,6 +851,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb48ff856ae7c841a85730cc181f30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preset_type: -1
+  sprite_thing: {fileID: 0}
   player: {fileID: 0}
   bullet: {fileID: 3976846265408971094, guid: 28cc81340ee9fdf469a1b701aeb51141, type: 3}
   is_camera_guy: 0
@@ -869,6 +871,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 129
   player_position: {fileID: 2339349100593489313}
+  dead: 0
+  miner_mask: {fileID: 7523315281132959843, guid: acec80aa482b8d24d9ecc48d5f3e8b21,
+    type: 3}
+  guard_mask: {fileID: 0}
 --- !u!114 &4329387807409280012
 MonoBehaviour:
   m_ObjectHideFlags: 0

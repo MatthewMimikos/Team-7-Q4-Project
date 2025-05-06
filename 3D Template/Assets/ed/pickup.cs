@@ -4,6 +4,11 @@ public class pickup : MonoBehaviour
 {
     public bool dynamite = false;
     public bool shell = false;
+    public bool miner_mask = false;
+    public bool guard_mask = false;
+    public bool camera_mask = false;
+    public bool speed_mask = false;
+    public bool shovel_mask = false;
 
     public void picked_up()
     {
