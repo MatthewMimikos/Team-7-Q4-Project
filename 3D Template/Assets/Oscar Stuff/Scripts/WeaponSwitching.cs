@@ -82,10 +82,6 @@ public class WeaponSwitching : MonoBehaviour
         {
             SelectWeapon();
         }
-        if (Input.GetMouseButtonDown(0))
-        {
-            animator.SetTrigger("shoot");
-        }
     }
 
     void SelectWeapon()
