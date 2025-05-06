@@ -14,6 +14,7 @@ public class PlayerCam : MonoBehaviour
     public int target = 120;
 
     private GameObject gamemanager;
+    public MaskSwitching MaskSwitcher;
     public bullet_create bullet_Create;
     public ui ui;
     public Vector3 raycast_point;
@@ -125,6 +126,10 @@ public class PlayerCam : MonoBehaviour
             if (item.GetComponent<pickup>().shell == true)
             {
 
+            }
+            if (item.GetComponent<pickup>().miner_mask == true)
+            {
+                MaskSwitcher.has_miner_mask = true;
             }
             if (item)
             {

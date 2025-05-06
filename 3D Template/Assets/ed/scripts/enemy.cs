@@ -5,6 +5,7 @@ using UnityEngine.Rendering;
 
 public class enemy : MonoBehaviour
 {
+    public int preset_type = -1;
     public Animator sprite_thing;
 
     public GameObject player;
@@ -34,6 +35,9 @@ public class enemy : MonoBehaviour
     Vector3 prev_position;
     Vector3 moving_direction;
 
+    public GameObject miner_mask;
+    public GameObject guard_mask;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,7 +45,10 @@ public class enemy : MonoBehaviour
         moving_direction = Vector3.zero;
         gamemanager = GameObject.Find("gamemanager");
         player = GameObject.Find("Player");
-        type = Random.Range(0, 6);
+        if (preset_type == -1)
+        {
+            type = Random.Range(1, 6);
+        }
         miner.SetActive(false);
         guard.SetActive(false);
         elite_guard.SetActive(false);
@@ -113,6 +120,10 @@ public class enemy : MonoBehaviour
                 Destroy(detection.my_detection_visual);
             }
             sprite_thing.SetTrigger("die");
+            if (type == 0)
+            {
+                GameObject new_mask = Instantiate(miner_mask, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            }
         }
 
         if (gamemanager.GetComponent<gamemanager>().is_detected)

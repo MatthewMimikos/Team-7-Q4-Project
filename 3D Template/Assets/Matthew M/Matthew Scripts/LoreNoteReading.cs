@@ -59,13 +59,13 @@ public class LoreNoteReading : MonoBehaviour
     {
         LoreReading.SetActive(false);
         LoreNote1 = true;
-        LoreNote2 = false;
-        LoreNote3 = false;
-        LoreNote4 = false;
-        LoreNote5 = false;
-        LoreNote6 = false;
-        LoreNote7 = false;
-        LoreNote8 = false;
+        LoreNote2 = true;
+        LoreNote3 = true;
+        LoreNote4 = true;
+        LoreNote5 = true;
+        LoreNote6 = true;
+        LoreNote7 = true;
+        LoreNote8 = true;
     }
 
     public void Update()
