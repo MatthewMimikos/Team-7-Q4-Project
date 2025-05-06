@@ -302,6 +302,7 @@ MonoBehaviour:
   sensY: 90
   orientation: {fileID: 1103243833669211420}
   target: 120
+  MaskSwitcher: {fileID: 0}
   bullet_Create: {fileID: 3438625121426260272}
   ui: {fileID: 0}
   raycast_point: {x: 0, y: 0, z: 0}
@@ -640,6 +641,9 @@ MonoBehaviour:
   raycastpoint: {x: 0, y: 0, z: 0}
   playercamera: {fileID: 0}
   weapons: {fileID: 0}
+  ammo_text: {fileID: 0}
+  loaded_ammo: 2
+  ammo: 8
 --- !u!1 &4363057510291372260
 GameObject:
   m_ObjectHideFlags: 0
