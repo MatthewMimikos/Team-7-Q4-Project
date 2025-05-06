@@ -49,6 +49,10 @@ public class enemy : MonoBehaviour
         {
             type = Random.Range(1, 6);
         }
+        else
+        {
+            type = preset_type;
+        }
         miner.SetActive(false);
         guard.SetActive(false);
         elite_guard.SetActive(false);
@@ -111,6 +115,10 @@ public class enemy : MonoBehaviour
         if (health <= 0 && !dead)
         {
             dead = true;
+            if (type == 0)
+            {
+                GameObject new_mask = Instantiate(miner_mask, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            }
             if (is_camera_guy)
             {
                 gamemanager.GetComponent<gamemanager>().DisableCameras();
@@ -120,10 +128,6 @@ public class enemy : MonoBehaviour
                 Destroy(detection.my_detection_visual);
             }
             sprite_thing.SetTrigger("die");
-            if (type == 0)
-            {
-                GameObject new_mask = Instantiate(miner_mask, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-            }
         }
 
         if (gamemanager.GetComponent<gamemanager>().is_detected)

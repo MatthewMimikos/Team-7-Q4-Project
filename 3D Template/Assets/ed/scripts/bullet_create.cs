@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class bullet_create : MonoBehaviour
 {
+    public Animator shotgun_anim;
+    public AudioSource AudioSource;
     public GameObject bullet;
     public Transform playertransform;
     public Transform cameratransform;
@@ -27,11 +29,13 @@ public class bullet_create : MonoBehaviour
         {
             if (weapons.selectedWeapon == 2)
             {
-                if (loaded_ammo >= 0 && ammo >= 0)
+                if (loaded_ammo > 0 && ammo >= 0)
                 {
+                    shotgun_anim.SetTrigger("shoot");
                     loaded_ammo--;
                     ammo_text.text = loaded_ammo.ToString() + "/" + ammo.ToString();
                     transform.LookAt(playercamera.raycast_point);
+                    AudioSource.Play();
                     for (int i = 0; i < 8; i++)
                     {
                         GameObject new_bullet = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
@@ -39,8 +43,12 @@ public class bullet_create : MonoBehaviour
                     }
                     GameObject game_manager = GameObject.Find("gamemanager");
                     game_manager.GetComponent<gamemanager>().detected("Everyone heard the shotgun fire...");
-                }  
-                if (loaded_ammo <= 0 && ammo <= 2)
+                }
+                if (loaded_ammo == 0 && ammo == 0)
+                {
+
+                }
+                else if (loaded_ammo <= 0 && ammo >= 2 && ammo_text.text != "Reloading")
                 {
                     ammo_text.text = "Reloading";
                     StartCoroutine(Reload());
@@ -50,8 +58,10 @@ public class bullet_create : MonoBehaviour
     }
     private IEnumerator Reload()
     {
-        yield return new WaitForSeconds(3.0f);
+        shotgun_anim.SetTrigger("reload");
+        yield return new WaitForSeconds(1.2f);
         ammo -= 2;
         loaded_ammo = 2;
+        ammo_text.text = loaded_ammo.ToString() + "/" + ammo.ToString();
     }
 }

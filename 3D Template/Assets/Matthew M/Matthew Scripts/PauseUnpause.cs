@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PauseUnpause : MonoBehaviour
 {
+    public AudioSource audio1;
+    public AudioSource audio2;
     public GameObject PauseMenu;
     public KeyCode Pause;
     public PlayerCam playercamera;
@@ -20,6 +22,7 @@ public class PauseUnpause : MonoBehaviour
 
     public void Unpause()
     {
+            audio1.pitch = 1;
             Time.timeScale = 1f;
             PauseMenu.SetActive(false);
             playercamera.enabled = true;
@@ -36,6 +39,7 @@ public class PauseUnpause : MonoBehaviour
     {
         if (Input.GetKey(Pause))
         {
+            audio1.pitch = 0.6f;
             PauseMenu.SetActive(true);
             Time.timeScale = 0f;
             playercamera.enabled = false;

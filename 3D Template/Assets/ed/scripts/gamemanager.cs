@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class gamemanager : MonoBehaviour
 {
+    public AudioSource audio1;
+    public AudioSource audio2;
     public TMP_Text event_text;
     public TMP_Text status_text;
     public bool is_detected = false;
@@ -39,8 +41,9 @@ public class gamemanager : MonoBehaviour
     }
     public void PlayMusic()
     {
-        GetComponent<AudioSource>().time = 31.75f;
-        GetComponent<AudioSource>().Play();
+        audio2.Stop();
+        audio1.time = 31.75f;
+        audio1.Play();
     }
     public void DisableCameras()
     {
@@ -105,13 +108,6 @@ public class gamemanager : MonoBehaviour
             float sound_pitch = Mathf.Lerp(posA, posB, i / 100f);
             GetComponent<AudioSource>().pitch = sound_pitch;
             yield return new WaitForSeconds(0.03f);
-        }
-    }
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            StartCoroutine(Tween(GetComponent<AudioSource>().pitch, 1f, 0.6f));
         }
     }
     private IEnumerator diologue_queue(string text)
