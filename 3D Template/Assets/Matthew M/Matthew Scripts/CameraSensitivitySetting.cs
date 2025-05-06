@@ -21,8 +21,8 @@ public class CameraSensitivitySetting : MonoBehaviour
 
     public void CameraSensitivity()
     {
-        PlayerCam.sensX = Slider.value * 180;
-        PlayerCam.sensY = Slider.value * 180;
+        PlayerCam.sensX = (Slider.value * 180) + 20;
+        PlayerCam.sensY = (Slider.value * 180) + 20;
         Save();
     }
 

@@ -479,7 +479,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3471750214970605888}
+        m_TargetAssemblyTypeName: CameraSensitivitySetting, Assembly-CSharp
+        m_MethodName: CameraSensitivity
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3471750214970605888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,6 +504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99842607ac9eba047aeac899ac050a9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerCam: {fileID: 0}
+  Slider: {fileID: 0}
 --- !u!1 &2286494558718132893
 GameObject:
   m_ObjectHideFlags: 0
