@@ -640,6 +640,9 @@ MonoBehaviour:
   raycastpoint: {x: 0, y: 0, z: 0}
   playercamera: {fileID: 0}
   weapons: {fileID: 0}
+  ammo_text: {fileID: 0}
+  loaded_ammo: 2
+  ammo: 8
 --- !u!1 &4363057510291372260
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,6 +960,7 @@ GameObject:
   - component: {fileID: 25001110947590717}
   - component: {fileID: 5226927608904884246}
   - component: {fileID: 2696109598567043691}
+  - component: {fileID: 5277716245697364339}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1166,6 +1170,20 @@ MonoBehaviour:
   dashDuration: 0.3
   dashCd: 0.75
   dashKey: 114
+--- !u!114 &5277716245697364339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6944541057997856593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5dddb925a1f4774fb7382a00196602f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
 --- !u!1 &8663020925678824526
 GameObject:
   m_ObjectHideFlags: 0
