@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class gamemanager : MonoBehaviour
 {
+
+    public int enemies_left = 0;
     public AudioSource audio1;
     public AudioSource audio2;
     public TMP_Text event_text;

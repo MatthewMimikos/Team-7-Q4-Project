@@ -222,7 +222,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1407
+    m_Bits: 1919
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 731aa8580f5e6b64db7d0ce9aa14a674, type: 2}
   m_TargetDisplay: 0
@@ -1231,7 +1231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 241da2a3b49450548bceb13ac7fac6b8, type: 2}
+  - {fileID: 2100000, guid: 87247a8f5501fe14b861bc7e32a37f88, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

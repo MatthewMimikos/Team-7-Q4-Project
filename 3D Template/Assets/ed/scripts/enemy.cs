@@ -66,36 +66,41 @@ public class enemy : MonoBehaviour
             GetComponent<billboard_sprite>().sprite = miner;
             health = 50;
         }
-        if (type == 1)
+        else if (type == 1)
         {
+            gamemanager.GetComponent<gamemanager>().enemies_left += 1;
             guard.SetActive(true);
             sprite_thing = guard.GetComponent<Animator>();
             GetComponent<billboard_sprite>().sprite = guard;
             health = 125;
         }
-        if (type == 2)
+        else if (type == 2)
         {
+            gamemanager.GetComponent<gamemanager>().enemies_left += 1;
             elite_guard.SetActive(true);
             sprite_thing = elite_guard.GetComponent<Animator>();
             GetComponent<billboard_sprite>().sprite = elite_guard;
             health = 325;
         }
-        if (type == 3)
+        else if (type == 3)
         {
+            gamemanager.GetComponent<gamemanager>().enemies_left += 1;
             rifle.SetActive(true);
             sprite_thing = rifle.GetComponent<Animator>();
             GetComponent<billboard_sprite>().sprite = rifle;
             health = 100;
         }
-        if (type == 4)
+        else if (type == 4)
         {
+            gamemanager.GetComponent<gamemanager>().enemies_left += 1;
             cultmember.SetActive(true);
             sprite_thing = cultmember.GetComponent<Animator>();
             GetComponent<billboard_sprite>().sprite = cultmember;
             health = 125;
         }
-        if (type == 5)
+        else if (type == 5)
         {
+            gamemanager.GetComponent<gamemanager>().enemies_left += 1;
             coolcultmember.SetActive(true);
             sprite_thing = coolcultmember.GetComponent<Animator>();
             GetComponent<billboard_sprite>().sprite = coolcultmember;
@@ -119,6 +124,10 @@ public class enemy : MonoBehaviour
             {
                 GameObject new_mask = Instantiate(miner_mask, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
             }
+            if (type != 0)
+            {
+                gamemanager.GetComponent<gamemanager>().enemies_left -= 1;
+            }
             if (is_camera_guy)
             {
                 gamemanager.GetComponent<gamemanager>().DisableCameras();
@@ -132,20 +141,16 @@ public class enemy : MonoBehaviour
 
         if (gamemanager.GetComponent<gamemanager>().is_detected)
         {
-            if (can_attack == true && type == 1 || can_attack == true && type == 2)
+            if (can_attack == true && type == 3)
             {
-                Physics.Raycast(transform.position, transform.position - player.transform.position, out RaycastHit hitInfo, 100f, layerMask);
+                bool did_hit = Physics.Linecast(transform.position, player.transform.position, out RaycastHit hitInfo, layerMask);
                 Debug.Log(hitInfo);
-
-                if (hitInfo.transform.gameObject.CompareTag("Player"))
+                if (did_hit && hitInfo.transform.gameObject.CompareTag("Player"))
                 {
-                    for (int i = 0; i < 8; i++)
-                    {
-                        GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
-                        new_bullet.GetComponent<bullet>().from_enemy = true;
-                        new_bullet.transform.LookAt(player.transform.position);
-                        new_bullet.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
-                    }
+                    GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
+                    new_bullet.GetComponent<bullet>().from_enemy = true;
+                    new_bullet.transform.LookAt(player.transform.position);
+                    new_bullet.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
                     StartCoroutine(EnterCooldown());
                 }
             }

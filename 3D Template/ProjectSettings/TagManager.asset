@@ -13,6 +13,7 @@ TagManager:
   - dynamite
   - shells
   - playerui
+  - dropped_item
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - weapons
   - player
   - window
-  - 
+  - dropped_item
   - whatIsGround
   - 
   - 
