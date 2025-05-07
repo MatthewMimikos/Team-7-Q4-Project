@@ -142,6 +142,10 @@ public class enemy : MonoBehaviour
 
         if (gamemanager.GetComponent<gamemanager>().is_detected)
         {
+            if (type == 0)
+            {
+                sprite_thing.SetTrigger("fear");
+            }
             if (can_attack == true && type != 0)
             {
                 bool did_hit = Physics.Linecast(transform.position, player.transform.position, out RaycastHit hitInfo, layerMask);

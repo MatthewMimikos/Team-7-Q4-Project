@@ -308,7 +308,7 @@ MonoBehaviour:
   raycast_point: {x: 0, y: 0, z: 0}
   layerMask:
     serializedVersion: 2
-    m_Bits: 1417
+    m_Bits: 1289
 --- !u!114 &3471659783714565118
 MonoBehaviour:
   m_ObjectHideFlags: 0

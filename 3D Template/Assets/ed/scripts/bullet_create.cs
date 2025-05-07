@@ -27,6 +27,7 @@ public class bullet_create : MonoBehaviour
     void Update()
     {
         ammo_text = GameObject.Find("ammo_text").GetComponent<TMP_Text>();
+        transform.LookAt(playercamera.raycast_point);
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (weapons.selectedWeapon == 2)
@@ -36,11 +37,11 @@ public class bullet_create : MonoBehaviour
                     shotgun_anim.SetTrigger("shoot");
                     loaded_ammo--;
                     ammo_text.text = loaded_ammo.ToString() + "/" + ammo.ToString();
-                    transform.LookAt(playercamera.raycast_point);
                     AudioSource.Play();
                     for (int i = 0; i < 8; i++)
                     {
                         GameObject new_bullet = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+                        new_bullet.GetComponent<bullet>().from_enemy = false;
                         new_bullet.transform.Rotate(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
                     }
                     GameObject game_manager = GameObject.Find("gamemanager");

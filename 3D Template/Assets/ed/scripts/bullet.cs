@@ -4,6 +4,7 @@ public class bullet : MonoBehaviour
 {
     public bool from_enemy = false;
     public GameObject player;
+    public bool already_damaged = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,10 +30,11 @@ public class bullet : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("detection"))
         {
-            
+
         }
-        else if (other.gameObject.CompareTag("Player"))
+        else if (other.gameObject.CompareTag("Player") && already_damaged == false && from_enemy == true)
         {
+            already_damaged = true;
             if (from_enemy == true)
             {
                 other.gameObject.GetComponent<PlayerMovement>().take_damage(20);
@@ -40,6 +42,10 @@ public class bullet : MonoBehaviour
             }
         }
         else if (other.gameObject.CompareTag("enemy"))
+        {
+
+        }
+        else if (other.gameObject.CompareTag("Player"))
         {
 
         }

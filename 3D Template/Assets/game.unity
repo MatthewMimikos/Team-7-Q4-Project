@@ -393,6 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346c95b64778fc649a36be679e02c119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurt_animation: {fileID: 0}
   enemies_left: 0
   audio1: {fileID: 387352084}
   audio2: {fileID: 387352088}
