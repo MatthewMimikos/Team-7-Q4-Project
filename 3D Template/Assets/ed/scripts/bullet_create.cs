@@ -5,6 +5,7 @@ using UnityEngine;
 public class bullet_create : MonoBehaviour
 {
     public Animator shotgun_anim;
+    public Animator shovel_anim;
     public AudioSource AudioSource;
     public GameObject bullet;
     public Transform playertransform;
@@ -14,6 +15,7 @@ public class bullet_create : MonoBehaviour
     public WeaponSwitching weapons;
     public TMP_Text ammo_text;
 
+    public bool shovel_cooldown = false;
     public int loaded_ammo = 2;
     public int ammo = 8;
 
@@ -54,6 +56,14 @@ public class bullet_create : MonoBehaviour
                     StartCoroutine(Reload());
                 }
             }
+            Debug.Log(weapons.selectedWeapon);
+            Debug.Log(shovel_cooldown);
+            if (weapons.selectedWeapon == 1 && shovel_cooldown == false)
+            {
+                Debug.Log("wow");
+                shovel_anim.SetTrigger("attack");
+                StartCoroutine(Swing());
+            }
         }
     }
     private IEnumerator Reload()
@@ -63,5 +73,11 @@ public class bullet_create : MonoBehaviour
         ammo -= 2;
         loaded_ammo = 2;
         ammo_text.text = loaded_ammo.ToString() + "/" + ammo.ToString();
+    }
+    private IEnumerator Swing()
+    {
+        shovel_cooldown = true;
+        yield return new WaitForSeconds(1f);
+        shovel_cooldown = false;
     }
 }

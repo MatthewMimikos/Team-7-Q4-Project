@@ -90,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
         {
             gun.SetBool("Moving", false);
             shovel.SetBool("Moving", false);
-            
         }
         if (health <= 0)
         {
@@ -116,6 +115,12 @@ public class PlayerMovement : MonoBehaviour
         MovePlayer();
     }
 
+    public void take_damage(int damage)
+    {
+        health -= damage;
+        Gamemanager.hurt_animation.SetTrigger("damage");
+        Gamemanager.hurt_animation.ForceStateNormalizedTime(-1);
+    }
     private void MyInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
