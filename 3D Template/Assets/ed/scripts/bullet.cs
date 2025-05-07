@@ -33,7 +33,11 @@ public class bullet : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Player"))
         {
-
+            if (from_enemy == true)
+            {
+                other.gameObject.GetComponent<PlayerMovement>().take_damage(20);
+                Destroy(gameObject);
+            }
         }
         else if (other.gameObject.CompareTag("enemy"))
         {
@@ -41,7 +45,6 @@ public class bullet : MonoBehaviour
         }
         else
         {
-            Debug.Log(other);
             Destroy(gameObject);
         }
     }

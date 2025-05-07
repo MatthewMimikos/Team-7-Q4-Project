@@ -67,7 +67,7 @@ public class PlayerCam : MonoBehaviour
             ui.info_text2.text = "Press E to pick up";
             item = HitInfo.collider.gameObject;
             can_pickup_shovel = true;
-            can_pickup_shovel = false;
+            can_pickup_shotgun = false;
             can_pickup_dynamite = false;
         }
         else if (HitInfo.collider.CompareTag("dropped_shotgun"))

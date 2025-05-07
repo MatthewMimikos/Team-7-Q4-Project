@@ -38,6 +38,7 @@ public class enemy : MonoBehaviour
     public GameObject miner_mask;
     public GameObject guard_mask;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -141,12 +142,12 @@ public class enemy : MonoBehaviour
 
         if (gamemanager.GetComponent<gamemanager>().is_detected)
         {
-            if (can_attack == true && type == 3)
+            if (can_attack == true && type != 0)
             {
                 bool did_hit = Physics.Linecast(transform.position, player.transform.position, out RaycastHit hitInfo, layerMask);
-                Debug.Log(hitInfo);
                 if (did_hit && hitInfo.transform.gameObject.CompareTag("Player"))
                 {
+                    sprite_thing.SetTrigger("attack");
                     GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
                     new_bullet.GetComponent<bullet>().from_enemy = true;
                     new_bullet.transform.LookAt(player.transform.position);
@@ -179,7 +180,9 @@ public class enemy : MonoBehaviour
     private IEnumerator EnterCooldown()
     {
         can_attack = false;
+        navigation.enabled = false;
         yield return new WaitForSeconds(0.5f);
         can_attack = true;
+        navigation.enabled = true;
     }
 }
