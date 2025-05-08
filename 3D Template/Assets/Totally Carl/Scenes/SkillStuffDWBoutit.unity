@@ -1519,6 +1519,11 @@ MonoBehaviour:
   Guard_mask: {fileID: 0}
   Camera_mask: {fileID: 0}
   ui: {fileID: 0}
+  has_miner_mask: 0
+  has_guard_mask: 0
+  has_camera_mask: 0
+  has_shovel_mask: 0
+  has_speed_mask: 0
 --- !u!1 &1004718484
 GameObject:
   m_ObjectHideFlags: 0
