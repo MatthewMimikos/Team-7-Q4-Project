@@ -15,18 +15,17 @@ public class melee_attack : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemy") && from_enemy == false)
         {
+            GetComponent<AudioSource>().Play();
             other.gameObject.GetComponent<enemy>().health -= 100;
         }
         else if (other.gameObject.CompareTag("window"))
         {
+            GetComponent<AudioSource>().Play();
             other.gameObject.GetComponent<breakablewindow>().wow();
-        }
-        else if (other.gameObject.CompareTag("detection"))
-        {
-
         }
         else if (other.gameObject.CompareTag("Player") && already_damaged == false && from_enemy == true)
         {
+            GetComponent<AudioSource>().Play();
             already_damaged = true;
             if (from_enemy == true)
             {
@@ -38,9 +37,13 @@ public class melee_attack : MonoBehaviour
         {
 
         }
+        if (other.gameObject.CompareTag("camera"))
+        {
+            Destroy(other.gameObject);
+        }
     }
     private void Awake()
     {
-        Destroy(gameObject, 0.25f);
+        Destroy(gameObject, 0.5f);
     }
 }
