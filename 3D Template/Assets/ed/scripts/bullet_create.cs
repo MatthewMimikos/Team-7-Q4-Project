@@ -8,6 +8,7 @@ public class bullet_create : MonoBehaviour
     public Animator shovel_anim;
     public AudioSource AudioSource;
     public GameObject bullet;
+    public GameObject attack;
     public Transform playertransform;
     public Transform cameratransform;
     public Vector3 raycastpoint;
@@ -61,8 +62,9 @@ public class bullet_create : MonoBehaviour
             Debug.Log(shovel_cooldown);
             if (weapons.selectedWeapon == 1 && shovel_cooldown == false)
             {
-                Debug.Log("wow");
                 shovel_anim.SetTrigger("attack");
+                GameObject melee_attack_thing = Instantiate(attack, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+                melee_attack_thing.GetComponent<bullet>().from_enemy = false;
                 StartCoroutine(Swing());
             }
         }

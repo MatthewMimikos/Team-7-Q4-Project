@@ -1,23 +1,21 @@
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class melee_attack : MonoBehaviour
 {
     public bool from_enemy = false;
     public bool already_damaged = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        transform.position += transform.forward * 100 * Time.deltaTime;
-        transform.Rotate(new Vector3(20 * Time.deltaTime, 0, 0));
+        
     }
 
+    // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("enemy") && from_enemy == false)
         {
-            other.gameObject.GetComponent<enemy>().health -= 25;
+            other.gameObject.GetComponent<enemy>().health -= 100;
         }
         else if (other.gameObject.CompareTag("window"))
         {
@@ -40,17 +38,9 @@ public class bullet : MonoBehaviour
         {
 
         }
-        else if (other.gameObject.CompareTag("Player"))
-        {
-
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
     private void Awake()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 0.25f);
     }
 }
