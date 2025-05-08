@@ -855,6 +855,7 @@ MonoBehaviour:
   sprite_thing: {fileID: 0}
   player: {fileID: 0}
   bullet: {fileID: 3976846265408971094, guid: 28cc81340ee9fdf469a1b701aeb51141, type: 3}
+  sword: {fileID: 3166654246895360839, guid: 7ba12cec961a75748bf3c3001e50016c, type: 3}
   is_camera_guy: 0
   attack_transform: {fileID: 5442279503527671666}
   miner: {fileID: 4801171808517132158}

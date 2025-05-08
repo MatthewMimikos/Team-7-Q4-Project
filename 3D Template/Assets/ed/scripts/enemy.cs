@@ -49,7 +49,7 @@ public class enemy : MonoBehaviour
         player = GameObject.Find("Player");
         if (preset_type == -1)
         {
-            type = Random.Range(1, 6);
+            type = Random.Range(3, 3);
         }
         else
         {
@@ -144,10 +144,6 @@ public class enemy : MonoBehaviour
                 {
 
                 }
-                if (type == 2)
-                {
-
-                }
                 if (type == 3)
                 {
                     bool did_hit = Physics.Linecast(transform.position, player.transform.position, out RaycastHit hitInfo, layerMask);
@@ -160,14 +156,6 @@ public class enemy : MonoBehaviour
                         StartCoroutine(EnterCooldown());
                     }
                 }
-                if (type == 4)
-                {
-
-                }
-                if (type == 5)
-                {
-
-                }
             }
         }
         if (gamemanager.GetComponent<gamemanager>().is_detected == true && type != 0 && !dead)
@@ -175,6 +163,7 @@ public class enemy : MonoBehaviour
             navigation.destination = player.transform.position;
         }
     }
+
 
     private IEnumerator EnterCooldown()
     {

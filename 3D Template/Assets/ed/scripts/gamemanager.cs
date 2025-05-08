@@ -32,6 +32,7 @@ public class gamemanager : MonoBehaviour
     {
         if (!is_detected)
         {
+            StartCoroutine(enemy_spam());
             is_detected = true;
             PlayMusic();
             event_text.text = reason;
@@ -42,7 +43,6 @@ public class gamemanager : MonoBehaviour
                 lights[i].turnon();
             }
             StartCoroutine(diologue_queue("Or you can do that, I guess..."));
-            StartCoroutine(enemy_spam());
         }
     }
     public void PlayMusic()
@@ -128,7 +128,7 @@ public class gamemanager : MonoBehaviour
         {
             lights[i].enemy_spawn();
         }
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(10.0f);
         StartCoroutine(enemy_spam());
     }
 }

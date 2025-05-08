@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7567159782346529312}
   - component: {fileID: 2340319449477806259}
   - component: {fileID: 7794908173711113312}
+  - component: {fileID: 8057294813883291603}
+  - component: {fileID: 1112395043388454308}
   m_Layer: 0
   m_Name: fireball
   m_TagString: Untagged
@@ -110,3 +112,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8057294813883291603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2728967188391024122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a96a506b705a84c990d2d085fb6ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  from_enemy: 0
+  already_damaged: 0
+--- !u!65 &1112395043388454308
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2728967188391024122}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
