@@ -21,6 +21,7 @@ public class WeaponSwitching : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
+            GetComponent<AudioSource>().Play();
             if (selectedWeapon == 0)
             {
                 if (has_shotgun)
@@ -51,6 +52,7 @@ public class WeaponSwitching : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") < 0f || Input.GetMouseButtonDown(1)) 
         {
+            GetComponent<AudioSource>().Play();
             if (selectedWeapon == 0)
             {
                 if (has_shovel)

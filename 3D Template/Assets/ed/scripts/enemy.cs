@@ -38,6 +38,7 @@ public class enemy : MonoBehaviour
     public GameObject miner_mask;
     public GameObject guard_mask;
 
+    public bool fear;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -121,30 +122,20 @@ public class enemy : MonoBehaviour
         if (health <= 0 && !dead)
         {
             dead = true;
-            if (type == 0)
-            {
-                GameObject new_mask = Instantiate(miner_mask, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-            }
             if (type != 0)
             {
+                GameObject new_mask = Instantiate(guard_mask, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
                 gamemanager.GetComponent<gamemanager>().enemies_left -= 1;
             }
-            if (is_camera_guy)
-            {
-                gamemanager.GetComponent<gamemanager>().DisableCameras();
-            }
-            if (detection.my_detection_visual != null)
-            {
-                Debug.Log(detection.my_detection_visual);
-                Destroy(detection.my_detection_visual);
-            }
+            Destroy(detection.my_detection_visual);
             sprite_thing.SetTrigger("die");
         }
 
         if (gamemanager.GetComponent<gamemanager>().is_detected && player.GetComponent<PlayerMovement>().health >= 0)
         {
-            if (type == 0)
+            if (type == 0 && fear == false)
             {
+                fear = true;
                 sprite_thing.SetTrigger("fear");
             }
             if (can_attack == true && type != 0)
@@ -162,7 +153,6 @@ public class enemy : MonoBehaviour
                     bool did_hit = Physics.Linecast(transform.position, player.transform.position, out RaycastHit hitInfo, layerMask);
                     if (did_hit && hitInfo.transform.gameObject.CompareTag("Player"))
                     {
-                        sprite_thing.SetTrigger("attack");
                         GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
                         new_bullet.GetComponent<bullet>().from_enemy = true;
                         new_bullet.transform.LookAt(player.transform.position);
@@ -180,29 +170,15 @@ public class enemy : MonoBehaviour
                 }
             }
         }
-        if (gamemanager.GetComponent<gamemanager>().is_detected == true && type != 0)
+        if (gamemanager.GetComponent<gamemanager>().is_detected == true && type != 0 && !dead)
         {
             navigation.destination = player.transform.position;
-        }
-
-        if (type == 5)
-        {
-            float angle = (player_position.transform.rotation.y * Mathf.Rad2Deg) - (Vector3.Angle(prev_position, moving_direction));
-            angle = Mathf.Abs(angle);
-            Debug.Log(angle);
-            if (angle >= 0 && angle <= 90)
-            {
-                GetComponent<billboard_sprite>().sprite.GetComponent<Animator>().SetTrigger("front_walk");
-            }
-            else if (angle >= 90 && angle <= 180)
-            {
-                GetComponent<billboard_sprite>().sprite.GetComponent<Animator>().SetTrigger("back_walk");
-            }
         }
     }
 
     private IEnumerator EnterCooldown()
     {
+        sprite_thing.SetTrigger("attack");
         can_attack = false;
         navigation.enabled = false;
         yield return new WaitForSeconds(0.5f);

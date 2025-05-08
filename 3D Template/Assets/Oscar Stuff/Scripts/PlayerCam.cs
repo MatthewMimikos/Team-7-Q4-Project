@@ -56,12 +56,7 @@ public class PlayerCam : MonoBehaviour
 
         GameObject item = null;
 
-        if (HitInfo.collider.CompareTag("camera"))
-        {
-            ui.info_text.text = "Security Camera";
-            ui.info_text2.text = "Damage with weapon to disable";
-        }
-        else if (HitInfo.collider.CompareTag("dropped_shovel"))
+        if (HitInfo.collider.CompareTag("dropped_shovel"))
         {
             ui.info_text.text = "Shovel";
             ui.info_text2.text = "Press E to pick up";
@@ -97,6 +92,12 @@ public class PlayerCam : MonoBehaviour
             can_pickup_shovel = false;
             can_pickup_shotgun = false;
         }
+        else if (HitInfo.collider.GetComponent<pickup>().guard_mask)
+        {
+            ui.info_text.text = "Guard Mask";
+            ui.info_text2.text = "Press E to pick up, opens guard doors while wearing";
+            item = HitInfo.collider.gameObject;
+        }
         else
         {
             ui.info_text.text = "";
@@ -113,23 +114,36 @@ public class PlayerCam : MonoBehaviour
             {
                 GameObject.Find("WeaponHolder").GetComponent<WeaponSwitching>().has_shovel = true;
                 gamemanager.GetComponent<gamemanager>().diologue("Picked up a Shovel. To switch weapons, use the scrollwheel or right click", false);
+                ui.info_text.text = "";
+                ui.info_text2.text = "";
             }
             if (can_pickup_shotgun == true)
             {
                 GameObject.Find("WeaponHolder").GetComponent<WeaponSwitching>().has_shotgun = true;
                 gamemanager.GetComponent<gamemanager>().diologue("Picked up a Shotgun. To switch weapons, use the scrollwheel or right click", false);
+                ui.info_text.text = "";
+                ui.info_text2.text = "";
             }
             if (can_pickup_dynamite == true)
             {
                 gamemanager.GetComponent<gamemanager>().diologue("Picked up Dynamite, Press F to drop it and ingite it's fuse", false);
+                ui.info_text.text = "";
+                ui.info_text2.text = "";
             }
             if (item.GetComponent<pickup>().shell == true)
             {
-
+                GameObject.Find("bullet_maker").GetComponent<bullet_create>().ammo += 4;
             }
-            if (item.GetComponent<pickup>().miner_mask == true)
+            if (item.GetComponent<pickup>().guard_mask == true)
             {
-                MaskSwitcher.has_miner_mask = true;
+                gamemanager.GetComponent<gamemanager>().diologue("Picked up a Guard Mask, Press 1 to wear it and open doors", false);
+                MaskSwitcher.has_guard_mask = true;
+                ui.info_text.text = "";
+                ui.info_text2.text = "";
+            }
+            if (HitInfo.collider.GetComponent<pickup>().guard_mask)
+            {
+
             }
             if (item)
             {

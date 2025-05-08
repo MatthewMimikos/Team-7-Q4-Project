@@ -591,7 +591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7462119134271958646
 Transform:
   m_ObjectHideFlags: 0
@@ -874,7 +874,9 @@ MonoBehaviour:
   dead: 0
   miner_mask: {fileID: 7523315281132959843, guid: acec80aa482b8d24d9ecc48d5f3e8b21,
     type: 3}
-  guard_mask: {fileID: 0}
+  guard_mask: {fileID: 7523315281132959843, guid: 5019d32c7aad5d249be75e615c2ee40d,
+    type: 3}
+  fear: 0
 --- !u!114 &4329387807409280012
 MonoBehaviour:
   m_ObjectHideFlags: 0

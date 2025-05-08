@@ -42,6 +42,7 @@ public class gamemanager : MonoBehaviour
                 lights[i].turnon();
             }
             StartCoroutine(diologue_queue("Or you can do that, I guess..."));
+            StartCoroutine(enemy_spam());
         }
     }
     public void PlayMusic()
@@ -119,5 +120,15 @@ public class gamemanager : MonoBehaviour
     {
         yield return new WaitForSeconds(9.0f);
         diologue(text, true);
+    }
+    private IEnumerator enemy_spam()
+    {
+        enemy_spawner[] lights = FindObjectsByType<enemy_spawner>(FindObjectsSortMode.None);
+        for (int i = 0; i < lights.Length; i++)
+        {
+            lights[i].enemy_spawn();
+        }
+        yield return new WaitForSeconds(5.0f);
+        StartCoroutine(enemy_spam());
     }
 }

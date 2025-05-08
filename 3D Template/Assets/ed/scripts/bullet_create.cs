@@ -7,6 +7,8 @@ public class bullet_create : MonoBehaviour
     public Animator shotgun_anim;
     public Animator shovel_anim;
     public AudioSource AudioSource;
+    public AudioSource AudioSource1;
+    public AudioSource AudioSource2;
     public GameObject bullet;
     public GameObject attack;
     public Transform playertransform;
