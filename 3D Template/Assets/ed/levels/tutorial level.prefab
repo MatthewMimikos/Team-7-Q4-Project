@@ -22616,8 +22616,8 @@ PrefabInstance:
     - target: {fileID: 3973598461947565870, guid: d7ffb5365ea2bfa46a8d0a55dfebfd6a,
         type: 3}
       propertyPath: diologue
-      value: Argh, Completely forgot about that security door. we'll need to get
-        a code from someone here.
+      value: Argh, Completely forgot about tha fence! we'll need to blow it up with
+        dynamite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

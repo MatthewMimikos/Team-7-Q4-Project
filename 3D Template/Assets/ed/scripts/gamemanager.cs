@@ -5,6 +5,8 @@ using UnityEngine;
 public class gamemanager : MonoBehaviour
 {
 
+    public Animator hurt_animation;
+
     public int enemies_left = 0;
     public AudioSource audio1;
     public AudioSource audio2;
@@ -24,6 +26,7 @@ public class gamemanager : MonoBehaviour
         animator = GameObject.Find("event_text").GetComponent<Animator>();
         event_text = GameObject.Find("event_text").GetComponent<TMP_Text>();
         status_text = GameObject.Find("status_text").GetComponent<TMP_Text>();
+        hurt_animation = GameObject.Find("painborder").GetComponent<Animator>();
     }
     public void detected(string reason)
     {

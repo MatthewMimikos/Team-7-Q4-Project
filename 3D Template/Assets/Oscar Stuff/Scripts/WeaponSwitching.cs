@@ -27,7 +27,7 @@ public class WeaponSwitching : MonoBehaviour
                 {
                     selectedWeapon = 2;
                 }
-                else if (has_shotgun)
+                else if (has_shovel)
                 {
                     selectedWeapon = 1;
                 }

@@ -38,6 +38,7 @@ public class enemy : MonoBehaviour
     public GameObject miner_mask;
     public GameObject guard_mask;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -134,24 +135,48 @@ public class enemy : MonoBehaviour
             }
             if (detection.my_detection_visual != null)
             {
+                Debug.Log(detection.my_detection_visual);
                 Destroy(detection.my_detection_visual);
             }
             sprite_thing.SetTrigger("die");
         }
 
-        if (gamemanager.GetComponent<gamemanager>().is_detected)
+        if (gamemanager.GetComponent<gamemanager>().is_detected && player.GetComponent<PlayerMovement>().health >= 0)
         {
-            if (can_attack == true && type == 3)
+            if (type == 0)
             {
-                bool did_hit = Physics.Linecast(transform.position, player.transform.position, out RaycastHit hitInfo, layerMask);
-                Debug.Log(hitInfo);
-                if (did_hit && hitInfo.transform.gameObject.CompareTag("Player"))
+                sprite_thing.SetTrigger("fear");
+            }
+            if (can_attack == true && type != 0)
+            {
+                if (type == 1)
                 {
-                    GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
-                    new_bullet.GetComponent<bullet>().from_enemy = true;
-                    new_bullet.transform.LookAt(player.transform.position);
-                    new_bullet.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
-                    StartCoroutine(EnterCooldown());
+
+                }
+                if (type == 2)
+                {
+
+                }
+                if (type == 3)
+                {
+                    bool did_hit = Physics.Linecast(transform.position, player.transform.position, out RaycastHit hitInfo, layerMask);
+                    if (did_hit && hitInfo.transform.gameObject.CompareTag("Player"))
+                    {
+                        sprite_thing.SetTrigger("attack");
+                        GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
+                        new_bullet.GetComponent<bullet>().from_enemy = true;
+                        new_bullet.transform.LookAt(player.transform.position);
+                        new_bullet.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
+                        StartCoroutine(EnterCooldown());
+                    }
+                }
+                if (type == 4)
+                {
+
+                }
+                if (type == 5)
+                {
+
                 }
             }
         }
@@ -179,7 +204,9 @@ public class enemy : MonoBehaviour
     private IEnumerator EnterCooldown()
     {
         can_attack = false;
+        navigation.enabled = false;
         yield return new WaitForSeconds(0.5f);
         can_attack = true;
+        navigation.enabled = true;
     }
 }

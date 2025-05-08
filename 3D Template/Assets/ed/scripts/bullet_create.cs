@@ -5,8 +5,10 @@ using UnityEngine;
 public class bullet_create : MonoBehaviour
 {
     public Animator shotgun_anim;
+    public Animator shovel_anim;
     public AudioSource AudioSource;
     public GameObject bullet;
+    public GameObject attack;
     public Transform playertransform;
     public Transform cameratransform;
     public Vector3 raycastpoint;
@@ -14,6 +16,7 @@ public class bullet_create : MonoBehaviour
     public WeaponSwitching weapons;
     public TMP_Text ammo_text;
 
+    public bool shovel_cooldown = false;
     public int loaded_ammo = 2;
     public int ammo = 8;
 
@@ -25,6 +28,7 @@ public class bullet_create : MonoBehaviour
     void Update()
     {
         ammo_text = GameObject.Find("ammo_text").GetComponent<TMP_Text>();
+        transform.LookAt(playercamera.raycast_point);
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (weapons.selectedWeapon == 2)
@@ -34,11 +38,11 @@ public class bullet_create : MonoBehaviour
                     shotgun_anim.SetTrigger("shoot");
                     loaded_ammo--;
                     ammo_text.text = loaded_ammo.ToString() + "/" + ammo.ToString();
-                    transform.LookAt(playercamera.raycast_point);
                     AudioSource.Play();
                     for (int i = 0; i < 8; i++)
                     {
                         GameObject new_bullet = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+                        new_bullet.GetComponent<bullet>().from_enemy = false;
                         new_bullet.transform.Rotate(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
                     }
                     GameObject game_manager = GameObject.Find("gamemanager");
@@ -54,6 +58,15 @@ public class bullet_create : MonoBehaviour
                     StartCoroutine(Reload());
                 }
             }
+            Debug.Log(weapons.selectedWeapon);
+            Debug.Log(shovel_cooldown);
+            if (weapons.selectedWeapon == 1 && shovel_cooldown == false)
+            {
+                shovel_anim.SetTrigger("attack");
+                GameObject melee_attack_thing = Instantiate(attack, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+                melee_attack_thing.GetComponent<bullet>().from_enemy = false;
+                StartCoroutine(Swing());
+            }
         }
     }
     private IEnumerator Reload()
@@ -63,5 +76,11 @@ public class bullet_create : MonoBehaviour
         ammo -= 2;
         loaded_ammo = 2;
         ammo_text.text = loaded_ammo.ToString() + "/" + ammo.ToString();
+    }
+    private IEnumerator Swing()
+    {
+        shovel_cooldown = true;
+        yield return new WaitForSeconds(1f);
+        shovel_cooldown = false;
     }
 }
