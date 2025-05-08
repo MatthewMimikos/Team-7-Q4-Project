@@ -9,6 +9,7 @@ public class SetInactive : MonoBehaviour
     public GameObject Object3;
     public GameObject Object4;
     public GameObject Object5;
+    public GameObject Object6;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class SetInactive : MonoBehaviour
         Object3.SetActive(false);
         Object4.SetActive(false);
         Object5.SetActive(false);
+        Object6.SetActive(false);
     }
     public void OnButton1()
     {
@@ -30,6 +32,7 @@ public class SetInactive : MonoBehaviour
         Object3.SetActive(false);
         Object4.SetActive(false);
         Object5.SetActive(false);
+        Object6.SetActive(false);
     }
 
     public void OnButton2()
@@ -39,6 +42,7 @@ public class SetInactive : MonoBehaviour
         Object3.SetActive(false);
         Object4.SetActive(false);
         Object5.SetActive(false);
+        Object6.SetActive(false);
     }
 
     public void OnButton3()
@@ -48,6 +52,7 @@ public class SetInactive : MonoBehaviour
         Object3.SetActive(true);
         Object4.SetActive(false);
         Object5.SetActive(false);
+        Object6.SetActive(false);
     }
 
     public void OnButton4()
@@ -57,6 +62,7 @@ public class SetInactive : MonoBehaviour
         Object3.SetActive(false);
         Object4.SetActive(true);
         Object5.SetActive(false);
+        Object6.SetActive(false);
     }
 
     public void OnButton5()
@@ -66,5 +72,16 @@ public class SetInactive : MonoBehaviour
         Object3.SetActive(false);
         Object4.SetActive(false);
         Object5.SetActive(true);
+        Object6.SetActive(false);
+    }
+
+    public void OnButton6()
+    {
+        Object1.SetActive(false);
+        Object2.SetActive(false);
+        Object3.SetActive(false);
+        Object4.SetActive(false);
+        Object5.SetActive(false);
+        Object6.SetActive(true);
     }
 }

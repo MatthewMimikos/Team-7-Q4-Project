@@ -1008,7 +1008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &465614544
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2971,7 +2971,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1908762080}
         m_TargetAssemblyTypeName: SetInactive, Assembly-CSharp
-        m_MethodName: OnButton5
+        m_MethodName: OnButton6
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3371,6 +3371,7 @@ MonoBehaviour:
   Object3: {fileID: 1578098696}
   Object4: {fileID: 617465316}
   Object5: {fileID: 1523943397}
+  Object6: {fileID: 465614543}
 --- !u!4 &1908762081
 Transform:
   m_ObjectHideFlags: 0
