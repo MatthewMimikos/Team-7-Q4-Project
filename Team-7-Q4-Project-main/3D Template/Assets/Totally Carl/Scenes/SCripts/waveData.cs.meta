@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7924c07e099960c469e0d837e814b163
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - EGuard: {fileID: 7011194103705707654, guid: 8b30e117e3946bd469ee593375198265,
+      type: 3}
+  - cultist: {fileID: 7011194103705707654, guid: 8b30e117e3946bd469ee593375198265,
+      type: 3}
+  - guard: {fileID: 7011194103705707654, guid: 8b30e117e3946bd469ee593375198265, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
