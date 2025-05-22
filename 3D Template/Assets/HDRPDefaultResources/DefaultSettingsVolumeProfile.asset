@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 8
+    m_Value: 99999
   maximumVelocity:
     m_OverrideState: 1
     m_Value: 200
@@ -797,7 +797,7 @@ MonoBehaviour:
     m_Value: 1
   enable:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   length:
     m_OverrideState: 1
     m_Value: 0.15
@@ -1118,10 +1118,10 @@ MonoBehaviour:
     m_Value: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.6
+    m_Value: 1
   scatter:
     m_OverrideState: 1
     m_Value: 1
@@ -1314,7 +1314,7 @@ MonoBehaviour:
       m_Value: {fileID: 0}
     lighting:
       m_OverrideState: 1
-      m_Value: 1
+      m_Value: 0
     steps:
       m_OverrideState: 1
       m_Value: 6
@@ -1475,19 +1475,19 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: -1
+    m_Value: 1
   xMultiplier:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 1
   yMultiplier:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   center:
     m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.5}
   scale:
     m_OverrideState: 1
-    m_Value: 2.23
+    m_Value: 1
 --- !u!114 &4704576646482353999
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1789,7 +1789,7 @@ MonoBehaviour:
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 8
   compensation:
     m_OverrideState: 1
     m_Value: 0
@@ -1946,7 +1946,7 @@ MonoBehaviour:
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   maxFogDistance:
     m_OverrideState: 1
-    m_Value: 50
+    m_Value: 40
   mipFogMaxMip:
     m_OverrideState: 1
     m_Value: 0.5
@@ -1964,19 +1964,19 @@ MonoBehaviour:
     m_Value: 100
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 20
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
   albedo:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 0.31955323, g: 0.34858894, b: 0.4056604, a: 1}
   globalLightProbeDimmer:
     m_OverrideState: 1
     m_Value: 1
   depthExtent:
     m_OverrideState: 1
-    m_Value: 200
+    m_Value: 1
   denoisingMode:
     m_OverrideState: 1
     m_Value: 0
@@ -2044,7 +2044,7 @@ MonoBehaviour:
     m_Value: 100
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.6917328, b: 0, a: 1}
+    m_Value: {r: 1, g: 0, b: 0, a: 1}
   hueShift:
     m_OverrideState: 1
     m_Value: 0
@@ -2295,7 +2295,7 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 1
+          inSlope: 0
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
@@ -2305,7 +2305,7 @@ MonoBehaviour:
           time: 1
           value: 1
           inSlope: 1
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -2326,7 +2326,7 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 1
+          inSlope: 0
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
@@ -2336,7 +2336,7 @@ MonoBehaviour:
           time: 1
           value: 1
           inSlope: 1
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -2458,7 +2458,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-  m_SelectedCurve: 1
+  m_SelectedCurve: 0
 --- !u!114 &7370257651821415008
 MonoBehaviour:
   m_ObjectHideFlags: 3
