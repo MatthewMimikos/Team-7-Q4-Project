@@ -17,7 +17,7 @@ public class bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemy") && from_enemy == false)
         {
-            other.gameObject.GetComponent<enemy>().health -= 25;
+            other.gameObject.GetComponent<enemy>().health -= 10;
         }
         else if (other.gameObject.CompareTag("window"))
         {

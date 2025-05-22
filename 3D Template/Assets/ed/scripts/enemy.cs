@@ -126,8 +126,12 @@ public class enemy : MonoBehaviour
             {
                 GameObject new_mask = Instantiate(guard_mask, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
                 gamemanager.GetComponent<gamemanager>().enemies_left -= 1;
+                gamemanager.GetComponent<gamemanager>().score += 1;
             }
-            Destroy(detection.my_detection_visual);
+            if (type == 0)
+            {
+                gamemanager.GetComponent<gamemanager>().score -= 10;
+            }
             sprite_thing.SetTrigger("die");
         }
 
@@ -149,10 +153,6 @@ public class enemy : MonoBehaviour
                     bool did_hit = Physics.Linecast(transform.position, player.transform.position, out RaycastHit hitInfo, layerMask);
                     if (did_hit && hitInfo.transform.gameObject.CompareTag("Player"))
                     {
-                        GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
-                        new_bullet.GetComponent<bullet>().from_enemy = true;
-                        new_bullet.transform.LookAt(player.transform.position);
-                        new_bullet.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
                         StartCoroutine(EnterCooldown());
                     }
                 }
@@ -169,7 +169,16 @@ public class enemy : MonoBehaviour
     {
         sprite_thing.SetTrigger("attack");
         can_attack = false;
-        navigation.enabled = false;
+        yield return new WaitForSeconds(2.1f);
+        bool did_hit = Physics.Linecast(transform.position, player.transform.position, out RaycastHit hitInfo, layerMask);
+        if (did_hit && hitInfo.transform.gameObject.CompareTag("Player"))
+        {
+            GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
+            new_bullet.GetComponent<bullet>().from_enemy = true;
+            new_bullet.transform.LookAt(player.transform.position);
+            new_bullet.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-2f, 2f), 0);
+        }
+        sprite_thing.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(0.5f);
         can_attack = true;
         navigation.enabled = true;

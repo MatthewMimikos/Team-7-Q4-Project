@@ -66,7 +66,7 @@ public class bullet_create : MonoBehaviour
             {
                 shovel_anim.SetTrigger("attack");
                 GameObject melee_attack_thing = Instantiate(attack, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-                melee_attack_thing.GetComponent<bullet>().from_enemy = false;
+                melee_attack_thing.GetComponent<melee_attack>().from_enemy = false;
                 StartCoroutine(Swing());
             }
         }

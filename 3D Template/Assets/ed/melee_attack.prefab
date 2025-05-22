@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5420211611145343558}
   - component: {fileID: 4384597387285737742}
   - component: {fileID: 622409369884415860}
+  - component: {fileID: 4115545969111438367}
+  - component: {fileID: 5543487013355744454}
   m_Layer: 0
   m_Name: melee_attack
   m_TagString: Untagged
@@ -166,3 +168,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &4115545969111438367
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166654246895360839}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: -2500
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.21
+  m_ReflectionsLevel: -2780
+  m_ReverbLevel: -1434
+  m_ReverbDelay: 0.1
+  m_Diffusion: 27
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 18
+--- !u!170 &5543487013355744454
+AudioDistortionFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166654246895360839}
+  m_Enabled: 1
+  m_DistortionLevel: 1

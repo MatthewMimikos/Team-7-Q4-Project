@@ -5,6 +5,7 @@ public class detection : MonoBehaviour
 {
     public bool can_see_player = false;
     private GameObject player;
+    public GameObject enemy;
     public GameObject detection_visual;
     private ui ui;
     public GameObject actual_camera;
@@ -46,6 +47,7 @@ public class detection : MonoBehaviour
                         GameObject new_detection = Instantiate(detection_visual, ui.transform.position, Quaternion.identity);
                         animator = new_detection.GetComponentInChildren<Animator>();
                         new_detection.transform.SetParent(ui.crosshair.transform);
+                        new_detection.GetComponent<delete_me>().enemy = this.gameObject;
                         my_detection_visual = new_detection.gameObject;
                     }
                     if (!fully_detected && gamemanager.GetComponent<gamemanager>().cameraguy1alive)

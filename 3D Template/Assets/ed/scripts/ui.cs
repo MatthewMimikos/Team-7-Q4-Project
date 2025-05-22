@@ -69,12 +69,6 @@ public class ui : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        float my_fps = Time.frameCount / Time.time;
-        fps.text = my_fps.ToString() + " FPS";
-    }
-
     public void switch_mask(Texture2D mask)
     {
         mask_texture.texture = mask;

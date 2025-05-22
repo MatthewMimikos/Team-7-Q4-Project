@@ -8,10 +8,12 @@ public class gamemanager : MonoBehaviour
     public Animator hurt_animation;
 
     public int enemies_left = 0;
+    public int score = 0;
     public AudioSource audio1;
     public AudioSource audio2;
     public TMP_Text event_text;
     public TMP_Text status_text;
+    public TMP_Text score_text;
     public bool is_detected = false;
     public bool is_dead = false;
     public GameObject ui;
@@ -19,6 +21,7 @@ public class gamemanager : MonoBehaviour
     public GameObject pause;
     public Animator animator;
     public bool cameraguy1alive = true;
+    public PlayerMovement playerMovement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public void begingame()
@@ -26,6 +29,7 @@ public class gamemanager : MonoBehaviour
         animator = GameObject.Find("event_text").GetComponent<Animator>();
         event_text = GameObject.Find("event_text").GetComponent<TMP_Text>();
         status_text = GameObject.Find("status_text").GetComponent<TMP_Text>();
+        score_text = GameObject.Find("score").GetComponent<TMP_Text>();
         hurt_animation = GameObject.Find("painborder").GetComponent<Animator>();
     }
     public void detected(string reason)
@@ -36,7 +40,6 @@ public class gamemanager : MonoBehaviour
             is_detected = true;
             PlayMusic();
             event_text.text = reason;
-            animator.SetTrigger("red_text");
             red_light_alarm[] lights = FindObjectsByType<red_light_alarm>(FindObjectsSortMode.None);
             for (int i = 0; i < lights.Length; i++)
             {
@@ -128,7 +131,14 @@ public class gamemanager : MonoBehaviour
         {
             lights[i].enemy_spawn();
         }
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(20.0f);
         StartCoroutine(enemy_spam());
+    }
+
+    private void Update()
+    {
+        Debug.Log(playerMovement.health / 100f);
+        hurt_animation.ForceStateNormalizedTime(playerMovement.health / 100f);
+        score_text.text = "Score: " + score;
     }
 }

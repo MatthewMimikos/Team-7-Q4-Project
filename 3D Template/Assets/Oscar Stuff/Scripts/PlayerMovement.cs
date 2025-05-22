@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator shovel;
     Rigidbody rb;
 
-    public int health = 100;
+    public float health = 100;
     public bool dead = false;
     public gamemanager Gamemanager;
     public GameObject dynamite;
@@ -112,14 +112,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (health < 100)
+        {
+            health += 1 * Time.deltaTime;
+        }
         MovePlayer();
     }
 
     public void take_damage(int damage)
     {
         health -= damage;
-        Gamemanager.hurt_animation.SetTrigger("damage");
-        Gamemanager.hurt_animation.ForceStateNormalizedTime(-1);
     }
     private void MyInput()
     {
@@ -150,10 +152,10 @@ public class PlayerMovement : MonoBehaviour
         {
             die();
         }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            drop_item();
-        }
+        //if (Input.GetKeyDown(KeyCode.F))
+        //{
+        //    drop_item();
+        //}
     }
     private float desiredMoveSpeed;
     private float lastDesiredMoveSpeed;
@@ -280,7 +282,7 @@ public class PlayerMovement : MonoBehaviour
         if (!dead)
         {
             dead = true;
-            health = -10000;
+            health = -9999999999;
             moveSpeed = 0;
             Gamemanager.GetComponent<gamemanager>().dead();
             GameObject playercamera = GameObject.Find("PlayerCam");

@@ -136,7 +136,7 @@ public class PlayerCam : MonoBehaviour
             }
             if (item.GetComponent<pickup>().guard_mask == true)
             {
-                gamemanager.GetComponent<gamemanager>().diologue("Picked up a Guard Mask, Press 1 to wear it and open doors", false);
+                gamemanager.GetComponent<gamemanager>().diologue("Picked up a Guard Mask, Press 2 to wear it and be able to open doors", false);
                 MaskSwitcher.has_guard_mask = true;
                 ui.info_text.text = "";
                 ui.info_text2.text = "";

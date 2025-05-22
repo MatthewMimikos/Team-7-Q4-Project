@@ -44,6 +44,6 @@ public class melee_attack : MonoBehaviour
     }
     private void Awake()
     {
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 1.5f);
     }
 }
