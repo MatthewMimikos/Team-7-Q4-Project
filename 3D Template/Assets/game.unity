@@ -216,7 +216,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: 7a74d4b98abbda94a9311f4b7fb49ad9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.6
-  m_Pitch: 1
+  m_Pitch: 2
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -379,7 +379,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: 0aa61f4b2f2c0bd489ef33a2ddd87913, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.6
-  m_Pitch: 1
+  m_Pitch: 2
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -470,7 +470,7 @@ AudioDistortionFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387352083}
   m_Enabled: 1
-  m_DistortionLevel: 0.5
+  m_DistortionLevel: 1
 --- !u!1001 &397369022
 PrefabInstance:
   m_ObjectHideFlags: 0
