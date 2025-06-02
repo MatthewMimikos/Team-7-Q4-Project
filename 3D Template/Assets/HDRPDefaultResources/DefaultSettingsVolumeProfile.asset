@@ -481,13 +481,13 @@ MonoBehaviour:
   active: 1
   redOutRedIn:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 200
   redOutGreenIn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -200
   redOutBlueIn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -200
   greenOutRedIn:
     m_OverrideState: 1
     m_Value: 0
@@ -794,40 +794,40 @@ MonoBehaviour:
   active: 1
   quality:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   enable:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   length:
     m_OverrideState: 1
-    m_Value: 0.15
+    m_Value: 0.706
   opacity:
     m_OverrideState: 1
     m_Value: 1
   distanceScaleFactor:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 1
   maxDistance:
     m_OverrideState: 1
-    m_Value: 50
+    m_Value: 356
   minDistance:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 3
   fadeDistance:
     m_OverrideState: 1
     m_Value: 5
   fadeInDistance:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 356
   rayBias:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 1
   thicknessScale:
     m_OverrideState: 1
-    m_Value: 0.15
+    m_Value: 1
   m_SampleCount:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 16
 --- !u!114 &-535129457183024485
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1115,10 +1115,10 @@ MonoBehaviour:
   active: 1
   quality:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 2
   threshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 5
   intensity:
     m_OverrideState: 1
     m_Value: 1
@@ -1127,25 +1127,25 @@ MonoBehaviour:
     m_Value: 1
   tint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 1, g: 0, b: 0, a: 1}
   dirtTexture:
     m_OverrideState: 1
-    m_Value: {fileID: 0}
+    m_Value: {fileID: 2800000, guid: f11bba6404ddf434b90db9b55d2597bf, type: 3}
   dirtIntensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1000
   anamorphic:
     m_OverrideState: 1
     m_Value: 1
   m_Resolution:
     m_OverrideState: 1
-    m_Value: 4
+    m_Value: 2
   m_HighQualityPrefiltering:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   m_HighQualityFiltering:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
 --- !u!114 &1932259527246508038
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1223,10 +1223,10 @@ MonoBehaviour:
   active: 1
   enable:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   opacity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.897
 --- !u!114 &3934553470726108397
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1478,10 +1478,10 @@ MonoBehaviour:
     m_Value: 1
   xMultiplier:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   yMultiplier:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   center:
     m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.5}
