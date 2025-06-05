@@ -191,28 +191,7 @@ MonoBehaviour:
       - rid: 5170029643863425294
       - rid: 5170029643863425295
     m_RuntimeSettings:
-      m_List:
-      - rid: 5170029643863425263
-      - rid: 5170029643863425264
-      - rid: 5170029643863425269
-      - rid: 5170029643863425270
-      - rid: 5170029643863425271
-      - rid: 5170029643863425273
-      - rid: 5170029643863425275
-      - rid: 5170029643863425276
-      - rid: 5170029643863425277
-      - rid: 5170029643863425278
-      - rid: 5170029643863425280
-      - rid: 5170029643863425281
-      - rid: 5170029643863425282
-      - rid: 5170029643863425283
-      - rid: 5170029643863425284
-      - rid: 5170029643863425287
-      - rid: 5170029643863425288
-      - rid: 5170029643863425291
-      - rid: 5170029643863425292
-      - rid: 5170029643863425294
-      - rid: 5170029643863425295
+      m_List: []
   renderingLayerNames:
   - Default
   lightLayerName0: 
@@ -680,7 +659,7 @@ MonoBehaviour:
         asm: Unity.RenderPipelines.HighDefinition.Runtime}
       data:
         m_Version: 0
-        m_VolumeProfile: {fileID: 11400000, guid: 7937647a1b25cf340872b8a63be6e644,
+        m_VolumeProfile: {fileID: 11400000, guid: 733981f59c9de4441b844bd3ef5da0ea,
           type: 2}
     - rid: 5170029643863425282
       type: {class: HDRPRayTracingResources, ns: UnityEngine.Rendering.HighDefinition,
