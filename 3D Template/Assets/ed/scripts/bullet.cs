@@ -44,7 +44,7 @@ public class bullet : MonoBehaviour
         {
 
         }
-        else
+        else if (other.gameObject.CompareTag("Untagged"))
         {
             Destroy(gameObject);
         }

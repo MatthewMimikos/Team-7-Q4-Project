@@ -51,7 +51,6 @@ public class gamemanager : MonoBehaviour
     public void PlayMusic()
     {
         audio2.Stop();
-        audio1.time = 31.75f;
         audio1.Play();
     }
     public void DisableCameras()

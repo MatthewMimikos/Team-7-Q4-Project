@@ -685,6 +685,8 @@ GameObject:
   - component: {fileID: 3071780319595842803}
   - component: {fileID: 1488895994540401339}
   - component: {fileID: 4507280467943189816}
+  - component: {fileID: 2131566837539884003}
+  - component: {fileID: 1089777102114211493}
   m_Layer: 3
   m_Name: rifle
   m_TagString: Untagged
@@ -881,6 +883,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!170 &2131566837539884003
+AudioDistortionFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5998384060966369116}
+  m_Enabled: 1
+  m_DistortionLevel: 0.5
+--- !u!166 &1089777102114211493
+AudioChorusFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5998384060966369116}
+  m_Enabled: 1
+  m_DryMix: 0.5
+  m_WetMix1: 0.5
+  m_WetMix2: 0.5
+  m_WetMix3: 0.5
+  m_Delay: 40
+  m_Rate: 0.8
+  m_Depth: 0.03
 --- !u!1 &6560633266848970219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,6 +1100,7 @@ MonoBehaviour:
   guard_mask: {fileID: 7523315281132959843, guid: 5019d32c7aad5d249be75e615c2ee40d,
     type: 3}
   fear: 0
+  speed: 1
 --- !u!114 &4329387807409280012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1117,7 +1144,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7011194103705707654}
   serializedVersion: 4
-  m_Mass: 2
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1134,7 +1161,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &2458298711870170479
 CapsuleCollider:

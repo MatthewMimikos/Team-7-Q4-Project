@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
 
 public class enemy : MonoBehaviour
 {
@@ -39,7 +40,6 @@ public class enemy : MonoBehaviour
     public GameObject guard_mask;
 
     public bool fear;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -108,6 +108,7 @@ public class enemy : MonoBehaviour
             GetComponent<billboard_sprite>().sprite = coolcultmember;
             health = 200;
         }
+        sprite_thing.SetTrigger("walk");
     }
 
     // Update is called once per frame
@@ -158,7 +159,7 @@ public class enemy : MonoBehaviour
                 }
             }
         }
-        if (gamemanager.GetComponent<gamemanager>().is_detected == true && type != 0 && !dead)
+        if (gamemanager.GetComponent<gamemanager>().is_detected == true && type != 0 && !dead && can_attack)
         {
             navigation.destination = player.transform.position;
         }
@@ -169,16 +170,21 @@ public class enemy : MonoBehaviour
     {
         sprite_thing.SetTrigger("attack");
         can_attack = false;
-        yield return new WaitForSeconds(2.1f);
+        navigation.enabled = false;
+        yield return new WaitForSeconds(1.9f);
         bool did_hit = Physics.Linecast(transform.position, player.transform.position, out RaycastHit hitInfo, layerMask);
-        if (did_hit && hitInfo.transform.gameObject.CompareTag("Player"))
+        if (did_hit && hitInfo.transform.gameObject.CompareTag("Player") && !dead)
         {
+            sprite_thing.GetComponent<AudioSource>().Play();
             GameObject new_bullet = Instantiate(bullet, new Vector3(attack_transform.transform.position.x, attack_transform.transform.position.y - 0.15f, attack_transform.transform.position.z), Quaternion.identity);
             new_bullet.GetComponent<bullet>().from_enemy = true;
             new_bullet.transform.LookAt(player.transform.position);
-            new_bullet.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-2f, 2f), 0);
+            new_bullet.transform.Rotate(Random.Range(-4f, 0f), Random.Range(-1f, 1f), 0);
         }
-        sprite_thing.GetComponent<AudioSource>().Play();
+        else
+        {
+            sprite_thing.SetTrigger("walk");
+        }
         yield return new WaitForSeconds(0.5f);
         can_attack = true;
         navigation.enabled = true;

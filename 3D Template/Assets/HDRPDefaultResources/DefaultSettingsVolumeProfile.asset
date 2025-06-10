@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Value: 2
   intensity:
     m_OverrideState: 1
-    m_Value: 8
+    m_Value: 1
   maximumVelocity:
     m_OverrideState: 1
     m_Value: 200
@@ -1789,7 +1789,7 @@ MonoBehaviour:
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 9
   compensation:
     m_OverrideState: 1
     m_Value: 0
@@ -1931,7 +1931,7 @@ MonoBehaviour:
   active: 1
   quality:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 2
   enabled:
     m_OverrideState: 1
     m_Value: 1
@@ -1979,7 +1979,7 @@ MonoBehaviour:
     m_Value: 10000
   denoisingMode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 2
   anisotropy:
     m_OverrideState: 1
     m_Value: 0
@@ -2000,10 +2000,10 @@ MonoBehaviour:
     m_Value: 64
   m_VolumetricFogBudget:
     m_OverrideState: 1
-    m_Value: 0.166
+    m_Value: 0.666
   m_ResolutionDepthRatio:
     m_OverrideState: 1
-    m_Value: 0.666
+    m_Value: 0.5
   directionalLightsOnly:
     m_OverrideState: 1
     m_Value: 0
